@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="340" viewBox="0 0 780 340">
+  <defs>
+    <pattern id="diag-project-nornickel.jpg" width="28" height="28" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="28" height="28" fill="#e6e7f8"/>
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#ffffff" stroke-width="14" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="780" height="340" fill="url(#diag-project-nornickel.jpg)"/>
+  <g transform="translate(390.0,152.0)" text-anchor="middle">
+    <circle r="34" fill="#ffffff" fill-opacity="0.7"/>
+    <path transform="translate(-14,-12)" fill="#575cce" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v9.59l4.29-4.3a1 1 0 0 1 1.42 0L14 15.59l1.29-1.3a1 1 0 0 1 1.42 0L20 17.6V6H4zm3 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+  </g>
+  <text x="390.0" y="210.0" text-anchor="middle" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#45495f">Nornickel Mining Platform</text>
+  <text x="390.0" y="232.0" text-anchor="middle" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="12" fill="#8891ab">Replace with project-nornickel.jpg</text>
+</svg>
