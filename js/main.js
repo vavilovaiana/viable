@@ -25,11 +25,69 @@
     });
   }
 
-  // Placeholder CV / Presentation links: no destination yet
-  document.querySelectorAll("[data-placeholder-link]").forEach(function (el) {
-    el.addEventListener("click", function (e) {
-      e.preventDefault();
-      console.info("Add a real link/file for: " + el.textContent.trim());
+  // Language switcher (EN default, RU translation)
+  var LANG_KEY = "viable-lang";
+  var ARIA_LABEL = { en: "Change language", ru: "Сменить язык" };
+
+  function applyLanguage(lang) {
+    var els = document.querySelectorAll("[data-ru], [data-ru-html]");
+    els.forEach(function (el) {
+      var isMeta = el.tagName === "META";
+      var current = isMeta ? el.getAttribute("content") : el.hasAttribute("data-ru-html") ? el.innerHTML : el.textContent;
+
+      if (!el.hasAttribute("data-en-cache")) {
+        el.setAttribute("data-en-cache", current);
+      }
+
+      if (lang === "ru") {
+        if (isMeta) {
+          el.setAttribute("content", el.getAttribute("data-ru"));
+        } else if (el.hasAttribute("data-ru-html")) {
+          el.innerHTML = el.getAttribute("data-ru-html");
+        } else {
+          el.textContent = el.getAttribute("data-ru");
+        }
+      } else {
+        var enValue = el.getAttribute("data-en-cache");
+        if (isMeta) {
+          el.setAttribute("content", enValue);
+        } else if (el.hasAttribute("data-ru-html")) {
+          el.innerHTML = enValue;
+        } else {
+          el.textContent = enValue;
+        }
+      }
     });
-  });
+
+    document.documentElement.lang = lang;
+
+    var langToggle = document.getElementById("langToggle");
+    if (langToggle) {
+      langToggle.setAttribute("aria-label", ARIA_LABEL[lang]);
+    }
+
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+    } catch (e) {
+      /* localStorage unavailable — language just won't persist across visits */
+    }
+  }
+
+  var langToggleBtn = document.getElementById("langToggle");
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener("click", function () {
+      var nextLang = document.documentElement.lang === "ru" ? "en" : "ru";
+      applyLanguage(nextLang);
+    });
+
+    var savedLang = null;
+    try {
+      savedLang = localStorage.getItem(LANG_KEY);
+    } catch (e) {
+      /* localStorage unavailable — fall back to default language */
+    }
+    if (savedLang === "ru") {
+      applyLanguage("ru");
+    }
+  }
 })();
