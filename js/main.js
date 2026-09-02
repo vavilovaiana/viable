@@ -59,6 +59,26 @@
       }
     });
 
+    // Swap href/download for links that point to a different target per language
+    // (e.g. Presentation -> RU prototype, CV -> RU resume file)
+    var attrSwaps = [
+      { data: "data-ru-href", attr: "href" },
+      { data: "data-ru-download", attr: "download" }
+    ];
+    attrSwaps.forEach(function (swap) {
+      document.querySelectorAll("[" + swap.data + "]").forEach(function (el) {
+        var cacheAttr = "data-en-" + swap.attr + "-cache";
+        if (!el.hasAttribute(cacheAttr)) {
+          el.setAttribute(cacheAttr, el.getAttribute(swap.attr) || "");
+        }
+        if (lang === "ru") {
+          el.setAttribute(swap.attr, el.getAttribute(swap.data));
+        } else {
+          el.setAttribute(swap.attr, el.getAttribute(cacheAttr));
+        }
+      });
+    });
+
     document.documentElement.lang = lang;
 
     var langToggle = document.getElementById("langToggle");

@@ -22,9 +22,11 @@ Real icons are already in place for AI tools and contact methods, via the open-s
 
 The vertical **"Change language" / "Сменить язык"** control next to the hero photo (visible from ~1200px viewport width up) toggles the whole page between English and Russian. It's implemented with `data-ru` / `data-ru-html` attributes on each translatable element in `index.html` (Russian copy lives right next to the English text) and a small script in `js/main.js` that swaps `textContent`/`innerHTML` on click, updates `<html lang>`, the page `<title>` and meta description, and remembers the choice in `localStorage` so it persists across visits. To add a new translatable string, add a `data-ru="…"` attribute to that element (or `data-ru-html="…"` if it needs inline markup like `<br>`/`<em>`) — no other code changes needed.
 
+The **Presentation** and **CV** header buttons also switch *target* per language, not just label: `data-ru-href` (and `data-ru-download` for CV) on those `<a>` tags point at the Russian prototype and Russian résumé file. Same mechanism — add `data-ru-href`/`data-ru-download` to any link that should point somewhere else in Russian.
+
 ## Not yet wired up
 
-- The **Presentation** button opens your Figma prototype in a new tab. The **CV** button downloads `assets/cv/Iana-Vavilova-CV.pdf` directly (this avoids new-tab popup blockers).
+- The **Presentation** button opens your Figma prototype in a new tab (Russian version links to the Russian prototype). The **CV** button downloads `assets/cv/Iana-Vavilova-CV.pdf` (Russian version downloads `assets/cv/Yana-Vavilova-CV-RU.pdf`) directly — this avoids new-tab popup blockers.
 - The **Telegram / WhatsApp / Email** contact cards already link to `t.me/viable`, WhatsApp, and your email — double check the Telegram handle is correct.
 - The small "cursor + tooltip" decorative detail on the Crypto Wallet card (visible in Figma) was left out as a minor cosmetic flourish.
 
