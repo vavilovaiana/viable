@@ -1,0 +1,472 @@
+/* ==========================================================================
+   Case study: Nornickel Mining Platform
+   Extends design tokens from styles.css
+   ========================================================================== */
+
+.cs-main { overflow: hidden; }
+
+.cs-back-row {
+  padding: 24px var(--side-pad) 0;
+}
+.cs-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--c-text-secondary);
+  transition: color 0.15s ease;
+}
+.cs-back-link:hover { color: var(--c-accent); }
+.cs-back-link svg { width: 16px; height: 16px; }
+
+/* ---- Hero ------------------------------------------------------------ */
+.cs-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: clamp(32px, 6vw, 64px) var(--side-pad) var(--section-pad-y);
+}
+.cs-hero__head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1100px;
+}
+.cs-hero__title {
+  font-weight: 700;
+  font-size: clamp(36px, 5.5vw, 72px);
+  line-height: 1.08;
+  color: var(--c-text);
+}
+.cs-hero__subtitle {
+  font-weight: 400;
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.5;
+  color: var(--c-text-secondary);
+}
+
+.cs-meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 56px;
+}
+.cs-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cs-meta-item dt {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+.cs-meta-item dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--c-text);
+}
+
+.cs-hero__visual {
+  border-radius: 32px;
+  overflow: hidden;
+  background: var(--c-dark-bg);
+}
+.cs-hero__visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- Shared section scaffolding --------------------------------------- */
+.cs-section {
+  position: relative;
+  padding: var(--section-pad-y) var(--side-pad);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.cs-section--tight { gap: 32px; }
+.cs-section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-section-title {
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 48px);
+  color: var(--c-text);
+}
+
+/* ---- Design Team -------------------------------------------------------*/
+.cs-team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+.cs-team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 28px 16px;
+  border-radius: 24px;
+  background: var(--c-card-bg);
+  border: 1px solid var(--c-border-mid);
+}
+.cs-team-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+.cs-team-card__name {
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--c-text);
+}
+.cs-team-card__role {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--c-text-secondary);
+}
+
+/* ---- Core Roles ----------------------------------------------------- */
+.cs-roles-head {
+  font-weight: 600;
+  font-size: clamp(22px, 3vw, 30px);
+  color: var(--c-text);
+  max-width: 560px;
+}
+.cs-roles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.cs-role-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px 12px 14px;
+  border-radius: 100px;
+  background: var(--c-tag-bg);
+  border: 1px solid var(--c-border);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--c-text);
+}
+.cs-role-pill svg {
+  width: 16px;
+  height: 16px;
+  color: var(--c-accent);
+  flex: 0 0 auto;
+}
+
+/* ---- Project Overview --------------------------------------------------*/
+.cs-overview-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+.cs-overview-goal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cs-overview-goal h3 {
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.25;
+  color: var(--c-text);
+}
+.cs-overview-goal p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--c-text-secondary);
+}
+
+.cs-whatfor {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cs-whatfor h4 {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--c-text);
+}
+.cs-whatfor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.cs-whatfor-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--c-light-bg);
+}
+.cs-whatfor-item .cs-icon-box { flex: 0 0 auto; }
+.cs-whatfor-item p {
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--c-text-secondary);
+}
+
+.cs-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--c-accent-soft-bg);
+  color: var(--c-accent);
+}
+.cs-icon-box svg { width: 18px; height: 18px; }
+
+.cs-challenge-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 24px;
+  background: var(--c-dark-bg);
+}
+.cs-challenge-card h3 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+}
+.cs-challenge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-challenge-list li {
+  display: flex;
+  gap: 12px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.8);
+}
+.cs-challenge-list li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  margin-top: 8px;
+  border-radius: 100px;
+  background: var(--c-accent);
+}
+
+/* ---- Key Features ----------------------------------------------------- */
+.cs-features {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.cs-feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.cs-feature-row--reverse .cs-feature-text { order: 2; }
+.cs-feature-row--reverse .cs-feature-visual { order: 1; }
+.cs-feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-feature-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--c-accent);
+}
+.cs-feature-text h3 {
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 30px);
+  color: var(--c-text);
+}
+.cs-feature-text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--c-text-secondary);
+}
+.cs-feature-visual {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--c-border-mid);
+  box-shadow: 0 16px 40px rgba(21, 27, 55, 0.08);
+}
+.cs-feature-visual img { width: 100%; height: auto; display: block; }
+
+/* ---- Design system banner ---------------------------------------------*/
+.cs-ds-banner {
+  padding: 0;
+}
+.cs-ds-banner__frame {
+  border-radius: 24px;
+  overflow: hidden;
+}
+.cs-ds-banner__frame img { width: 100%; height: auto; display: block; }
+.cs-ds-banner__caption {
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: var(--c-text-muted);
+}
+
+/* ---- Design System Showcase (infinite marquee) ------------------------ */
+.cs-ds-showcase-head {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-ds-showcase-head h2 {
+  font-weight: 700;
+  font-size: clamp(26px, 3.5vw, 40px);
+  color: var(--c-text);
+}
+.cs-ds-showcase-head p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--c-text-secondary);
+}
+
+.cs-marquee {
+  position: relative;
+  overflow: hidden;
+  margin: 0 calc(var(--side-pad) * -1);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.cs-marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+  padding: 0 var(--side-pad);
+  animation: cs-marquee-scroll 32s linear infinite;
+}
+.cs-marquee:hover .cs-marquee__track { animation-play-state: paused; }
+.cs-marquee__item {
+  flex: 0 0 auto;
+  width: min(560px, 70vw);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--c-border-mid);
+  background: var(--c-card-bg);
+}
+.cs-marquee__item img { width: 100%; height: auto; display: block; }
+
+@keyframes cs-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-marquee__track { animation: none; }
+  .cs-marquee { overflow-x: auto; }
+}
+
+/* ---- Tablet overview ----------------------------------------------------*/
+.cs-tablet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+.cs-tablet-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.cs-tablet-text h3 {
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 32px);
+  color: var(--c-text);
+}
+.cs-tablet-text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--c-text-secondary);
+}
+.cs-tablet-visual {
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--c-dark-bg);
+  border: 1px solid var(--c-border-mid);
+}
+.cs-tablet-visual img { width: 100%; height: auto; display: block; }
+
+/* ---- Screens grid ------------------------------------------------------*/
+.cs-screens-grid {
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--c-dark-bg);
+}
+.cs-screens-grid img { width: 100%; height: auto; display: block; }
+
+/* ---- Next case study CTA ------------------------------------------------*/
+.cs-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 24px;
+  background: var(--c-light-bg);
+  border: 1px solid var(--c-border-lav);
+}
+.cs-cta p {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--c-text);
+  max-width: 480px;
+}
+
+/* ---- Responsive ---------------------------------------------------------*/
+@media (max-width: 1100px) {
+  .cs-team-grid { grid-template-columns: repeat(3, 1fr); }
+  .cs-overview-grid { grid-template-columns: 1fr; }
+  .cs-feature-row,
+  .cs-feature-row--reverse { grid-template-columns: 1fr; }
+  .cs-feature-row--reverse .cs-feature-text { order: 1; }
+  .cs-feature-row--reverse .cs-feature-visual { order: 2; }
+  .cs-whatfor-grid { grid-template-columns: 1fr; }
+  .cs-tablet-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+  .cs-team-grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-meta-grid { gap: 24px 32px; }
+}
+
+@media (max-width: 500px) {
+  .cs-team-grid { grid-template-columns: 1fr 1fr; }
+  .cs-cta { flex-direction: column; align-items: flex-start; }
+}
