@@ -676,6 +676,67 @@
   background: #f04444;
 }
 
+/* ---- Additional Views carousel -------------------------------------------*/
+.cs-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cs-carousel__track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--side-pad);
+  padding-bottom: 4px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.cs-carousel__track::-webkit-scrollbar { display: none; }
+.cs-carousel__slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: min(560px, 78vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--c-light-bg);
+  border: 1px solid var(--c-border-mid);
+  box-shadow: 0 16px 40px rgba(21, 27, 55, 0.08);
+}
+.cs-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cs-carousel__nav-row {
+  display: flex;
+  align-self: flex-end;
+  gap: 0;
+}
+.cs-carousel__nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid var(--c-border);
+  background: #fff;
+  color: var(--c-text);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.cs-carousel__nav:hover {
+  background: var(--c-accent);
+  border-color: var(--c-accent);
+  color: #fff;
+}
+.cs-carousel__nav svg { width: 20px; height: 20px; }
+.cs-carousel__nav--prev { margin-right: -8px; }
+
 /* ---- Tablet overview ----------------------------------------------------*/
 .cs-tablet-grid {
   display: grid;

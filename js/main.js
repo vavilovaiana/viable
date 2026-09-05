@@ -63,7 +63,8 @@
     // (e.g. Presentation -> RU prototype, CV -> RU resume file)
     var attrSwaps = [
       { data: "data-ru-href", attr: "href" },
-      { data: "data-ru-download", attr: "download" }
+      { data: "data-ru-download", attr: "download" },
+      { data: "data-ru-aria-label", attr: "aria-label" }
     ];
     attrSwaps.forEach(function (swap) {
       document.querySelectorAll("[" + swap.data + "]").forEach(function (el) {
@@ -110,4 +111,31 @@
       applyLanguage("ru");
     }
   }
+
+  // Simple scroll-snap carousel (prev/next buttons scroll by one slide width)
+  document.querySelectorAll(".cs-carousel").forEach(function (carousel) {
+    var track = carousel.querySelector(".cs-carousel__track");
+    var prevBtn = carousel.querySelector(".cs-carousel__nav--prev");
+    var nextBtn = carousel.querySelector(".cs-carousel__nav--next");
+    if (!track) return;
+
+    function slideWidth() {
+      var slide = track.querySelector(".cs-carousel__slide");
+      if (!slide) return track.clientWidth;
+      var style = window.getComputedStyle(track);
+      var gap = parseFloat(style.columnGap || style.gap || "0") || 0;
+      return slide.getBoundingClientRect().width + gap;
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        track.scrollBy({ left: -slideWidth(), behavior: "smooth" });
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        track.scrollBy({ left: slideWidth(), behavior: "smooth" });
+      });
+    }
+  });
 })();
