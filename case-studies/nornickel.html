@@ -230,32 +230,126 @@
     </div>
   </section>
 
-  <!-- Design system banner -->
-  <section class="cs-section cs-section--tight cs-ds-banner">
-    <div class="cs-ds-banner__frame">
-      <img src="../assets/img/case-studies/nornickel/design-system-tiles.png" alt="Underlying UI kit: buttons, typography, pickers, colors and components" loading="lazy">
-    </div>
-    <p class="cs-ds-banner__caption" data-ru="Заглянем во внутреннюю UI-кит-библиотеку">A glimpse into the underlying UI kit</p>
-  </section>
-
   <!-- Design System Showcase -->
-  <section class="cs-section cs-section--tight" id="cs-design-system">
-    <div class="cs-ds-showcase-head">
-      <span class="label-pill" data-ru="Интеграция дизайн-системы">Design System Integration</span>
-      <h2 data-ru="Продуманный промышленный UI-кит">Curated Industrial UI Kit</h2>
-      <p data-ru="Тяжёлая промышленность требует исключительной согласованности. Мы спроектировали несколько UI-фреймворков, оптимизированных для быстрого сканирования, статусной цветовой кодировки и контрастных элементов форм.">Heavy industries require extreme consistency. We designed multiple UI frameworks optimized for rapid scanning, specific color statuses, and high-contrast form controls.</p>
+  <section class="cs-ds-section" id="cs-design-system">
+    <div class="cs-ds-section__bg">
+      <img src="../assets/img/case-studies/nornickel/design-system-tiles.png" alt="" aria-hidden="true" loading="lazy">
     </div>
+    <div class="cs-ds-section__inner">
+      <div class="cs-ds-head">
+        <span class="label-pill label-pill--dark" data-ru="Интеграция дизайн-системы">Design System Integration</span>
+        <h2 data-ru="Продуманный промышленный UI-кит">Curated Industrial UI Kit</h2>
+        <p data-ru="Тяжёлая промышленность требует исключительной согласованности. Мы спроектировали несколько UI-фреймворков, оптимизированных для быстрого сканирования, статусной цветовой кодировки и контрастных элементов форм.">Heavy industries require extreme consistency. We designed multiple UI frameworks optimized for rapid scanning, specific color statuses, and high-contrast form controls.</p>
+      </div>
 
-    <div class="cs-marquee">
-      <div class="cs-marquee__track">
-        <div class="cs-marquee__item"><img src="../assets/img/case-studies/nornickel/design-system-1.png" alt=""></div>
-        <div class="cs-marquee__item"><img src="../assets/img/case-studies/nornickel/design-system-2.png" alt=""></div>
-        <div class="cs-marquee__item"><img src="../assets/img/case-studies/nornickel/design-system-3.png" alt=""></div>
-        <div class="cs-marquee__item"><img src="../assets/img/case-studies/nornickel/design-system-4.png" alt=""></div>
-        <div class="cs-marquee__item" aria-hidden="true"><img src="../assets/img/case-studies/nornickel/design-system-1.png" alt=""></div>
-        <div class="cs-marquee__item" aria-hidden="true"><img src="../assets/img/case-studies/nornickel/design-system-2.png" alt=""></div>
-        <div class="cs-marquee__item" aria-hidden="true"><img src="../assets/img/case-studies/nornickel/design-system-3.png" alt=""></div>
-        <div class="cs-marquee__item" aria-hidden="true"><img src="../assets/img/case-studies/nornickel/design-system-4.png" alt=""></div>
+      <!-- Typography -->
+      <div class="cs-ds-panel">
+        <h3>Roboto</h3>
+        <div class="cs-ds-type-grid">
+          <div class="cs-ds-type-tile"><span class="cs-ds-type-aa">Aa</span><span class="cs-ds-type-meta"><span>Roboto</span><span>Regular</span></span></div>
+          <div class="cs-ds-type-tile"><span class="cs-ds-type-aa" style="font-weight:500;">Aa</span><span class="cs-ds-type-meta"><span>Roboto</span><span>Medium</span></span></div>
+          <div class="cs-ds-type-tile"><span class="cs-ds-type-aa" style="font-weight:600;">Aa</span><span class="cs-ds-type-meta"><span>Roboto</span><span>SemiBold</span></span></div>
+          <div class="cs-ds-type-tile"><span class="cs-ds-type-aa" style="font-weight:700;">Aa</span><span class="cs-ds-type-meta"><span>Roboto</span><span>Bold</span></span></div>
+          <div class="cs-ds-type-tile"><span class="cs-ds-type-aa" style="font-stretch:condensed;">Aa</span><span class="cs-ds-type-meta"><span>Roboto</span><span data-ru="Condensed Regular">Condensed Regular</span></span></div>
+          <div class="cs-ds-type-tile"><span class="cs-ds-type-aa" style="font-stretch:condensed;font-weight:500;">Aa</span><span class="cs-ds-type-meta"><span>Roboto</span><span data-ru="Condensed Medium">Condensed Medium</span></span></div>
+          <div class="cs-ds-type-tile"><span class="cs-ds-type-aa" style="font-stretch:condensed;font-weight:600;">Aa</span><span class="cs-ds-type-meta"><span>Roboto</span><span data-ru="Condensed SemiBold">Condensed SemiBold</span></span></div>
+          <div class="cs-ds-type-tile"><span class="cs-ds-type-aa" style="font-stretch:condensed;font-weight:700;">Aa</span><span class="cs-ds-type-meta"><span>Roboto</span><span data-ru="Condensed Bold">Condensed Bold</span></span></div>
+        </div>
+      </div>
+
+      <!-- Component cards -->
+      <div class="cs-ds-cards-grid">
+        <div class="cs-ds-card">
+          <h3 data-ru="Кнопки действий">Action Buttons</h3>
+          <span class="cs-ds-btn-mock cs-ds-btn-mock--primary" data-ru="Основное действие">Primary Action</span>
+          <span class="cs-ds-btn-mock cs-ds-btn-mock--secondary" data-ru="Второстепенное действие">Secondary Bordered</span>
+          <span class="cs-ds-btn-mock cs-ds-btn-mock--disabled" data-ru="Недоступное действие">Disabled Action</span>
+        </div>
+
+        <div class="cs-ds-card">
+          <h3 data-ru="Статусы системы">System Statuses</h3>
+          <span class="cs-ds-status-row cs-ds-status-row--danger"><i class="cs-ds-status-row__dot"></i><span data-ru="Авария остановки конвейера">Conveyor Stall Alarm</span></span>
+          <span class="cs-ds-status-row cs-ds-status-row--warning"><i class="cs-ds-status-row__dot"></i><span data-ru="Предупреждение об отдыхе оператора">Operator Rest Warning</span></span>
+          <span class="cs-ds-status-row cs-ds-status-row--success"><i class="cs-ds-status-row__dot"></i><span data-ru="Конвейер работает штатно">Conveyor Running normal</span></span>
+        </div>
+
+        <div class="cs-ds-card">
+          <h3 data-ru="Фильтры данных">Data Filters</h3>
+          <dl class="cs-ds-filter">
+            <dt data-ru="ID ствола">Shaft ID</dt>
+            <dd data-ru="Ствол «Светлый» №3">Svetly Shaft #3</dd>
+          </dl>
+          <dl class="cs-ds-filter">
+            <dt data-ru="Фильтр сортности руды">Ore Grade Filter</dt>
+            <dd data-ru="Высокосортный медно-никелевый">High-Grade Copper Nickel</dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Equipment status cards -->
+      <div class="cs-ds-equipment-grid">
+        <div class="cs-ds-equipment-card cs-ds-equipment-card--blue">
+          <div class="cs-ds-equipment-card__top">
+            <span class="cs-ds-equipment-card__icon"><img src="../assets/img/icons/topology.svg" alt="" width="22" height="22"></span>
+            <span>
+              <span class="cs-ds-equipment-card__title">Логистический комплекс</span><br>
+              <span class="cs-ds-equipment-card__subtitle">CAT R1700 №802</span>
+            </span>
+          </div>
+          <span class="cs-ds-equipment-card__route"><img src="../assets/img/icons/map-pin.svg" alt="" width="13" height="13">СПБ_КАМ-07-30-1-21 → СПБ_КАМ-07-30-1-21-2</span>
+          <div class="cs-ds-equipment-card__bottom">
+            <span></span>
+            <span class="cs-ds-equipment-card__value">1000 <span data-ru="т.">t</span></span>
+          </div>
+        </div>
+
+        <div class="cs-ds-equipment-card cs-ds-equipment-card--amber">
+          <div class="cs-ds-equipment-card__top">
+            <span class="cs-ds-equipment-card__icon"><img src="../assets/img/icons/drill.svg" alt="" width="22" height="22"></span>
+            <span>
+              <span class="cs-ds-equipment-card__title" data-ru="Бурение">Drilling</span><br>
+              <span class="cs-ds-equipment-card__subtitle">CAT R1700 №802</span>
+            </span>
+          </div>
+          <span class="cs-ds-equipment-card__route"><img src="../assets/img/icons/map-pin.svg" alt="" width="13" height="13">СПБ_КАМ-07-30-1-21 → СПБ_КАМ-07-30-1-21-2</span>
+          <div class="cs-ds-equipment-card__bottom">
+            <span></span>
+            <span class="cs-ds-equipment-card__value">1000 <span data-ru="т.">t</span></span>
+          </div>
+        </div>
+
+        <div class="cs-ds-equipment-card cs-ds-equipment-card--green">
+          <div class="cs-ds-equipment-card__top">
+            <span class="cs-ds-equipment-card__icon"><img src="../assets/img/icons/wind.svg" alt="" width="22" height="22"></span>
+            <span>
+              <span class="cs-ds-equipment-card__title" data-ru="Проветривание">Ventilation</span><br>
+              <span class="cs-ds-equipment-card__subtitle">CAT R1700 №802</span>
+            </span>
+          </div>
+          <span class="cs-ds-equipment-card__route"><img src="../assets/img/icons/map-pin.svg" alt="" width="13" height="13">СПБ_КАМ-07-30-1-21 → СПБ_КАМ-07-30-1-21-2</span>
+          <div class="cs-ds-equipment-card__bottom">
+            <span></span>
+            <span class="cs-ds-equipment-card__value">1000 <span data-ru="т.">t</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rule / legend builder panel -->
+      <div class="cs-ds-panel cs-ds-legend">
+        <div class="cs-ds-legend-tabs">
+          <span class="cs-ds-legend-tab is-active" data-ru="Вид 3D">3D View</span>
+          <span class="cs-ds-legend-tab" data-ru="Срез 2D">2D Section</span>
+          <span class="cs-ds-legend-tab" data-ru="Проекция 2D">2D Projection</span>
+        </div>
+        <div class="cs-ds-legend-body">
+          <div class="cs-ds-legend-preview"></div>
+          <div class="cs-ds-legend-rows">
+            <div class="cs-ds-legend-row"><span data-ru="Условие правила">Rule condition</span><span data-ru="Элемент = «Подошва»">Element = "Sole"</span></div>
+            <div class="cs-ds-legend-row"><span data-ru="Цвет">Color</span><span class="cs-ds-legend-swatch"><i></i>#FF4D4F</span></div>
+            <div class="cs-ds-legend-row"><span data-ru="Толщина">Thickness</span><span>1 px</span></div>
+            <div class="cs-ds-legend-row"><span data-ru="Отображение метки">Label display</span><span data-ru="Выкл.">Off</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
