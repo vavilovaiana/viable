@@ -112,29 +112,95 @@
     }
   }
 
-  // Simple scroll-snap carousel (prev/next buttons scroll by one slide width)
+  // Infinite-loop scroll-snap carousel. The track starts with only the real
+  // slides; on init we clone the whole real set once before and once after
+  // it (real slides stay in the middle third), so there is always at least
+  // one full set's worth of buffer on each side. That buffer has to be wide
+  // enough that the browser never clamps scrollLeft before we can reach a
+  // clone — a single cloned slide isn't enough once more than one slide is
+  // visible at a time, which was causing the carousel to get stuck at the
+  // last real slide. Once a scroll (button click or manual drag) settles on
+  // a clone, the track jumps instantly (no animation) to the matching real
+  // slide so the loop looks seamless in both directions.
   document.querySelectorAll(".cs-carousel").forEach(function (carousel) {
     var track = carousel.querySelector(".cs-carousel__track");
     var prevBtn = carousel.querySelector(".cs-carousel__nav--prev");
     var nextBtn = carousel.querySelector(".cs-carousel__nav--next");
     if (!track) return;
 
-    function slideWidth() {
-      var slide = track.querySelector(".cs-carousel__slide");
-      if (!slide) return track.clientWidth;
+    var realSlides = Array.prototype.slice.call(track.children);
+    var realCount = realSlides.length;
+    if (realCount < 2) return;
+
+    function cloneSet() {
+      return realSlides.map(function (slide) {
+        var clone = slide.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        clone.querySelectorAll("img").forEach(function (img) {
+          img.setAttribute("alt", "");
+        });
+        return clone;
+      });
+    }
+
+    var beforeClones = cloneSet();
+    var afterClones = cloneSet();
+
+    // Build final order: [beforeClones][realSlides][afterClones]
+    var frag = document.createDocumentFragment();
+    beforeClones.forEach(function (n) { frag.appendChild(n); });
+    realSlides.forEach(function (n) { frag.appendChild(n); });
+    afterClones.forEach(function (n) { frag.appendChild(n); });
+    track.appendChild(frag);
+
+    var slides = Array.prototype.slice.call(track.children);
+    var lastIndex = slides.length - 1;
+    var current = realCount; // first real slide sits right after the "before" clone block
+
+    function step() {
       var style = window.getComputedStyle(track);
       var gap = parseFloat(style.columnGap || style.gap || "0") || 0;
-      return slide.getBoundingClientRect().width + gap;
+      return slides[0].getBoundingClientRect().width + gap;
     }
+
+    function goTo(index, smooth) {
+      track.scrollTo({ left: index * step(), behavior: smooth ? "smooth" : "auto" });
+    }
+
+    goTo(current, false);
+
+    var settleTimer = null;
+    function onSettled() {
+      var idx = Math.round(track.scrollLeft / step());
+      if (idx < realCount) {
+        current = idx + realCount;
+        goTo(current, false);
+      } else if (idx >= realCount * 2) {
+        current = idx - realCount;
+        goTo(current, false);
+      } else {
+        current = idx;
+      }
+    }
+    track.addEventListener("scroll", function () {
+      clearTimeout(settleTimer);
+      settleTimer = setTimeout(onSettled, 120);
+    });
+
+    window.addEventListener("resize", function () {
+      goTo(current, false);
+    });
 
     if (prevBtn) {
       prevBtn.addEventListener("click", function () {
-        track.scrollBy({ left: -slideWidth(), behavior: "smooth" });
+        current -= 1;
+        goTo(current, true);
       });
     }
     if (nextBtn) {
       nextBtn.addEventListener("click", function () {
-        track.scrollBy({ left: slideWidth(), behavior: "smooth" });
+        current += 1;
+        goTo(current, true);
       });
     }
   });
