@@ -803,12 +803,26 @@
    rather than be cropped into another rounded card. */
 .cs-tablet-visual img { width: 100%; height: auto; display: block; }
 
-/* ---- Screens grid ------------------------------------------------------*/
-.cs-screens-grid {
+/* ---- Screens grid (dark, full-bleed per Figma) ---------------------------*/
+.cs-screens-section {
+  position: relative;
+  padding: 0 var(--side-pad);
+}
+.cs-screens-section__bg {
+  position: absolute;
+  inset: 0;
   border-radius: 24px;
   overflow: hidden;
   background: var(--c-dark-bg);
 }
+.cs-screens-section__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: var(--section-pad-y) 0;
+}
+.cs-section-title--dark { color: #fff; }
 .cs-screens-grid img { width: 100%; height: auto; display: block; }
 
 /* ---- Next case study CTA ------------------------------------------------*/
