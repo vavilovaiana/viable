@@ -755,7 +755,25 @@
 }
 .cs-carousel__nav svg { width: 20px; height: 20px; }
 
-/* ---- Tablet overview ----------------------------------------------------*/
+/* ---- Tablet overview (dark, full-bleed per Figma) ------------------------*/
+.cs-tablet-section {
+  position: relative;
+  padding: 0 var(--side-pad);
+}
+.cs-tablet-section__bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--c-dark-bg);
+}
+.cs-tablet-section__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: var(--section-pad-y) 0;
+}
 .cs-tablet-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -771,20 +789,18 @@
 .cs-tablet-text h3 {
   font-weight: 700;
   font-size: clamp(24px, 3vw, 32px);
-  color: var(--c-text);
+  color: #fff;
 }
 .cs-tablet-text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.65;
-  color: var(--c-text-secondary);
+  color: rgba(255, 255, 255, 0.72);
 }
-.cs-tablet-visual {
-  border-radius: 24px;
-  overflow: hidden;
-  background: var(--c-dark-bg);
-  border: 1px solid var(--c-border-mid);
-}
+/* No container/rounding/clipping here on purpose — the source photo already
+   includes the tablet's own rugged casing full-bleed with a transparent
+   backdrop, so it should sit directly on the dark section like in Figma
+   rather than be cropped into another rounded card. */
 .cs-tablet-visual img { width: 100%; height: auto; display: block; }
 
 /* ---- Screens grid ------------------------------------------------------*/
