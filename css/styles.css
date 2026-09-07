@@ -334,7 +334,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
   top: 0;
   width: 300px;
   height: 150px;
-  background: radial-gradient(closest-side, rgba(87, 92, 206, 0.18), rgba(87, 92, 206, 0) 72%);
+  background: radial-gradient(closest-side, rgba(94, 210, 175, 0.24), rgba(94, 210, 175, 0) 72%);
   filter: blur(30px);
   pointer-events: none;
 }
@@ -436,7 +436,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
   top: 100px;
   width: 240px;
   height: 500px;
-  background: radial-gradient(closest-side, rgba(87, 92, 206, 0.16), rgba(87, 92, 206, 0) 72%);
+  background: radial-gradient(closest-side, rgba(232, 121, 249, 0.22), rgba(232, 121, 249, 0) 72%);
   filter: blur(50px);
   pointer-events: none;
 }
