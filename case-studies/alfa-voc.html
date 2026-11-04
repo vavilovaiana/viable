@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-ru="Альфа-Банк «Голос клиента» — кейс | Яна Вавилова">Alfa-Bank Voice of Client — Case Study | Iana Vavilova</title>
+<meta name="description" content="Case study: redesign of Alfa-Bank’s Voice of Client platform — real-time customer ratings and tools for the experts who resolve negative feedback." data-ru="Кейс: редизайн платформы «Голос клиента» Альфа-Банка — оценки клиентов в реальном времени и инструменты для экспертов, которые отрабатывают негатив.">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<link rel="stylesheet" href="../css/case-alfa.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-ru="Перейти к содержимому">Skip to content</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="logo" aria-label="Iana Vavilova — home">
+      <img src="../assets/img/photos/logo.png" alt="Iana Vavilova logo" width="59" height="36">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <button class="main-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <div class="main-nav__links" id="navLinks">
+        <a href="../index.html#mission" data-ru="Обо мне">About me</a>
+        <a href="../index.html#case-studies" data-ru="Кейсы">Case studies</a>
+        <a href="../index.html#ai-tools" data-ru="Навыки">Skills</a>
+        <a href="../index.html#contacts" data-ru="Контакты">Contacts</a>
+        <div class="main-nav__buttons">
+          <button type="button" id="langToggle" class="tag tag--outline" data-ru="RU / EN" aria-label="Change language">EN / RU</button>
+          <a class="tag tag--accent" href="https://www.figma.com/proto/rudZk6rEIAjRQLwwJBsMRe/Viable_personal-brand?node-id=20007962-11445&amp;p=f&amp;t=sg4oWDETdWKKeh3u-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=1213%3A22987&amp;starting-point-node-id=20007962%3A11445" target="_blank" rel="noopener" data-ru="Презентация" data-ru-href="https://www.figma.com/proto/rudZk6rEIAjRQLwwJBsMRe/Viable_personal-brand?node-id=20007771-7284&amp;p=f&amp;t=vNckKan8vcx1uxIu-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=76%3A883&amp;starting-point-node-id=20007771%3A7284">Presentation</a>
+          <a class="tag tag--dark" href="../assets/cv/Iana-Vavilova-CV.pdf" download="Iana-Vavilova-CV.pdf" target="_blank" rel="noopener" data-ru="Резюме" data-ru-href="../assets/cv/Yana-Vavilova-CV-RU.pdf" data-ru-download="Yana-Vavilova-CV-RU.pdf">CV</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="cs-main">
+
+  <div class="cs-back-row">
+    <a class="cs-back-link" href="../index.html#case-studies">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span data-ru="Все кейсы">All case studies</span>
+    </a>
+  </div>
+
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="cs-hero__head">
+      <span class="badge al-badge" data-ru="FinTech · Внутренняя платформа">FinTech · Internal platform</span>
+      <h1 class="cs-hero__title" data-ru="Альфа-Банк: Голос клиента">Alfa-Bank: Voice of Client</h1>
+      <p class="cs-hero__subtitle" data-ru="Редизайн внутренней платформы, которая собирает оценки клиентов после каждого контакта с банком и помогает экспертам отрабатывать негатив. Цель — снизить отток и сделать банк привлекательнее для новых клиентов.">Redesign of the internal platform that collects customer ratings after every contact with the bank and helps experts resolve negative feedback. The goal: reduce churn and make the bank more attractive to new clients.</p>
+    </div>
+    <dl class="cs-meta-grid">
+      <div class="cs-meta-item"><dt data-ru="Компания">Company</dt><dd data-ru="Альфа-Банк, CX-команда">Alfa-Bank, CX team</dd></div>
+      <div class="cs-meta-item"><dt data-ru="Роль">Role</dt><dd data-ru="Продуктовый дизайнер">Product Designer</dd></div>
+      <div class="cs-meta-item"><dt data-ru="Платформа">Platform</dt><dd data-ru="Внутреннее веб-приложение + виджет оценки">Internal web app + rating widget</dd></div>
+      <div class="cs-meta-item"><dt data-ru="Год">Year</dt><dd>2021</dd></div>
+    </dl>
+    <div class="al-hero-visual">
+      <img src="../assets/img/case-studies/alfa-voc/hero.jpg" alt="Voice of Client platform: expert dashboard and rating widget" width="1440" height="900" loading="eager">
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="cs-section cs-section--tight" id="vc-results">
+    <span class="label-pill" data-ru="Результаты">Results</span>
+    <h2 class="cs-section-title" data-ru="Ключевые метрики после запуска VOC">Key metrics after the VOC launch</h2>
+    <div class="al-stats">
+      <div class="al-stat"><span class="al-stat__value">19,7<small data-ru="млн">mln</small></span><p data-ru="событий в год обрабатывает банк — на 12 млн больше, чем до платформы">events a year processed by the bank — 12 million more than before the platform</p></div>
+      <div class="al-stat"><span class="al-stat__value">2,6<small data-ru="млн">mln</small></span><p data-ru="положительных отзывов от клиентов банка">positive reviews from the bank’s clients</p></div>
+      <div class="al-stat"><span class="al-stat__value">3<small data-ru="мин">min</small></span><p data-ru="среднее время обработки обращения (было больше 60 минут)">average request processing time (down from over 60 minutes)</p></div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="cs-section" id="vc-problem">
+    <span class="label-pill" data-ru="Проблема">The problem</span>
+    <div class="al-two">
+      <div class="al-text">
+        <h3 data-ru="Неполная и запоздалая картина клиентского опыта">An incomplete, delayed picture of customer experience</h3>
+        <p data-ru="Часть информации о клиентах — из соцсетей, форумов и звонков — вообще не попадает в системы банка, а часть того, что попадает (письма, итоги звонков), никто не анализирует. Единого механизма контроля нет, и историю взаимодействий невозможно увидеть в одном месте.">Part of the information about clients — from social networks, forums and phone calls — never reaches the bank’s systems, and part of what does (emails, call outcomes) is never analysed. With no single control mechanism, the history of interactions can’t be seen in one place.</p>
+        <p data-ru="Коммуникация шла в основном через почту и звонки, обработка обращений была ручной, а статус обслуживания на каждом этапе — непрозрачным. В итоге банк замечал тренды в отношениях с клиентами слишком поздно.">Communication ran mostly through email and calls, request handling was manual, and service status at each stage was opaque. As a result the bank saw trends in customer relationships too late.</p>
+      </div>
+      <div class="cs-challenge-card">
+        <h3 data-ru="Цели">Objectives</h3>
+        <span class="cs-challenge-label" data-ru="Лучше знать клиента">Know the customer better</span>
+        <ul class="cs-challenge-list">
+          <li data-ru="Систематизировать управление информацией о клиентах.">Systematise customer information management.</li>
+          <li data-ru="Собирать данные из всех потоков банка с учётом сегмента, канала и ценности для банка.">Collect data from every bank stream, accounting for segment, channel and value to the bank.</li>
+          <li data-ru="Дать один простой интерфейс, где живут все данные о взаимодействиях.">Give one simple interface where all interaction data lives together.</li>
+          <li data-ru="Отвечать на вопросы бизнеса за 15 минут: сколько клиентов недовольны кредитными картами в этом месяце, какой тренд и почему.">Answer business questions within 15 minutes: how many clients are unhappy with credit cards this month, what’s the trend and why.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="al-cards">
+      <div class="al-card"><span class="al-card__label" data-ru="Для клиентов">For clients</span><h3 data-ru="Выше удовлетворённость, ниже отток.">Higher satisfaction, lower churn.</h3></div>
+      <div class="al-card"><span class="al-card__label" data-ru="Для сервиса">For service</span><h3 data-ru="Гарантированное время обработки, выше качество.">Guaranteed handling time, better quality.</h3></div>
+      <div class="al-card"><span class="al-card__label" data-ru="Для банка">For the bank</span><h3 data-ru="Ниже затраты, цифровой процесс.">Lower costs, a digital process.</h3></div>
+    </div>
+  </section>
+
+  <!-- Legacy -->
+  <section class="cs-section" id="vc-legacy">
+    <span class="label-pill" data-ru="Было">Before</span>
+    <div class="al-head">
+      <h2 class="al-section-title" data-ru="Старый «Голос клиента»">The legacy “Voice of Client”</h2>
+      <p data-ru="Цель редизайна — цельный дизайн-продукт, который помогает экспертам Отдела сохранения лояльности клиентов (ОСЛК) работать быстрее и лучше. Старый интерфейс — плотные таблицы и десятки фильтров без иерархии.">The redesign goal: a coherent design product that helps the Loyalty Retention Department (OSLK) experts work faster and better. The old interface was dense tables and dozens of filters with no hierarchy.</p>
+    </div>
+    <figure class="al-figure">
+      <div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/legacy-filters.jpg" alt="The old VoC list: a wall of filters above the data table" width="1600" height="899" loading="lazy"></div>
+      <figcaption data-ru="Список VoC до редизайна: фильтры занимают весь экран, а данные — где-то внизу.">The VoC list before the redesign: filters fill the screen while the data sits at the bottom.</figcaption>
+    </figure>
+    <ol class="al-numlist">
+      <li><span>1</span><b data-ru="Энтропия и непредсказуемость">Entropy and unpredictability</b></li>
+      <li><span>2</span><b data-ru="Плохая читаемость, устаревший UI">Poor legibility, dated UI</b></li>
+      <li><span>3</span><b data-ru="Нет ощущения приоритета">No sense of priority</b></li>
+      <li><span>4</span><b data-ru="Негибкость">Inflexibility</b></li>
+      <li><span>5</span><b data-ru="Визуальное качество">Visual quality</b></li>
+      <li><span>6</span><b data-ru="Нет цельности">No coherence</b></li>
+    </ol>
+  </section>
+
+  <!-- Process -->
+  <section class="cs-section cs-section--tight" id="vc-process">
+    <span class="label-pill" data-ru="Процесс">Process</span>
+    <div class="al-head">
+      <h2 class="al-section-title" data-ru="Человекоцентричный фреймворк">A human-centred framework</h2>
+      <p data-ru="Мы балансировали потребности людей, технологии и цели бизнеса. Я вела работу от стратегии до прототипа: UX-часть — исследование и структуру, и UI-часть — компоненты и финальные экраны.">We balanced people’s needs, technology and business goals. I led the work from strategy to prototype: the UX half — research and structure — and the UI half — components and final screens.</p>
+    </div>
+    <div class="al-steps">
+      <div class="al-step"><h3 data-ru="Стратегия">Strategy</h3><p data-ru="Изучение аудитории, требования">Audience study, requirements</p></div>
+      <div class="al-step"><h3 data-ru="Исследование">Research</h3><p data-ru="Онлайн- и офлайн-интервью, тесты">Online and offline interviews, tests</p></div>
+      <div class="al-step"><h3 data-ru="Структура">Structure</h3><p data-ru="Информационная архитектура, UJM, CJM">Information architecture, UJM, CJM</p></div>
+      <div class="al-step"><h3 data-ru="Вайрфреймы">Wireframes</h3><p data-ru="Базовый user flow, low-fi макеты">Base user flow, low-fi layouts</p></div>
+      <div class="al-step"><h3 data-ru="Компоненты">Components</h3><p data-ru="Сверка с гайдлайнами Альфа-Банка">Checked against Alfa-Bank guidelines</p></div>
+      <div class="al-step"><h3 data-ru="Макеты">Mockups</h3><p data-ru="Финальные экраны">Final screens</p></div>
+      <div class="al-step"><h3 data-ru="Прототип">Prototype</h3><p data-ru="Сопровождение разработки">Delivery tracking</p></div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section class="al-dark" id="vc-research">
+    <div class="al-dark__bg"></div>
+    <div class="al-dark__inner">
+      <span class="label-pill label-pill--dark" data-ru="Исследование">Research</span>
+      <div class="al-two">
+        <div class="al-text">
+          <h3 class="al-section-title" data-ru="Недели в колл-центре">Weeks inside the call centre</h3>
+          <p data-ru="Чтобы понять проблему, мы использовали эксперименты, опросы, анкеты и множество интервью. Основой стало полевое исследование: мы с командой несколько недель провели в колл-центрах — принимали звонки и обрабатывали обращения вместе с сотрудниками.">To understand the problem we used experiments, surveys, questionnaires and many interviews. The core was field research: the team and I spent several weeks in call centres, answering calls and processing requests alongside employees.</p>
+          <p data-ru="Мы фиксировали всё, что влияет на работу эксперта и время обработки жалобы, и расспрашивали руководителей, как распределяются задачи и считаются зарплата и мотивация, — чтобы сбалансировать нагрузку.">We recorded everything that affects an expert’s work and the time to handle a complaint, and interviewed managers about how tasks are assigned and how pay and incentives are calculated, to balance the workload.</p>
+        </div>
+        <figure class="al-figure">
+          <div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/field-research.jpg" alt="Field research in the call centre" width="1297" height="840" loading="lazy"></div>
+        </figure>
+      </div>
+      <div class="al-grid-2">
+        <div class="al-persona">
+          <span class="al-card__label" data-ru="Персона">Persona</span>
+          <h3 data-ru="Светлана, 35 — эксперт ОСЛК">Svetlana, 35 — OSLK expert</h3>
+          <p data-ru="Девять лет в Альфа-Банке: начинала в колл-центре, потом перешла в ОСЛК. Любит работать с негативом — успокоить самого злого клиента и услышать в ответ комплимент. Цель — стать руководителем отдела.">Nine years at Alfa-Bank: started in the call centre, then moved to OSLK. Enjoys working with negative feedback — calming the angriest caller and hearing a compliment back. Goal: become a department head.</p>
+          <blockquote data-ru="«Важно чувствовать, что тебя ценят и клиенты, и коллеги, — быть незаменимой и по-настоящему помогать людям».">“It matters to feel valued by both clients and colleagues — to be irreplaceable and genuinely help people.”</blockquote>
+        </div>
+        <div class="al-card">
+          <span class="al-card__label" data-ru="Главные проблемы с VOC">Main problems with VOC</span>
+          <ul>
+            <li data-ru="Количество обработанных за день обращений она считает вручную, на бумаге.">She logs the number of handled requests per day by hand, on paper.</li>
+            <li data-ru="После «Отложить» система не запоминает, когда вернуться к карточке.">After “Postpone” the system doesn’t record when to come back to the card.</li>
+            <li data-ru="Отчёт эксперта пишется долго — в Word.">The expert report takes ages — it’s written in Word.</li>
+            <li data-ru="Количество попыток дозвона не видно ни в карточке, ни в таблице задач.">The number of call attempts isn’t visible on the card or in the task table.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ideation -->
+  <section class="cs-section" id="vc-ideation">
+    <span class="label-pill" data-ru="Идеация">Ideation</span>
+    <h2 class="al-section-title" data-ru="Карты пути и архитектура">Journey maps and architecture</h2>
+    <div class="al-feature">
+      <figure class="al-figure">
+        <div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/ujm.jpg" alt="User journey map of the expert's main scenario" width="1600" height="2227" loading="lazy"></div>
+        <figcaption data-ru="UJM: основной сценарий эксперта в VOC — вход, изучение, обработка, результат.">UJM: the expert’s main VOC scenario — entry, study, processing, result.</figcaption>
+      </figure>
+      <div class="al-card">
+        <span class="al-card__label" data-ru="Что нужно решить">Issues to resolve</span>
+        <ul>
+          <li data-ru="Среднее время обработки обращения — больше 60 минут.">Average request processing time is over 60 minutes.</li>
+          <li data-ru="Нет надёжной базы для рекомендаций в реальном времени.">No reliable database for real-time recommendations.</li>
+          <li data-ru="Неудобная навигация для сотрудников.">Inconvenient navigation for employees.</li>
+          <li data-ru="Нет взаимодействия между подразделениями банка.">No collaboration between bank departments.</li>
+          <li data-ru="Мотивация и геймификация для клиентов и сотрудников.">Motivation and gamification for clients and employees.</li>
+          <li data-ru="Расчёт среднего плана сотрудников (KPI).">Calculating employees’ average plan (KPI).</li>
+          <li data-ru="Своевременные уведомления об изменениях в банке.">Timely notifications about changes at the bank.</li>
+          <li data-ru="Разделение задач по каналу, потоку и сложности.">Splitting tasks by channel, stream and complexity.</li>
+        </ul>
+      </div>
+    </div>
+    <figure class="al-figure">
+      <div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/cjm.jpg" alt="Customer journey map across channels" width="2000" height="1714" loading="lazy"></div>
+      <figcaption data-ru="CJM: действия клиента и банка по каналам — колл-центр, банкомат, отделение, сайт.">CJM: client and bank actions across channels — call centre, ATM, branch, website.</figcaption>
+    </figure>
+    <figure class="al-figure">
+      <div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/architecture.jpg" alt="Information architecture of the new VOC" width="2400" height="612" loading="lazy"></div>
+      <figcaption data-ru="Информационная архитектура нового VOC.">Information architecture of the new VOC.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Solution -->
+  <section class="cs-section cs-section--tight" id="vc-solution">
+    <span class="label-pill" data-ru="Решение">Solution</span>
+    <h2 class="al-section-title" data-ru="Оценки в реальном времени после каждого контакта">Real-time ratings after every contact</h2>
+    <div class="al-steps">
+      <div class="al-step"><p data-ru="Внешние системы отправляют в VOC событие после контакта клиента с банком.">External systems send VOC an event after a client contacts the bank.</p></div>
+      <div class="al-step"><p data-ru="VOC обрабатывает событие и отправляет клиенту push или SMS с опросом.">VOC processes the event and sends the client a push or SMS with a poll.</p></div>
+      <div class="al-step"><p data-ru="Клиент оценивает взаимодействие по 5-балльной шкале и выбирает, что понравилось или нет.">The client rates the interaction on a 5-point scale and picks what they liked or didn’t.</p></div>
+      <div class="al-step"><p data-ru="При оценке 1–3 эксперт ОСЛК перезванивает клиенту и решает вопрос.">For a 1–3 rating, an OSLK expert calls the client back and resolves the issue.</p></div>
+      <div class="al-step"><p data-ru="Итоги фиксируются, по ним считаются аналитика и рейтинг сотрудников.">Outcomes are logged, and analytics and employee ratings are calculated from them.</p></div>
+    </div>
+  </section>
+
+  <!-- Design -->
+  <section class="cs-section" id="vc-design">
+    <span class="label-pill" data-ru="Дизайн">Design</span>
+    <h2 class="al-section-title" data-ru="Ключевые экраны">Key screens</h2>
+
+    <div class="al-feature">
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/widget-modal.jpg" alt="Rating widget modal" width="1280" height="915" loading="lazy"></div></figure>
+      <div class="al-text">
+        <span class="al-card__label" data-ru="Клиент">Client</span>
+        <h3 data-ru="Виджет оценки">Rating widget</h3>
+        <p data-ru="Когда услуга оказана, клиента просят её оценить — опрос запускается автоматически после конкретной операции. Если не помогли, клиент выбирает, что пошло не так, и может оставить комментарий.">When a service is finished, the client is asked to rate it — triggered automatically after a specific operation. If it didn’t help, the client picks what went wrong and can leave a comment.</p>
+      </div>
+    </div>
+    <figure class="al-figure">
+      <div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/widget-flow.jpg" alt="Rating widget flow" width="2280" height="450" loading="lazy"></div>
+      <figcaption data-ru="Флоу виджета: оценка, причины и комментарий на сайте и в приложении.">Widget flow: rating, reasons and comment on the website and in the app.</figcaption>
+    </figure>
+
+    <div class="al-feature al-feature--reverse">
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/screen-dashboard.jpg" alt="Expert home screen: My performance" width="1104" height="1180" loading="lazy"></div></figure>
+      <div class="al-text">
+        <span class="al-card__label" data-ru="Эксперт">Expert</span>
+        <h3 data-ru="Главная: «Моя эффективность»">Home: “My performance”</h3>
+        <p data-ru="Эксперт сразу видит свои показатели за выбранный период и канал — обработанные обращения, с обратной связью, переведённые в офлайн, средняя оценка и эффективность. Ниже — важные новости и лента изменений в банке: новые хэштеги, сценарии и каналы.">The expert sees their numbers for the chosen period and channel at a glance — requests handled, with feedback, moved offline, average rating and efficiency. Below sit important news and a feed of changes at the bank: new hashtags, scenarios and channels.</p>
+      </div>
+    </div>
+
+    <div class="al-feature">
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/screen-tasks.jpg" alt="My tasks table" width="1366" height="1080" loading="lazy"></div></figure>
+      <div class="al-text">
+        <span class="al-card__label" data-ru="Эксперт">Expert</span>
+        <h3 data-ru="Мои задачи">My tasks</h3>
+        <p data-ru="Задачи разделены на «В работе», «Офлайн» и «Завершённые». В каждой строке — оценка, число звонков, канал и таймер до дедлайна, окрашенный по срочности. Строка раскрывается и показывает сценарий и заметки без открытия карточки.">Tasks are split into In progress, Offline and Completed. Each row shows the rating, number of calls, channel and a countdown to the deadline, coloured by urgency. A row expands to show the scenario and notes without opening the card.</p>
+      </div>
+    </div>
+
+    <div class="al-feature al-feature--reverse">
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/alfa-voc/screen-card.jpg" alt="VOC card screen" width="1366" height="1996" loading="lazy"></div></figure>
+      <div class="al-text">
+        <span class="al-card__label" data-ru="Эксперт">Expert</span>
+        <h3 data-ru="Карточка VOC">VOC card</h3>
+        <p data-ru="Всё для звонка на одном экране: данные клиента, событие и оценка, история звонков и действий, чат с клиентом и заметки. Справа — переходы в 14 внешних систем вместо поиска по закладкам. Основные действия — «Уведомить», «Офлайн», «Отложить», «Завершить» — всегда наверху.">Everything for the call on one screen: client data, the event and rating, call and action history, the chat with the client and notes. On the right — shortcuts to 14 external systems instead of hunting through bookmarks. The main actions — Notify, Offline, Postpone, Finish — stay at the top.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roles -->
+  <section class="cs-section cs-section--tight" id="vc-roles">
+    <span class="label-pill" data-ru="Ролевая модель">Role model</span>
+    <h2 class="al-section-title" data-ru="Кто работает в VOC">Who works in VOC</h2>
+    <div class="al-grid-2">
+      <div class="al-card">
+        <h3 data-ru="Эксперт">Expert</h3>
+        <ul>
+          <li data-ru="Звонит клиентам">Calls clients</li>
+          <li data-ru="Выбирает категорию и подкатегорию жалобы">Picks the complaint category and subcategory</li>
+          <li data-ru="Выбирает категорию из мастер-справочника">Picks a category from the master directory</li>
+          <li data-ru="Заполняет отчёт эксперта в VOC">Fills in the expert report in VOC</li>
+          <li data-ru="Работает со смежными подразделениями над решением вопроса">Works with related departments to solve the issue</li>
+        </ul>
+      </div>
+      <div class="al-card">
+        <h3 data-ru="Руководитель">Manager</h3>
+        <ul>
+          <li data-ru="Контролирует очередь задач">Controls the task queue</li>
+          <li data-ru="Отчитывается об эффективности отдела">Reports on department performance</li>
+          <li data-ru="Следит за качеством работы экспертов ОСЛК">Monitors the quality of OSLK experts’ work</li>
+          <li data-ru="Управляет нагрузкой отдела">Manages the department’s workload</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testing -->
+  <section class="al-dark" id="vc-testing">
+    <div class="al-dark__bg"></div>
+    <div class="al-dark__inner">
+      <span class="label-pill label-pill--dark" data-ru="Тестирование">Testing</span>
+      <div class="al-head">
+        <h2 class="al-section-title" data-ru="Гипотезы вместо споров в переговорке">Hypotheses, not meeting-room debates</h2>
+        <p data-ru="Вместо дизайна на интуиции мы собрали бэклог гипотез и проверяли их с экспертами. Примеры:">Instead of designing on intuition, we built a backlog of hypotheses and tested them with experts. Examples:</p>
+      </div>
+      <div class="al-cards">
+        <div class="al-card"><span class="al-card__label" data-ru="Информация">Information</span><ul><li data-ru="В карточке не хватает данных для подготовки к звонку.">The card lacks the data needed to prepare for a call.</li><li data-ru="Эксперту нужно видеть число звонков перед следующим звонком.">The expert needs to see the call count before the next call.</li></ul></div>
+        <div class="al-card"><span class="al-card__label" data-ru="Интерпретация">Interpretation</span><ul><li data-ru="Пользователи не понимают, как приоритизировать задачи с текущими компонентами.">Users don’t understand how to prioritise tasks with the existing components.</li><li data-ru="Комментарии вместо оценки система считывает неверно.">Comments instead of a rating are misread by the system.</li></ul></div>
+        <div class="al-card"><span class="al-card__label" data-ru="UI / заметность">UI / visibility</span><ul><li data-ru="Статус задачи неочевиден.">Task status is unclear.</li><li data-ru="Кнопка звонка должна быть зелёной иконкой.">The call button should be a green icon.</li><li data-ru="Непонятно, как скопировать данные из карточки.">It’s unclear how to copy data from the card.</li></ul></div>
+        <div class="al-card"><span class="al-card__label" data-ru="UX / архитектура">UX / architecture</span><ul><li data-ru="Карточки читаются лучше без аккордеонов.">Cards read better without accordions.</li><li data-ru="Пользователю не нужны персональные данные клиента.">The user doesn’t need the client’s personal data.</li></ul></div>
+        <div class="al-card"><span class="al-card__label" data-ru="Инклюзивность">Inclusiveness</span><ul><li data-ru="Блокам нужно больше контраста.">Blocks need more contrast.</li><li data-ru="У каждого статуса — свой цвет.">Every status gets its own colour.</li></ul></div>
+        <div class="al-card"><span class="al-card__label" data-ru="Интеграции">Integration</span><ul><li data-ru="Проверка орфографии.">Spell checker.</li><li data-ru="Интеграция с сервисом колл-центра.">Call-centre service integration.</li><li data-ru="Функции Microsoft внутри VOC вместо внешнего ПО.">Microsoft functions inside VOC instead of external software.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA back to portfolio -->
+  <section class="cs-section cs-section--tight">
+    <div class="cs-cta">
+      <p data-ru="Хотите узнать больше об этом проекте или обсудить сотрудничество?">Want to learn more about this project or discuss a collaboration?</p>
+      <a class="tag tag--accent" href="../index.html#contacts" data-ru="Связаться со мной">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="contacts" id="contacts">
+    <div class="contacts__header">
+      <div class="contacts__title-row">
+        <h2 data-ru="Давайте общаться!">Let's stay in touch!</h2>
+        <span class="smiley-bubble smiley-bubble--card" aria-hidden="true"><img src="../assets/img/icons/smile.svg" alt="" width="24" height="24"></span>
+      </div>
+      <p data-ru="Я всегда открыта для новых проектов, долгосрочного сотрудничества и классных идей. Свяжитесь со мной любым удобным способом.">I'm always open to new projects, long-term collaborations, and exciting ideas. Feel free to reach out through any channel.</p>
+    </div>
+
+    <div class="contact-cards">
+      <a class="contact-card" href="https://t.me/viable" target="_blank" rel="noopener">
+        <span class="contact-card__icon contact-card__icon--telegram"><img src="../assets/img/icons/telegram.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label">Telegram</span>
+          <span class="contact-card__value">@viable</span>
+        </span>
+      </a>
+      <a class="contact-card" href="https://wa.me/34607944458" data-ru-href="https://wa.me/79312444104" target="_blank" rel="noopener">
+        <span class="contact-card__icon contact-card__icon--whatsapp"><img src="../assets/img/icons/whatsapp.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label">WhatsApp</span>
+          <span class="contact-card__value" data-ru="+7 931 2444104">+34 607 944 458</span>
+        </span>
+      </a>
+      <a class="contact-card" href="mailto:vavilovaiana@gmail.com">
+        <span class="contact-card__icon contact-card__icon--email"><img src="../assets/img/icons/mail.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label" data-ru="Электронная почта">Email</span>
+          <span class="contact-card__value">vavilovaiana@gmail.com</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year">2026</span> <span data-ru="Яна Вавилова. Продуктовый дизайнер.">Yana Vavilova. Product Designer.</span></p>
+  <p data-ru="В центре всего, что я создаю — люди.">People are at the center of everything.</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

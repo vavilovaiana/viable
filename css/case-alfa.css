@@ -1,0 +1,394 @@
+/* ==========================================================================
+   Case studies: Alfa-Bank VOC + Alfa-Bank EMP  (prefix: al-)
+   Loaded after styles.css + case-study.css
+   ========================================================================== */
+
+:root {
+  --al-red: #ef3124;
+  --al-red-soft: rgba(239, 49, 36, 0.1);
+  --al-navy: #0b1f35;
+  --al-navy-2: #13304f;
+}
+
+.badge.al-badge { background: var(--al-red-soft); color: var(--al-red); }
+
+/* ---- Hero visual ------------------------------------------------------ */
+.al-hero-visual {
+  border-radius: 32px;
+  overflow: hidden;
+  background: var(--al-navy);
+}
+.al-hero-visual img { width: 100%; height: auto; display: block; }
+
+/* ---- Common text blocks ------------------------------------------------ */
+.al-head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 880px;
+}
+.al-head p,
+.al-text p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--c-text-secondary);
+}
+.al-text { display: flex; flex-direction: column; gap: 16px; }
+.al-text h3 { font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.3; }
+
+.al-two {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+}
+
+/* ---- Stats ------------------------------------------------------------- */
+.al-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.al-stat {
+  padding: 32px;
+  border-radius: 24px;
+  background: var(--c-light-bg);
+  border: 1px solid var(--c-border-lav);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.al-stat__value {
+  font-weight: 800;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1;
+  color: var(--al-red);
+}
+.al-stat__value small { font-size: 0.4em; font-weight: 700; margin-left: 6px; color: var(--c-text); }
+.al-stat p { font-size: 15px; line-height: 1.55; color: var(--c-text-secondary); }
+
+/* ---- Small cards grid --------------------------------------------------- */
+.al-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.al-cards--4 { grid-template-columns: repeat(4, 1fr); }
+.al-cards--5 { grid-template-columns: repeat(5, 1fr); }
+.al-card {
+  padding: 24px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--c-border-lav);
+  box-shadow: 0 8px 24px rgba(21, 27, 55, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.al-card__label {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--al-red);
+}
+.al-card h3 { font-weight: 700; font-size: 18px; line-height: 1.35; }
+.al-card p { font-size: 14.5px; line-height: 1.55; color: var(--c-text-secondary); }
+.al-card ul { display: flex; flex-direction: column; gap: 8px; }
+.al-card li { font-size: 14.5px; line-height: 1.5; color: var(--c-text-secondary); padding-left: 16px; position: relative; }
+.al-card li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--al-red); }
+
+/* ---- Numbered list (problems) ----------------------------------------- */
+.al-numlist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.al-numlist--5 { grid-template-columns: repeat(5, 1fr); }
+.al-numlist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--c-light-bg);
+  border: 1px solid var(--c-border-lav);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.al-numlist li span {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--al-red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ---- Steps (process / solution) ----------------------------------------- */
+.al-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  counter-reset: al-step;
+}
+.al-step {
+  counter-increment: al-step;
+  padding: 20px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid var(--c-border-lav);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.al-step::before {
+  content: counter(al-step, decimal-leading-zero);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--al-red);
+}
+.al-step h3 { font-weight: 700; font-size: 16px; }
+.al-step p { font-size: 14px; line-height: 1.5; color: var(--c-text-secondary); }
+
+/* ---- Figures ------------------------------------------------------------ */
+.al-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+.al-figure__img {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--c-border-lav);
+  background: #fff;
+}
+.al-figure__img img { width: 100%; height: auto; display: block; }
+.al-figure figcaption { font-size: 14px; line-height: 1.5; color: var(--c-text-muted); }
+
+.al-figure--narrow { max-width: 760px; }
+
+/* ---- Feature rows (image + text) --------------------------------------- */
+.al-feature {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
+}
+.al-feature--reverse > :first-child { order: 2; }
+.al-feature .al-text p { max-width: 520px; }
+
+/* ---- Dark section ------------------------------------------------------- */
+.al-dark {
+  position: relative;
+  padding: 0 var(--side-pad);
+}
+.al-dark__bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background:
+    radial-gradient(55% 60% at 100% 0%, rgba(239, 49, 36, 0.28), transparent 70%),
+    var(--al-navy);
+}
+.al-dark__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: var(--section-pad-y) 0;
+}
+.al-dark .al-head h2,
+.al-dark .al-text h3,
+.al-dark h3 { color: #fff; }
+.al-dark .al-head p,
+.al-dark .al-text p { color: rgba(255, 255, 255, 0.75); }
+.al-dark .al-card { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.12); box-shadow: none; }
+.al-dark .al-card h3 { color: #fff; }
+.al-dark .al-card p, .al-dark .al-card li { color: rgba(255, 255, 255, 0.75); }
+.al-dark .al-figure__img { border-color: rgba(255, 255, 255, 0.12); }
+.al-dark .al-figure figcaption { color: rgba(255, 255, 255, 0.6); }
+.al-dark .al-step { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.12); }
+.al-dark .al-step h3 { color: #fff; }
+.al-dark .al-step p { color: rgba(255, 255, 255, 0.72); }
+.al-dark .al-quote { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.12); color: #fff; }
+
+.al-section-title { font-weight: 700; font-size: clamp(28px, 4vw, 48px); line-height: 1.15; }
+
+/* ---- Persona ------------------------------------------------------------ */
+.al-persona {
+  padding: 32px;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid var(--c-border-lav);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.al-persona h3 { font-weight: 700; font-size: 22px; color: var(--c-text); }
+.al-persona p { font-size: 15px; line-height: 1.6; color: var(--c-text-secondary); }
+.al-persona blockquote {
+  margin: 0;
+  padding-left: 16px;
+  border-left: 3px solid var(--al-red);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--c-text);
+}
+
+/* ---- Phones ------------------------------------------------------------- */
+.al-phones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.al-phone { display: flex; flex-direction: column; gap: 12px; margin: 0; }
+.al-phone__screen {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 6px solid #10151c;
+  background: #fff;
+  max-height: 560px;
+  box-shadow: 0 16px 36px rgba(11, 31, 53, 0.18);
+}
+.al-phone__screen img { width: 100%; height: auto; display: block; }
+.al-phone figcaption { font-size: 14px; line-height: 1.45; color: var(--c-text-secondary); }
+.al-phone figcaption strong {
+  display: block;
+  font-size: 11.5px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--al-red);
+  margin-bottom: 4px;
+}
+.al-phones--old .al-phone__screen { border-color: #c3cad5; box-shadow: none; }
+
+/* ---- Lifecycle stages ---------------------------------------------------- */
+.al-stages {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+}
+.al-stage {
+  padding: 16px 14px;
+  border-radius: 14px;
+  background: var(--c-light-bg);
+  border: 1px solid var(--c-border-lav);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.35;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.al-stage span { font-size: 12px; color: var(--c-text-muted); font-weight: 700; }
+.al-stage--on { background: var(--al-red); border-color: var(--al-red); color: #fff; }
+.al-stage--on span { color: rgba(255, 255, 255, 0.8); }
+
+/* ---- Quotes (user stories) ---------------------------------------------- */
+.al-quotes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.al-quote {
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid var(--c-border-lav);
+  font-size: 15px;
+  line-height: 1.55;
+  position: relative;
+}
+.al-quote::before {
+  content: "“";
+  display: block;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 0.8;
+  color: var(--al-red);
+  margin-bottom: 6px;
+}
+
+/* ---- Needs (5 things) ---------------------------------------------------- */
+.al-needs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.al-need {
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--al-navy);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.al-need span:first-child { font-size: 13px; font-weight: 700; color: var(--al-red); }
+
+/* ---- Roadmap ------------------------------------------------------------ */
+.al-roadmap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.al-roadmap__col {
+  padding: 24px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--c-border-lav);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.al-roadmap__col h3 { font-weight: 800; font-size: 22px; color: var(--al-navy); }
+.al-roadmap__col li { font-size: 15px; line-height: 1.45; color: var(--c-text-secondary); }
+.al-tag-must {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: var(--al-red-soft);
+  color: var(--al-red);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.al-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+
+/* ---- Responsive ---------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .al-cards--5, .al-needs, .al-numlist--5 { grid-template-columns: repeat(3, 1fr); }
+  .al-stages { grid-template-columns: repeat(4, 1fr); }
+  .al-roadmap { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .al-two, .al-feature, .al-grid-2 { grid-template-columns: 1fr; }
+  .al-feature--reverse > :first-child { order: 0; }
+  .al-stats, .al-cards, .al-cards--4, .al-numlist, .al-quotes { grid-template-columns: 1fr; }
+  .al-cards--5, .al-needs, .al-numlist--5 { grid-template-columns: repeat(2, 1fr); }
+  .al-stages { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .al-cards--5, .al-needs, .al-numlist--5, .al-roadmap { grid-template-columns: 1fr; }
+  .al-phones { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .al-phone__screen { border-width: 4px; border-radius: 20px; max-height: 420px; }
+}
+
+/* ---- Fixes ---------------------------------------------------------------- */
+.cs-section > .label-pill,
+.al-dark__inner > .label-pill { align-self: flex-start; }
+.al-numlist, .al-card ul, .al-roadmap__col ul { list-style: none; padding: 0; margin: 0; }
+.al-roadmap__col ul { display: flex; flex-direction: column; gap: 8px; }
+.al-dark .al-phone figcaption { color: rgba(255, 255, 255, 0.75); }
