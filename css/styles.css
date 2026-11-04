@@ -474,6 +474,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
   box-shadow: 0 16px 32px rgba(21, 27, 55, 0.08);
 }
 .project-card--muted { background: var(--c-card-muted-bg); }
+.project-card--wide { grid-column: 1 / -1; }
+.project-card--wide .project-card__image { aspect-ratio: 1600 / 600; }
 .project-card__image {
   position: relative;
   aspect-ratio: 780 / 342;
