@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-ru="Норникель — планшет горняка | Яна Вавилова">Nornickel Mine Worker Tablet — Case Study | Iana Vavilova</title>
+<meta name="description" content="Case study: a task app for the touch monitor inside an underground mining vehicle at Nornickel." data-ru="Кейс: приложение задач для сенсорного монитора в кабине подземной горной техники Норникеля.">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<link rel="stylesheet" href="../css/case-tablet.css">
+</head>
+<body class="nt-page">
+
+<a class="skip-link" href="#main" data-ru="Перейти к содержимому">Skip to content</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="logo" aria-label="Iana Vavilova — home">
+      <img src="../assets/img/photos/logo.png" alt="Iana Vavilova logo" width="59" height="36">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <button class="main-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <div class="main-nav__links" id="navLinks">
+        <a href="../index.html#mission" data-ru="Обо мне">About me</a>
+        <a href="../index.html#case-studies" data-ru="Кейсы">Case studies</a>
+        <a href="../index.html#ai-tools" data-ru="Навыки">Skills</a>
+        <a href="../index.html#contacts" data-ru="Контакты">Contacts</a>
+        <div class="main-nav__buttons">
+          <button type="button" id="langToggle" class="tag tag--outline" data-ru="RU / EN" aria-label="Change language">EN / RU</button>
+          <a class="tag tag--accent" href="https://www.figma.com/proto/rudZk6rEIAjRQLwwJBsMRe/Viable_personal-brand?node-id=20007962-11445&amp;p=f&amp;t=sg4oWDETdWKKeh3u-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=1213%3A22987&amp;starting-point-node-id=20007962%3A11445" target="_blank" rel="noopener" data-ru="Презентация" data-ru-href="https://www.figma.com/proto/rudZk6rEIAjRQLwwJBsMRe/Viable_personal-brand?node-id=20007771-7284&amp;p=f&amp;t=vNckKan8vcx1uxIu-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=76%3A883&amp;starting-point-node-id=20007771%3A7284">Presentation</a>
+          <a class="tag tag--dark" href="../assets/cv/Iana-Vavilova-CV.pdf" download="Iana-Vavilova-CV.pdf" target="_blank" rel="noopener" data-ru="Резюме" data-ru-href="../assets/cv/Yana-Vavilova-CV-RU.pdf" data-ru-download="Yana-Vavilova-CV-RU.pdf">CV</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="cs-main">
+
+  <div class="cs-back-row nt-back-row">
+    <a class="cs-back-link" href="../index.html#case-studies">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span data-ru="Все кейсы">All case studies</span>
+    </a>
+    <a class="nt-parent-link" href="nornickel.html">
+      <span data-ru="Часть кейса">Part of</span>
+      <strong data-ru="Платформа ГГИС Норникель">Nornickel Mining Platform</strong>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="cs-hero__head">
+      <span class="badge" data-ru="Тяжёлая промышленность · Полевой UX">Heavy Industry · Field UX</span>
+      <h1 class="cs-hero__title" data-ru="Норникель: планшет горняка">Nornickel: Mine Worker Tablet App</h1>
+      <p class="cs-hero__subtitle" data-ru="Приложение задач для сенсорного монитора в кабине подземной техники: рабочий принимает задания, фиксирует выполненный объём и правит данные смены — под землёй, в перчатках, на ходу.">A task app for the touch monitor inside an underground mining vehicle: the worker accepts jobs, logs the volume done and corrects shift records — underground, in gloves, on the move.</p>
+    </div>
+
+    <dl class="cs-meta-grid">
+      <div class="cs-meta-item">
+        <dt data-ru="Компания">Company</dt>
+        <dd>RNT Group</dd>
+      </div>
+      <div class="cs-meta-item">
+        <dt data-ru="Кейс">Case Study</dt>
+        <dd data-ru="UX-исследование и UI планшета">UX Research &amp; Tablet UI</dd>
+      </div>
+      <div class="cs-meta-item">
+        <dt data-ru="Платформа">Platform</dt>
+        <dd data-ru="Astra OS (Linux), сенсорный монитор">Astra OS (Linux), touch monitor</dd>
+      </div>
+      <div class="cs-meta-item">
+        <dt data-ru="Демо">Demo</dt>
+        <dd data-ru="28 ноября 2024">Nov 28, 2024</dd>
+      </div>
+    </dl>
+
+    <div class="cs-hero__visual">
+      <img src="../assets/img/case-studies/nornickel-tablet/hero.jpg" alt="Rugged tablet showing the “My tasks” screen with a drilling task of 80 square metres, on a mining machine control panel" data-ru-alt="Защищённый планшет с экраном «Мои задания» и задачей на бурение 80 кв. м на фоне пульта горной машины" width="1600" height="900" loading="eager">
+    </div>
+  </section>
+
+  <!-- Design Team -->
+  <section class="cs-section cs-section--tight">
+    <span class="label-pill" data-ru="Команда">Design Team</span>
+    <h2 class="cs-section-title" data-ru="Кто работал над проектом">Who worked on it</h2>
+
+    <div class="nt-team-groups">
+      <div class="nt-team-group">
+        <h3 class="nt-team-group__label" data-ru="Основная команда">Core team</h3>
+        <div class="nt-team-grid">
+          <div class="cs-team-card nt-team-card--me">
+            <img src="../assets/img/case-studies/nornickel-tablet/team-iana.jpg" alt="Iana Vavilova" width="80" height="80" loading="lazy">
+            <span class="cs-team-card__name" data-ru="Яна Вавилова">Iana Vavilova</span>
+            <span class="cs-team-card__role" data-ru="Ведущий дизайнер">Lead Designer</span>
+          </div>
+          <div class="cs-team-card">
+            <img src="../assets/img/case-studies/nornickel-tablet/team-marat.jpg" alt="Marat Idrisov" width="80" height="80" loading="lazy">
+            <span class="cs-team-card__name" data-ru="Марат Идрисов">Marat Idrisov</span>
+            <span class="cs-team-card__role" data-ru="Дизайнер">Designer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nt-team-group">
+        <h3 class="nt-team-group__label" data-ru="Эксперты">Advisors</h3>
+        <div class="nt-team-grid">
+          <div class="cs-team-card">
+            <img src="../assets/img/case-studies/nornickel-tablet/team-yulia.jpg" alt="Yulia Fokina" width="80" height="80" loading="lazy">
+            <span class="cs-team-card__name" data-ru="Юлия Фокина">Yulia Fokina</span>
+            <span class="cs-team-card__role" data-ru="Эксперт по дизайн-системе">Advisor, design system</span>
+          </div>
+          <div class="cs-team-card">
+            <img src="../assets/img/case-studies/nornickel-tablet/team-ivan.jpg" alt="Ivan Mazai" width="80" height="80" loading="lazy">
+            <span class="cs-team-card__name" data-ru="Иван Мазай">Ivan Mazai</span>
+            <span class="cs-team-card__role" data-ru="Эксперт в предметной области">Advisor, domain expert</span>
+          </div>
+          <div class="cs-team-card">
+            <img src="../assets/img/case-studies/nornickel-tablet/team-aleksey.jpg" alt="Aleksey Rodin" width="80" height="80" loading="lazy">
+            <span class="cs-team-card__name" data-ru="Алексей Родин">Aleksey Rodin</span>
+            <span class="cs-team-card__role" data-ru="Деливери-менеджер">Delivery Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nt-team-group">
+        <h3 class="nt-team-group__label" data-ru="Дизайнеры-партнёры">Partner designers</h3>
+        <div class="nt-team-grid">
+          <div class="cs-team-card">
+            <img src="../assets/img/case-studies/nornickel-tablet/team-zlata.jpg" alt="Zlata Rubtsova" width="80" height="80" loading="lazy">
+            <span class="cs-team-card__name" data-ru="Злата Рубцова">Zlata Rubtsova</span>
+            <span class="cs-team-card__role" data-ru="Ведущий дизайнер">Lead Designer</span>
+          </div>
+          <div class="cs-team-card">
+            <img src="../assets/img/case-studies/nornickel-tablet/team-anya.jpg" alt="Anya Suvorova" width="80" height="80" loading="lazy">
+            <span class="cs-team-card__name" data-ru="Аня Суворова">Anya Suvorova</span>
+            <span class="cs-team-card__role" data-ru="Дизайнер">Designer</span>
+          </div>
+          <div class="cs-team-card">
+            <img src="../assets/img/case-studies/nornickel-tablet/team-sonya.jpg" alt="Sonya Kivokuntseva" width="80" height="80" loading="lazy">
+            <span class="cs-team-card__name" data-ru="Соня Кивокунцева">Sonya Kivokuntseva</span>
+            <span class="cs-team-card__role" data-ru="Дизайнер">Designer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brief -->
+  <section class="cs-overview-section nt-brief" id="nt-brief">
+    <div class="cs-overview-bg">
+      <img src="../assets/img/case-studies/nornickel-tablet/overview-bg.jpg" alt="" aria-hidden="true" loading="lazy">
+    </div>
+
+    <div class="cs-overview-inner">
+      <div class="cs-overview-top">
+        <div class="cs-overview-panel">
+          <span class="label-pill nt-pill-yellow" data-ru="Задача">The Brief</span>
+          <h3 data-ru="Сменные задания без бумаги и рации">Shift tasks without paper or radio calls</h3>
+          <p data-ru="Цель — приложение, которое автоматизирует работу с заданиями для горняков Норникеля. Задания на смену приходят прямо в кабину машины; рабочий принимает или отклоняет их, а выполненный объём фиксируется автоматически или вводится вручную.">The goal: an app that automates task handling for Nornickel’s mine workers. Shift tasks arrive straight in the vehicle cab; the worker accepts or rejects them, and the completed volume is logged automatically or entered by hand.</p>
+          <p data-ru="За один спринт мы провели аудит текущего решения, погрузились в предметную область, изучили пользователей и условия их работы, собрали UI-кит и спроектировали два ключевых пользовательских сценария.">In one sprint we audited the existing solution, learned the domain, studied the users and their working conditions, built a UI kit and designed the two core user flows.</p>
+
+          <div class="cs-whatfor">
+            <h4 data-ru="Контекст использования">Context of use</h4>
+            <div class="cs-whatfor-grid">
+              <div class="cs-whatfor-item">
+                <span class="cs-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+                <p data-ru="Платформа — Astra OS (Linux), проводное подключение.">Platform — Astra OS (Linux), wired connection.</p>
+              </div>
+              <div class="cs-whatfor-item">
+                <span class="cs-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M18 12h.01"/></svg></span>
+                <p data-ru="Устройство — сенсорный монитор, закреплённый в кабине машины.">Device — touch monitor mounted in the vehicle cab.</p>
+              </div>
+              <div class="cs-whatfor-item">
+                <span class="cs-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-10 4 6 3-4 5 8z"/><path d="M3 20h18"/></svg></span>
+                <p data-ru="Под землёй, за противоударным стеклом.">Underground, behind armoured glass.</p>
+              </div>
+              <div class="cs-whatfor-item">
+                <span class="cs-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4L2.4 16a2 2 0 0 1 2.9-2.8L7 15"/></svg></span>
+                <p data-ru="Работа в перчатках, очках и каске.">Used in gloves, goggles and a hard hat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-overview-bottom">
+        <div class="cs-challenge-card">
+          <h3 data-ru="Что мы сделали">What we did</h3>
+          <span class="cs-challenge-label nt-yellow" data-ru="Спринт до демо 28 ноября">Sprint to the Nov 28 demo</span>
+          <ul class="cs-challenge-list">
+            <li data-ru="Аудит текущего решения (AS-IS) и погружение в предметную область.">Audit of the AS-IS solution and a deep dive into the domain.</li>
+            <li data-ru="Анализ пользователей и контекстов использования.">Analysis of users and usage contexts.</li>
+            <li data-ru="UI-кит и визуальный стиль.">UI kit and visual style.</li>
+            <li data-ru="Сценарий: рабочий принимает задание и приступает к нему.">User flow: the worker accepts a task and starts on it.</li>
+            <li data-ru="Сценарий: рабочий проверяет выполненные работы и вносит правки.">User flow: the worker reviews completed work and makes corrections.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section class="nt-dark" id="nt-research">
+    <div class="nt-dark__bg"></div>
+    <div class="nt-dark__inner">
+      <div class="nt-head">
+        <span class="label-pill label-pill--dark" data-ru="Исследование">Research</span>
+        <h2 class="cs-section-title cs-section-title--dark" data-ru="Пользователи и их контекст">Users and their context</h2>
+        <p class="nt-lead" data-ru="Рабочий сидит в кабине буровой установки в каске, очках и перчатках. Монитор закреплён на приборной панели за противоударным стеклом, вокруг — провода, шум и полумрак. Целевое устройство ещё не было выбрано, поэтому мы протестировали несколько защищённых планшетов в лаборатории.">The worker sits in a drilling rig cab wearing a hard hat, goggles and gloves. The monitor is fixed to the dashboard behind impact-resistant glass, surrounded by cables, noise and low light. The target device hadn’t been chosen yet, so we tested several rugged tablets in the lab.</p>
+      </div>
+
+      <div class="nt-photo-grid">
+        <figure class="nt-photo">
+          <img src="../assets/img/case-studies/nornickel-tablet/research-cab.jpg" alt="Annotated photo of a drilling rig cab: hard hat, goggles, gloves, a mounted monitor behind armoured glass, cables and Bluetooth" data-ru-alt="Фото кабины буровой установки с пометками: каска, очки, перчатки, закреплённый монитор за противоударным стеклом, провода и Bluetooth" width="788" height="443" loading="lazy">
+          <figcaption data-ru="«Рабочий Саня едет бурить»: каска, очки, перчатки, закреплённый монитор, противоударное стекло, провода и Bluetooth.">“Sanya heads off to drill”: hard hat, goggles, gloves, a mounted monitor, armoured glass, cables and Bluetooth.</figcaption>
+        </figure>
+        <figure class="nt-photo">
+          <img src="../assets/img/case-studies/nornickel-tablet/research-lab.jpg" alt="Rugged tablets and mounts on a lab workbench" data-ru-alt="Защищённые планшеты и крепления на лабораторном столе" width="788" height="443" loading="lazy">
+          <figcaption data-ru="Знакомство с планшетами в лаборатории: целевое устройство не выбрано, известно лишь, что это будет сенсорный монитор.">Hands-on with tablets in the lab: no target device yet, only that it would be a touch monitor.</figcaption>
+        </figure>
+      </div>
+
+      <div class="nt-conditions">
+        <h3 class="nt-kicker" data-ru="Условия работы">Working conditions</h3>
+        <ul class="nt-chips">
+          <li data-ru="Сильный шум">High noise</li>
+          <li data-ru="Перепады температур">Temperature extremes</li>
+          <li data-ru="Пыль и грязь">Dust and dirt</li>
+          <li data-ru="Маски и перчатки">Masks and gloves</li>
+          <li data-ru="Слабый GPS">Limited GPS</li>
+          <li data-ru="Выход из кабины">Leaving the cab</li>
+          <li data-ru="Темнота">Darkness</li>
+          <li data-ru="Закреплённый экран">Fixed-mount screen</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Users -->
+  <section class="cs-section" id="nt-users">
+    <div class="nt-head">
+      <span class="label-pill" data-ru="Пользователи">Users</span>
+      <h2 class="cs-section-title" data-ru="Кто и когда работает с заданием">Who touches the task, and when</h2>
+    </div>
+
+    <div class="nt-timeline" role="table" aria-label="Shift roles timeline" data-ru-aria-label="Роли в течение смены">
+      <div class="nt-timeline__row nt-timeline__row--head" role="row">
+        <span class="nt-timeline__note" role="columnheader" data-ru="2–3 смены в сутки по 8–12 ч · рудник работает 24/7">2–3 shifts a day, 8–12 h each · the mine runs 24/7</span>
+        <div class="nt-timeline__scale" role="columnheader">
+          <span style="left:0" data-ru="Утро 8–12">Morning 8–12</span>
+          <span style="left:50%" data-ru="День 12–14">Day 12–14</span>
+          <span style="left:75%" data-ru="Вечер 14–16">Evening 14–16</span>
+        </div>
+        <span role="columnheader"></span>
+      </div>
+      <div class="nt-timeline__row" role="row">
+        <span class="nt-timeline__role" role="cell" data-ru="Начальник участка">Section chief</span>
+        <div class="nt-timeline__track" role="cell"><i class="nt-bar nt-bar--grey" style="left:0;width:10%"></i><i class="nt-bar nt-bar--grey" style="left:89%;width:11%"></i></div>
+        <span class="nt-timeline__desc" role="cell" data-ru="План смены → проверка результатов">Shift plan → results review</span>
+      </div>
+      <div class="nt-timeline__row" role="row">
+        <span class="nt-timeline__role" role="cell" data-ru="Горный мастер">Mining foreman</span>
+        <div class="nt-timeline__track" role="cell"><i class="nt-bar nt-bar--red" style="left:5%;width:83%"></i></div>
+        <span class="nt-timeline__desc" role="cell" data-ru="Раздаёт задания рабочим">Assigns tasks to workers</span>
+      </div>
+      <div class="nt-timeline__row nt-timeline__row--us" role="row">
+        <span class="nt-timeline__role" role="cell" data-ru="Рабочий">Worker</span>
+        <div class="nt-timeline__track" role="cell"><i class="nt-bar nt-bar--yellow" style="left:9%;width:78%"></i></div>
+        <span class="nt-timeline__desc" role="cell" data-ru="Выполняет задания — наш пользователь">Carries out tasks — our user</span>
+      </div>
+      <div class="nt-timeline__row" role="row">
+        <span class="nt-timeline__role" role="cell" data-ru="Диспетчер">Dispatcher</span>
+        <div class="nt-timeline__track" role="cell"><i class="nt-bar nt-bar--dark" style="left:0;width:100%"></i></div>
+        <span class="nt-timeline__desc" role="cell" data-ru="Следит за планом, перенаправляет и меняет задания">Tracks the plan, redirects and changes tasks</span>
+      </div>
+    </div>
+
+    <div class="nt-persona-row">
+      <article class="nt-card nt-persona">
+        <img class="nt-persona__photo" src="../assets/img/case-studies/nornickel-tablet/persona.jpg" alt="Persona photo: miner in a hard hat" data-ru-alt="Фото персоны: горняк в каске" width="96" height="96" loading="lazy">
+        <h3 data-ru="Александр, 55">Alexander, 55</h3>
+        <p class="nt-persona__sub" data-ru="Машинист погрузочно-доставочной машины · живёт в Норильске · женат, двое детей">Load-haul-dump machine operator · lives in Norilsk · married, two kids</p>
+        <div class="nt-persona__cols">
+          <div>
+            <h4 class="nt-kicker" data-ru="Мотивация и цели">Motivation and goals</h4>
+            <ul class="nt-list">
+              <li data-ru="Получить зарплату">Get paid</li>
+              <li data-ru="Соблюдать правила и регламенты">Follow rules and regulations</li>
+              <li data-ru="Выполнить план смены">Hit the shift plan</li>
+              <li data-ru="Заработать премию">Earn the bonus</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="nt-kicker" data-ru="Что важно">What matters</h4>
+            <p data-ru="Как можно меньше взаимодействия с устройством — в идеале полная автоматизация.">As little interaction with the device as possible — ideally full automation.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="nt-card nt-age">
+        <span class="nt-age__num">25–55</span>
+        <p data-ru="лет — возраст основной аудитории">years — age range of the core audience</p>
+        <h4 class="nt-kicker" data-ru="Что мешает">What gets in the way</h4>
+        <ul class="nt-list">
+          <li data-ru="Основная работа важнее; нет мотивации заполнять данные.">The main job comes first; no motivation to fill in data.</li>
+          <li data-ru="Процесс новый, поэтому фиксация результатов воспринимается как барьер.">The process is new, so logging results feels like a barrier.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Audit -->
+  <section class="nt-dark" id="nt-audit">
+    <div class="nt-dark__bg"></div>
+    <div class="nt-dark__inner">
+      <div class="nt-head">
+        <span class="label-pill label-pill--dark" data-ru="Экспресс-аудит: UI / UX / бизнес-логика">Express audit: UI / UX / business logic</span>
+        <h2 class="cs-section-title cs-section-title--dark" data-ru="Было → стало">Before → after</h2>
+      </div>
+
+      <ul class="nt-checks">
+        <li data-ru="Крупные элементы">Large targets</li>
+        <li data-ru="Минимум вложенности">Minimal nesting</li>
+        <li data-ru="Прогресс задания сразу виден">Task progress at a glance</li>
+        <li data-ru="Автоматизация">Automation</li>
+        <li data-ru="Контрастность">Contrast</li>
+        <li data-ru="Экран гаснет во время движения">Screen sleeps while driving</li>
+      </ul>
+
+      <div class="nt-audit">
+        <div class="nt-audit__card">
+          <span class="nt-tag" data-ru="Было">Before</span>
+          <h3 data-ru="Слабый контраст">Poor contrast</h3>
+          <div class="nt-meter"><span class="nt-meter__bar"><i style="width:21.5%;background:#e5432a"></i></span><span class="nt-meter__num">3.39</span></div>
+          <p data-ru="Много оттенков синего, мелкий текст.">Many shades of blue, small text.</p>
+        </div>
+        <div class="nt-audit__card nt-audit__card--after">
+          <span class="nt-tag nt-tag--after" data-ru="Стало">After</span>
+          <h3 data-ru="Сильный контраст">Strong contrast</h3>
+          <div class="nt-meter"><span class="nt-meter__bar"><i style="width:96%;background:#f5ed33"></i></span><span class="nt-meter__num">15.78</span></div>
+          <p data-ru="Ярко-жёлтый на почти чёрном, крупный шрифт.">Bright yellow on near-black, large type.</p>
+        </div>
+
+        <div class="nt-audit__card">
+          <span class="nt-tag" data-ru="Было">Before</span>
+          <h3 data-ru="Глубокая навигация">Deep navigation</h3>
+          <div class="nt-steps" aria-hidden="true"><span>01</span><span>02</span><span>03</span><span class="nt-steps__go">ПРИНЯТЬ</span></div>
+          <p data-ru="На смене никто не хочет нажимать тысячу раз.">On the job, nobody wants to tap a thousand times.</p>
+        </div>
+        <div class="nt-audit__card nt-audit__card--after">
+          <span class="nt-tag nt-tag--after" data-ru="Стало">After</span>
+          <h3 data-ru="Один экран — одно решение">One screen, one decision</h3>
+          <p data-ru="Всё нужное — на первом экране, минимум шагов до результата.">Everything needed is on the first screen, with the fewest steps to a result.</p>
+        </div>
+
+        <div class="nt-audit__card">
+          <span class="nt-tag" data-ru="Было">Before</span>
+          <h3 data-ru="Много ручного ввода">Lots of manual input</h3>
+          <p data-ru="Мотивации заполнять нет — значит, нужно автоматизировать.">No motivation to fill things in — it has to be automated.</p>
+        </div>
+        <div class="nt-audit__card nt-audit__card--after">
+          <span class="nt-tag nt-tag--after" data-ru="Стало">After</span>
+          <h3 data-ru="Автоматизация, сон экрана">Automation, screen sleep</h3>
+          <p data-ru="Объём приходит с датчика, а экран гаснет во время движения, поэтому ничего не отвлекает от работы.">Volume comes from the sensor and the screen sleeps while moving, so it never distracts from the work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User flows -->
+  <section class="cs-section" id="nt-flows">
+    <div class="nt-head">
+      <span class="label-pill" data-ru="Пользовательские сценарии">User Flows</span>
+      <h2 class="cs-section-title" data-ru="Два ключевых сценария">Two core flows</h2>
+    </div>
+
+    <div class="cs-features">
+      <div class="cs-feature-row">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Шаг 01">Step 01</span>
+          <h3 data-ru="Принять задание">Accept a task</h3>
+          <p data-ru="Новые задания появляются в журнале. Рабочий раскрывает карточку, видит места и метры и принимает задание одним касанием — без вложенных экранов и набора текста.">New tasks land in the log. The worker expands a card, sees locations and metres, and accepts with one tap — no nested screens, no typing.</p>
+        </div>
+        <div class="cs-feature-visual nt-screen">
+          <img src="../assets/img/case-studies/nornickel-tablet/screen-01-accept.png" alt="Expanded drilling task card: 80 square metres split into locations of 30 and 10 metres" data-ru-alt="Раскрытая карточка задания на бурение: 80 кв. м, разбитые на места по 30 и 10 метров" width="761" height="478" loading="lazy">
+        </div>
+      </div>
+
+      <div class="cs-feature-row cs-feature-row--reverse">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Шаг 02">Step 02</span>
+          <h3 data-ru="Задание в работе">Task in progress</h3>
+          <p data-ru="Задание в работе становится жёлтым и заполняется прогрессом по мере того, как датчик передаёт метры. Когда всё готово, появляется зелёная кнопка «Завершить».">A task in progress turns yellow and fills with progress as the sensor reports metres. When it’s done, a green “Finish” button appears.</p>
+        </div>
+        <div class="cs-feature-visual nt-screen">
+          <img src="../assets/img/case-studies/nornickel-tablet/screen-02-progress.png" alt="Task in progress: yellow location cards at 10/10 and 43/40 metres and a green Finish button" data-ru-alt="Задание в работе: жёлтые карточки мест 10/10 и 43/40 метров и зелёная кнопка «Завершить»" width="761" height="477" loading="lazy">
+        </div>
+      </div>
+
+      <div class="cs-feature-row">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Шаг 03">Step 03</span>
+          <h3 data-ru="Отклонить с причиной">Reject with a reason</h3>
+          <p data-ru="Если задание ошибочное, рабочий отклоняет его, выбирает причину и добавляет комментарий. Уведомление подтверждает, что задание вернулось диспетчеру.">If a task is wrong, the worker rejects it, picks a reason and adds a comment. A notification confirms the task went back to the dispatcher.</p>
+        </div>
+        <div class="cs-feature-visual nt-screen">
+          <img src="../assets/img/case-studies/nornickel-tablet/screen-03-reject.png" alt="Reject task dialog with “No, keep” and “Yes, reject” buttons" data-ru-alt="Диалог отклонения задания с кнопками «Нет, оставить» и «Да, отклонить»" width="761" height="478" loading="lazy">
+        </div>
+      </div>
+
+      <div class="cs-feature-row cs-feature-row--reverse">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Шаг 04">Step 04</span>
+          <h3 data-ru="Поправить объём">Correct the volume</h3>
+          <p data-ru="В журнале фактов смены рабочий фильтрует работы по типу, открывает любую карточку и, если датчик ошибся, вводит фактический объём на крупной клавиатуре, которой удобно пользоваться в перчатках.">From the shift fact log the worker filters by work type, opens any card and, if the sensor miscounted, types the actual volume on a large keypad that works with gloves on.</p>
+        </div>
+        <div class="cs-feature-visual nt-screen">
+          <img src="../assets/img/case-studies/nornickel-tablet/screen-04-volume.png" alt="Completed volume screen showing 20/20 with an “Enter manually” button" data-ru-alt="Экран выполненного объёма 20/20 с кнопкой «Ввести вручную»" width="761" height="477" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="nt-flows">
+      <figure class="nt-flow">
+        <img src="../assets/img/case-studies/nornickel-tablet/flow-accept.jpg" alt="User flow board: task log, accepting a task, the reject modal and rejecting a task" data-ru-alt="Схема сценария: журнал заданий, принятие задания, модальное окно и отклонение задания" width="1600" height="529" loading="lazy">
+        <figcaption data-ru="Сценарий 01 — рабочий принимает или отклоняет новые задания">Flow 01 — the worker accepts or rejects new tasks</figcaption>
+      </figure>
+      <figure class="nt-flow">
+        <img src="../assets/img/case-studies/nornickel-tablet/flow-facts.jpg" alt="User flow board: fact log, filtering, editing and entering the volume on a keypad" data-ru-alt="Схема сценария: журнал фактов, фильтрация, редактирование и ввод объёма на клавиатуре" width="1600" height="525" loading="lazy">
+        <figcaption data-ru="Сценарий 02 — рабочий проверяет выполненные работы и вносит правки">Flow 02 — the worker reviews completed work and makes corrections</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Visual style -->
+  <section class="nt-dark" id="nt-style">
+    <div class="nt-dark__bg"></div>
+    <div class="nt-dark__inner">
+      <div class="nt-head">
+        <span class="label-pill label-pill--dark" data-ru="UI-кит и визуальный стиль">UI kit &amp; visual style</span>
+        <h2 class="cs-section-title cs-section-title--dark" data-ru="Жёлтое на чёрном, как шахтная разметка">Yellow on black, like mine signage</h2>
+        <p class="nt-lead" data-ru="Палитра и формы взяты у горной техники: чёрные и тёмно-серые поверхности, сигнальный жёлтый для действий, зелёный для завершения. Geist Mono в верхнем регистре читается издалека, а плотные скруглённые кнопки и карточки легко нажать пальцем в перчатке.">The palette and shapes come from mining machinery: black and dark grey surfaces, signal yellow for actions, green for completion. Uppercase Geist Mono reads from a distance, and dense rounded buttons and cards are easy to hit with a gloved finger.</p>
+      </div>
+
+      <div class="nt-style-block">
+        <h3 class="nt-kicker nt-kicker--light" data-ru="Палитра">Palette</h3>
+        <ul class="nt-palette">
+          <li><span class="nt-swatch" style="background:#000000"></span><code>#000000</code><span data-ru="Фон">Background</span></li>
+          <li><span class="nt-swatch" style="background:#292929"></span><code>#292929</code><span data-ru="Карточки">Cards</span></li>
+          <li><span class="nt-swatch" style="background:#F5ED33"></span><code>#F5ED33</code><span data-ru="Действие">Action</span></li>
+          <li><span class="nt-swatch" style="background:#42BE65"></span><code>#42BE65</code><span data-ru="Завершение">Finish</span></li>
+          <li><span class="nt-swatch" style="background:#39381A"></span><code>#39381A</code><span data-ru="Вторичный">Secondary</span></li>
+          <li><span class="nt-swatch" style="background:#F2F2F2"></span><code>#F2F2F2</code><span data-ru="Текст">Text</span></li>
+        </ul>
+      </div>
+
+      <div class="nt-style-grid">
+        <div class="nt-style-block">
+          <h3 class="nt-kicker nt-kicker--light" data-ru="Типографика">Typography</h3>
+          <div class="nt-type">
+            <div class="nt-type__card">
+              <span class="nt-type__sample nt-mono">80</span>
+              <strong>Geist Mono</strong>
+              <span data-ru="Верхний регистр, крупные цифры">Uppercase, oversized numerals</span>
+            </div>
+            <div class="nt-type__card">
+              <span class="nt-type__sample">Aa</span>
+              <strong>SF Pro / Inter</strong>
+              <span data-ru="Текст страницы портфолио">Portfolio page copy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="nt-style-block">
+          <h3 class="nt-kicker nt-kicker--light" data-ru="Кнопки и состояния">Buttons &amp; states</h3>
+          <div class="nt-ui" aria-hidden="true">
+            <div class="nt-ui__task">
+              <span class="nt-mono">БУРЕНИЕ · 80 СКВ.М. · КАМ-41-3</span>
+              <span class="nt-ui__chev">⌄</span>
+            </div>
+            <div class="nt-ui__tabs">
+              <span class="nt-ui__tab nt-ui__tab--on">НОВЫЕ 02</span>
+              <span class="nt-ui__tab">В РАБОТЕ</span>
+              <span class="nt-ui__tab">ЗАВЕРШЕННЫЕ</span>
+            </div>
+            <div class="nt-ui__btns">
+              <span class="nt-ui__btn nt-ui__btn--ghost">НЕТ, ОСТАВИТЬ</span>
+              <span class="nt-ui__btn nt-ui__btn--yellow">ДА, ОТКЛОНИТЬ</span>
+            </div>
+            <span class="nt-ui__btn nt-ui__btn--green">ЗАВЕРШИТЬ <span>✓</span></span>
+          </div>
+        </div>
+      </div>
+
+      <figure class="nt-flow nt-flow--dark">
+        <img src="../assets/img/case-studies/nornickel-tablet/moodboard.jpg" alt="Moodboard: yellow mining machinery, Geist Mono type samples, typography references, two colour options and UI element references" data-ru-alt="Мудборд: жёлтая горная техника, образцы шрифта Geist Mono, референсы типографики, два варианта цвета и референсы элементов" width="1600" height="461" loading="lazy">
+        <figcaption data-ru="Мудборд: техника, шрифты, типографика, два варианта цвета и референсы элементов — скруглённые формы, плотные и крупные кнопки и карточки.">Moodboard: machinery, fonts, typography, two colour options and element references — rounded shapes, dense and large buttons and cards.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Back to the parent case -->
+  <section class="cs-section cs-section--tight">
+    <a class="nt-parent-card" href="nornickel.html">
+      <img src="../assets/img/photos/project-nornickel.png" alt="" aria-hidden="true" width="780" height="342" loading="lazy">
+      <span class="nt-parent-card__text">
+        <span class="nt-kicker" data-ru="Основной кейс">Main case study</span>
+        <strong data-ru="Платформа ГГИС Норникель">Nornickel Mining Platform</strong>
+        <span data-ru="Десктопная CAD- и ГГИС-система для диспетчеризации и планирования, частью которой стал этот планшет.">The desktop CAD &amp; GIS dispatching and planning system this tablet app is part of.</span>
+      </span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="cs-cta">
+      <p data-ru="Хотите узнать больше об этом проекте или обсудить сотрудничество?">Want to learn more about this project or discuss a collaboration?</p>
+      <a class="tag tag--accent" href="../index.html#contacts" data-ru="Связаться со мной">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="contacts" id="contacts">
+    <div class="contacts__header">
+      <div class="contacts__title-row">
+        <h2 data-ru="Давайте общаться!">Let's stay in touch!</h2>
+        <span class="smiley-bubble smiley-bubble--card" aria-hidden="true"><img src="../assets/img/icons/smile.svg" alt="" width="24" height="24"></span>
+      </div>
+      <p data-ru="Я всегда открыта для новых проектов, долгосрочного сотрудничества и классных идей. Свяжитесь со мной любым удобным способом.">I'm always open to new projects, long-term collaborations, and exciting ideas. Feel free to reach out through any channel.</p>
+    </div>
+
+    <div class="contact-cards">
+      <a class="contact-card" href="https://t.me/viable" target="_blank" rel="noopener">
+        <span class="contact-card__icon contact-card__icon--telegram"><img src="../assets/img/icons/telegram.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label">Telegram</span>
+          <span class="contact-card__value">@viable</span>
+        </span>
+      </a>
+      <a class="contact-card" href="https://wa.me/34607944458" data-ru-href="https://wa.me/79312444104" target="_blank" rel="noopener">
+        <span class="contact-card__icon contact-card__icon--whatsapp"><img src="../assets/img/icons/whatsapp.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label">WhatsApp</span>
+          <span class="contact-card__value" data-ru="+7 931 2444104">+34 607 944 458</span>
+        </span>
+      </a>
+      <a class="contact-card" href="mailto:vavilovaiana@gmail.com">
+        <span class="contact-card__icon contact-card__icon--email"><img src="../assets/img/icons/mail.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label" data-ru="Электронная почта">Email</span>
+          <span class="contact-card__value">vavilovaiana@gmail.com</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year">2026</span> <span data-ru="Яна Вавилова. Продуктовый дизайнер.">Yana Vavilova. Product Designer.</span></p>
+  <p data-ru="В центре всего, что я создаю — люди.">People are at the center of everything.</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

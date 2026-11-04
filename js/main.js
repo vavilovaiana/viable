@@ -64,7 +64,8 @@
     var attrSwaps = [
       { data: "data-ru-href", attr: "href" },
       { data: "data-ru-download", attr: "download" },
-      { data: "data-ru-aria-label", attr: "aria-label" }
+      { data: "data-ru-aria-label", attr: "aria-label" },
+      { data: "data-ru-alt", attr: "alt" }
     ];
     attrSwaps.forEach(function (swap) {
       document.querySelectorAll("[" + swap.data + "]").forEach(function (el) {

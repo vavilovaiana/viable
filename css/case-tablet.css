@@ -1,0 +1,604 @@
+/* =========================================================================
+   Nornickel mine worker tablet case — page-specific styles (prefix nt-)
+   Loaded after styles.css + case-study.css. Also used on nornickel.html
+   for the link row in the Tablet Overview section.
+   ========================================================================= */
+
+:root {
+  --nt-black: #0a0a0a;
+  --nt-card: #1c1c1c;
+  --nt-card-line: rgba(255, 255, 255, 0.08);
+  --nt-yellow: #f5ed33;
+  --nt-yellow-ink: #1a1900;
+  --nt-green: #42be65;
+  --nt-red: #e5432a;
+  --nt-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.nt-mono { font-family: var(--nt-mono); }
+.nt-page .cs-hero__head > .badge,
+.nt-page .cs-section > .label-pill { align-self: flex-start; }
+.nt-photo, .nt-flow { margin: 0; }
+.nt-yellow { color: var(--nt-yellow) !important; }
+
+/* ---- Back row with parent-case link ------------------------------------ */
+.nt-back-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+.nt-parent-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 16px;
+  background: var(--c-tag-bg);
+  border: 1px solid var(--c-border-lav);
+  font-size: 14px;
+  color: var(--c-text-secondary);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.nt-parent-link strong { font-weight: 600; color: var(--c-text); }
+.nt-parent-link svg { width: 14px; height: 14px; }
+.nt-parent-link:hover { border-color: var(--c-accent); color: var(--c-accent); }
+
+/* ---- Generic bits ------------------------------------------------------- */
+.nt-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.nt-lead {
+  max-width: 900px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--c-text-secondary);
+}
+.nt-kicker {
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+.nt-kicker--light { color: rgba(255, 255, 255, 0.55); }
+.nt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.nt-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--c-text-secondary);
+}
+.nt-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.nt-card {
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: 24px;
+  background: var(--c-card-bg);
+  border: 1px solid var(--c-border-mid);
+}
+
+/* ---- Team in groups ----------------------------------------------------- */
+.nt-team-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 40px;
+}
+.nt-team-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.nt-team-group__label {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+.nt-team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.nt-team-grid .cs-team-card { width: 172px; }
+.nt-team-grid .cs-team-card { padding: 24px 12px; }
+
+.nt-team-card--me {
+  border-color: var(--c-accent);
+  box-shadow: 0 0 0 3px var(--c-border-lav);
+}
+
+/* ---- Brief (reuses .cs-overview-*) -------------------------------------- */
+.nt-brief .cs-overview-bg { background: #000; }
+.nt-brief .cs-overview-bg::after {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0.55) 100%);
+}
+.nt-brief .cs-overview-panel { background: rgba(242, 242, 242, 0.92); }
+.nt-pill-yellow {
+  align-self: flex-start;
+  background: var(--nt-yellow);
+  color: var(--nt-yellow-ink);
+}
+.nt-brief .cs-whatfor-item { border-color: var(--nt-yellow); box-shadow: none; }
+.nt-brief .cs-icon-box { background: transparent; color: var(--c-text); }
+.nt-brief .cs-icon-box svg { width: 22px; height: 22px; }
+.nt-brief .cs-challenge-card {
+  background: rgba(56, 56, 56, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.nt-brief .cs-challenge-list li::before { background: var(--nt-yellow); }
+
+/* ---- Dark full-bleed sections (same pattern as .cs-tablet-section) ----- */
+.nt-dark {
+  position: relative;
+  padding: 0 var(--side-pad);
+  margin: 0 0 var(--section-pad-y);
+}
+.nt-dark + .cs-section,
+.cs-section + .nt-dark { margin-top: 0; }
+.nt-dark__bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: var(--nt-black);
+}
+.nt-dark__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: var(--section-pad-y) 0;
+}
+.nt-dark .nt-lead { color: rgba(255, 255, 255, 0.72); }
+.cs-overview-section + .nt-dark { margin-top: var(--section-pad-y); }
+
+/* Research */
+.nt-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.nt-photo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.nt-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid var(--nt-card-line);
+}
+.nt-photo figcaption {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.6);
+}
+.nt-conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.nt-conditions .nt-kicker { color: rgba(255, 255, 255, 0.55); }
+.nt-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.nt-chips li {
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--nt-card);
+  border: 1px solid var(--nt-card-line);
+  font-family: var(--nt-mono);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--nt-yellow);
+}
+
+/* ---- Users: shift timeline --------------------------------------------- */
+.nt-timeline {
+  display: flex;
+  flex-direction: column;
+  padding: 12px clamp(16px, 2.5vw, 32px);
+  border-radius: 24px;
+  background: var(--c-light-bg);
+  border: 1px solid var(--c-border-mid);
+}
+.nt-timeline__row {
+  display: grid;
+  grid-template-columns: minmax(130px, 1.1fr) 4fr minmax(180px, 2fr);
+  gap: 20px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px dashed var(--c-border-mid);
+}
+.nt-timeline__row--head { border-top: 0; align-items: start; }
+.nt-timeline__note { font-size: 12.5px; line-height: 1.45; color: var(--c-text-muted); }
+.nt-timeline__scale { position: relative; height: 18px; }
+.nt-timeline__scale span {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text);
+}
+.nt-timeline__role { font-weight: 600; font-size: 15px; color: var(--c-text); }
+.nt-timeline__desc { font-size: 14px; color: var(--c-text-secondary); }
+.nt-timeline__row--us .nt-timeline__desc { font-weight: 600; color: var(--c-text); }
+.nt-timeline__track {
+  position: relative;
+  height: 10px;
+  border-radius: 10px;
+  background: #eceef2;
+}
+.nt-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+.nt-bar--grey { background: #b8bcc8; }
+.nt-bar--red { background: var(--nt-red); }
+.nt-bar--yellow { background: #e8d600; }
+.nt-bar--dark { background: #45444f; }
+
+.nt-persona-row {
+  display: grid;
+  grid-template-columns: 1.75fr 1fr;
+  gap: 24px;
+}
+.nt-persona {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.nt-persona__photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+.nt-persona h3 { font-weight: 700; font-size: 26px; color: var(--c-text); }
+.nt-persona__sub { font-size: 15px; color: var(--c-text-secondary); }
+.nt-persona__cols {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 24px;
+  margin-top: 12px;
+}
+.nt-persona__cols > div { display: flex; flex-direction: column; gap: 12px; }
+.nt-persona__cols p { font-size: 15px; line-height: 1.55; color: var(--c-text-secondary); }
+.nt-age {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.nt-age__num {
+  font-weight: 800;
+  font-size: clamp(56px, 6vw, 80px);
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--c-text);
+}
+.nt-age > p { font-size: 15px; color: var(--c-text-secondary); margin-bottom: 8px; }
+
+/* ---- Audit -------------------------------------------------------------- */
+.nt-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.nt-checks li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  background: var(--nt-card);
+  font-family: var(--nt-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+.nt-checks li::before { content: "✓"; color: var(--nt-yellow); font-weight: 600; }
+
+.nt-audit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+}
+.nt-audit__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: clamp(22px, 2.5vw, 32px);
+  border-radius: 20px;
+  background: var(--nt-card);
+  border: 1px solid var(--nt-card-line);
+}
+.nt-audit__card--after { border-color: rgba(245, 237, 51, 0.28); }
+.nt-audit__card h3 {
+  font-family: var(--nt-mono);
+  font-weight: 500;
+  font-size: clamp(18px, 1.8vw, 22px);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+.nt-audit__card p { font-size: 15px; line-height: 1.55; color: rgba(255, 255, 255, 0.68); }
+.nt-tag {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #333;
+  font-family: var(--nt-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+.nt-tag--after { background: var(--nt-yellow); color: var(--nt-yellow-ink); }
+.nt-meter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.nt-meter__bar {
+  flex: 1;
+  height: 26px;
+  border-radius: 6px;
+  background: #111;
+  border: 1px solid var(--nt-card-line);
+  overflow: hidden;
+}
+.nt-meter__bar i { display: block; height: 100%; }
+.nt-meter__num {
+  font-family: var(--nt-mono);
+  font-size: clamp(30px, 3.2vw, 44px);
+  color: #f2f2f2;
+}
+.nt-steps { display: flex; gap: 8px; }
+.nt-steps span {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #2b2b2b;
+  font-family: var(--nt-mono);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.nt-steps .nt-steps__go { background: var(--nt-yellow); color: var(--nt-yellow-ink); }
+
+/* ---- Flows -------------------------------------------------------------- */
+.nt-screen.cs-feature-visual {
+  border: 0;
+  border-radius: 22px;
+  overflow: visible;
+  box-shadow: none;
+}
+.nt-screen img {
+  border-radius: 22px;
+  box-shadow: 0 24px 50px rgba(10, 10, 10, 0.22);
+}
+.nt-flows {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.nt-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.nt-flow img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  background: #000;
+}
+.nt-flow figcaption { font-size: 15px; color: var(--c-text-secondary); }
+.nt-flow--dark figcaption { color: rgba(255, 255, 255, 0.6); }
+.nt-flow--dark img { border: 1px solid var(--nt-card-line); }
+
+/* ---- Visual style ------------------------------------------------------- */
+.nt-style-block {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.nt-palette {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+.nt-palette li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.nt-palette code {
+  font-family: var(--nt-mono);
+  font-size: 14px;
+  color: #f2f2f2;
+}
+.nt-swatch {
+  display: block;
+  height: 96px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.nt-style-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.nt-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: 100%;
+}
+.nt-type__card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--nt-card);
+  border: 1px solid var(--nt-card-line);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.nt-type__card strong { font-size: 17px; font-weight: 600; color: #f2f2f2; }
+.nt-type__sample {
+  font-size: clamp(64px, 6vw, 96px);
+  line-height: 1;
+  margin-bottom: 12px;
+  color: #f2f2f2;
+}
+.nt-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #000;
+  border: 1px solid var(--nt-card-line);
+  font-family: var(--nt-mono);
+}
+.nt-ui__task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #292929;
+  font-size: 14px;
+  color: #f2f2f2;
+}
+.nt-ui__chev {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--nt-yellow);
+  color: var(--nt-yellow-ink);
+  line-height: 0;
+  font-size: 18px;
+}
+.nt-ui__tabs, .nt-ui__btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.nt-ui__tab {
+  padding: 9px 13px;
+  border-radius: 10px;
+  background: #333;
+  font-size: 13px;
+  color: #f2f2f2;
+}
+.nt-ui__tab--on { background: #f2f2f2; color: #000; }
+.nt-ui__btns > * { flex: 1; }
+.nt-ui__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 13.5px;
+  letter-spacing: 0.4px;
+}
+.nt-ui__btn--ghost { background: #4a4a4a; color: #f2f2f2; }
+.nt-ui__btn--yellow { background: var(--nt-yellow); color: var(--nt-yellow-ink); }
+.nt-ui__btn--green { justify-content: space-between; background: var(--nt-green); color: #0b2412; }
+
+/* ---- Parent-case card --------------------------------------------------- */
+.nt-parent-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 320px) 1fr auto;
+  align-items: center;
+  gap: clamp(20px, 3vw, 40px);
+  padding: 16px clamp(16px, 2vw, 24px) 16px 16px;
+  border-radius: 24px;
+  background: var(--c-card-bg);
+  border: 1px solid var(--c-border-mid);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.nt-parent-card:hover { border-color: var(--c-accent); box-shadow: 0 12px 32px rgba(21, 27, 55, 0.08); }
+.nt-parent-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 780 / 342;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.nt-parent-card__text { display: flex; flex-direction: column; gap: 8px; }
+.nt-parent-card__text strong { font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; color: var(--c-text); }
+.nt-parent-card__text > span:last-child { font-size: 15px; line-height: 1.55; color: var(--c-text-secondary); }
+.nt-parent-card > svg { width: 28px; height: 28px; color: var(--c-accent); }
+
+/* ---- Link row on nornickel.html (Tablet Overview) ---------------------- */
+.nt-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---- Responsive --------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .nt-persona-row { grid-template-columns: 1fr; }
+  .nt-style-grid { grid-template-columns: 1fr; }
+  .nt-palette { grid-template-columns: repeat(3, 1fr); }
+  .nt-timeline__row { grid-template-columns: 120px 1fr; }
+  .nt-timeline__row > :nth-child(3) { grid-column: 2; }
+  .nt-timeline__row--head > :nth-child(3) { display: none; }
+  .nt-timeline__row { row-gap: 8px; }
+}
+@media (max-width: 700px) {
+  .nt-team-groups, .nt-team-group { width: 100%; }
+  .nt-team-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .nt-team-grid .cs-team-card { width: auto; }
+  .nt-photo-grid,
+  .nt-audit,
+  .nt-persona__cols,
+  .nt-type { grid-template-columns: 1fr; }
+  .nt-palette { grid-template-columns: repeat(2, 1fr); }
+  .nt-swatch { height: 64px; }
+  .nt-parent-card { grid-template-columns: 1fr; }
+  .nt-parent-card > svg { display: none; }
+  .nt-timeline__row { grid-template-columns: 1fr; }
+  .nt-timeline__row > :nth-child(3) { grid-column: 1; }
+  .nt-timeline__row--head .nt-timeline__note { margin-bottom: 4px; }
+  .nt-timeline__scale span { font-size: 11px; }
+  .nt-timeline__scale span:nth-child(3) { left: auto !important; right: 0; }
+}
