@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-ru="Quppy — кейс | Яна Вавилова">Quppy — Case Study | Iana Vavilova</title>
+<meta name="description" content="Case study: Quppy, a crypto and fiat super app — UX audit, app map, onboarding, money journeys and a design system." data-ru="Кейс: Quppy — суперприложение для крипты и фиата: аудит UX, карта приложения, онбординг, сценарии и дизайн-система.">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<link rel="stylesheet" href="../css/case-quppy.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-ru="Перейти к содержимому">Skip to content</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="logo" aria-label="Iana Vavilova — home">
+      <img src="../assets/img/photos/logo.png" alt="Iana Vavilova logo" width="59" height="36">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <button class="main-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <div class="main-nav__links" id="navLinks">
+        <a href="../index.html#mission" data-ru="Обо мне">About me</a>
+        <a href="../index.html#case-studies" data-ru="Кейсы">Case studies</a>
+        <a href="../index.html#ai-tools" data-ru="Навыки">Skills</a>
+        <a href="../index.html#contacts" data-ru="Контакты">Contacts</a>
+        <div class="main-nav__buttons">
+          <button type="button" id="langToggle" class="tag tag--outline" data-ru="RU / EN" aria-label="Change language">EN / RU</button>
+          <a class="tag tag--accent" href="https://www.figma.com/proto/rudZk6rEIAjRQLwwJBsMRe/Viable_personal-brand?node-id=20007962-11445&amp;p=f&amp;t=sg4oWDETdWKKeh3u-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=1213%3A22987&amp;starting-point-node-id=20007962%3A11445" target="_blank" rel="noopener" data-ru="Презентация" data-ru-href="https://www.figma.com/proto/rudZk6rEIAjRQLwwJBsMRe/Viable_personal-brand?node-id=20007771-7284&amp;p=f&amp;t=vNckKan8vcx1uxIu-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=76%3A883&amp;starting-point-node-id=20007771%3A7284">Presentation</a>
+          <a class="tag tag--dark" href="../assets/cv/Iana-Vavilova-CV.pdf" download="Iana-Vavilova-CV.pdf" target="_blank" rel="noopener" data-ru="Резюме" data-ru-href="../assets/cv/Yana-Vavilova-CV-RU.pdf" data-ru-download="Yana-Vavilova-CV-RU.pdf">CV</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="cs-main">
+
+  <div class="cs-back-row">
+    <a class="cs-back-link" href="../index.html#case-studies">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span data-ru="Все кейсы">All case studies</span>
+    </a>
+  </div>
+
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="cs-hero__head">
+      <span class="badge qp-badge" data-ru="FinTech и крипто">FinTech &amp; Crypto</span>
+      <h1 class="cs-hero__title">Quppy</h1>
+      <p class="cs-hero__subtitle" data-ru="Финансовое суперприложение, которое объединяет IBAN-счета в EUR, GBP и USD с мультивалютным криптокошельком: редизайн UX, онбординг, ключевые сценарии и дизайн-система.">A financial super app that brings EUR, GBP and USD IBAN accounts together with a multi-currency crypto wallet — UX redesign, onboarding, core money journeys and a design system.</p>
+    </div>
+
+    <dl class="cs-meta-grid">
+      <div class="cs-meta-item">
+        <dt data-ru="Компания">Company</dt>
+        <dd data-ru="Quppy · агентство NewLion">Quppy · NewLion agency</dd>
+      </div>
+      <div class="cs-meta-item">
+        <dt data-ru="Роль">Role</dt>
+        <dd data-ru="Продуктовый дизайнер">Product Designer</dd>
+      </div>
+      <div class="cs-meta-item">
+        <dt data-ru="Платформы">Platforms</dt>
+        <dd>iOS &amp; Android</dd>
+      </div>
+      <div class="cs-meta-item">
+        <dt data-ru="Год">Year</dt>
+        <dd>2023–2024</dd>
+      </div>
+    </dl>
+
+    <div class="qp-hero-visual">
+      <img src="../assets/img/case-studies/quppy/hero-collage.jpg" alt="Five Quppy app screens: welcome, total balance, exchange, receive from card and banking card" width="2400" height="1200" loading="eager">
+    </div>
+  </section>
+
+  <!-- Brief -->
+  <section class="cs-section" id="qp-brief">
+    <span class="label-pill" data-ru="Задача">The brief</span>
+    <div class="qp-brief">
+      <div class="qp-brief__text">
+        <h3 data-ru="Крипта и повседневные деньги — в одном приложении">Crypto and everyday money — in one app</h3>
+        <p data-ru="Quppy — европейское финтех-приложение: пользователь открывает IBAN-счёт, пополняет его картой или переводом, хранит и обменивает криптовалюту и отправляет деньги по SEPA, Faster Payments или на карту. Приложение уже работало, но росло быстрее, чем его интерфейс: новые функции добавлялись поверх старой логики, и люди терялись.">Quppy is a European fintech app: people open an IBAN account, fund it by card or bank transfer, hold and exchange crypto, and send money via SEPA, Faster Payments or to a card. The app was already live, but it grew faster than its interface — new features were stacked on top of old logic, and people got lost.</p>
+        <ul class="qp-dots">
+          <li data-ru="Провести аудит текущего приложения и предложить изменения для каждого сценария.">Audit the live app and propose changes for every journey.</li>
+          <li data-ru="Собрать полную карту приложения — от регистрации до удаления аккаунта.">Build a complete app map — from registration to account deletion.</li>
+          <li data-ru="Перепроектировать онбординг, кошельки, обмен, отправку и получение денег.">Redesign onboarding, wallets, exchange, sending and receiving money.</li>
+          <li data-ru="Передать разработке UI-кит с описанными состояниями компонентов.">Hand developers a UI kit with documented component states.</li>
+        </ul>
+      </div>
+
+      <div class="cs-challenge-card">
+        <h3 data-ru="Сложности">The Challenge</h3>
+        <span class="cs-challenge-label" data-ru="Что нужно было решить">What we had to solve</span>
+        <ul class="cs-challenge-list">
+          <li data-ru="Фиатные счета и криптокошельки живут по разным правилам, но должны ощущаться как один продукт.">Fiat accounts and crypto wallets follow different rules, yet must feel like one product.</li>
+          <li data-ru="Комиссии сети и обмена были скрыты — пользователь узнавал о них после операции.">Network and exchange fees were hidden — people found out after the transaction.</li>
+          <li data-ru="Потеря мнемонической фразы означает потерю денег, а бэкап предлагался слишком поздно.">Losing the mnemonic means losing the money, and backup was offered too late.</li>
+          <li data-ru="Новые функции — пополнение телефона, перевыпуск кошелька, KYC — нужно было встроить без перегруза.">New features — mobile top-up, wallet reissue, KYC — had to fit in without overload.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qp-facts">
+      <div class="qp-fact">
+        <span class="qp-fact__value">19</span>
+        <span class="qp-fact__label" data-ru="разделов в карте приложения — от входа до удаления аккаунта">sections in the app map — from login to account deletion</span>
+      </div>
+      <div class="qp-fact">
+        <span class="qp-fact__value">12</span>
+        <span class="qp-fact__label" data-ru="криптокошельков и необанков в конкурентном анализе">crypto wallets and neobanks in the competitive analysis</span>
+      </div>
+      <div class="qp-fact">
+        <span class="qp-fact__value">3 + 6</span>
+        <span class="qp-fact__label" data-ru="фиатные валюты (EUR, GBP, USD) и криптовалюты: BTC, BCH, LTC, ETH, TRX, USDT">fiat currencies (EUR, GBP, USD) and coins: BTC, BCH, LTC, ETH, TRX, USDT</span>
+      </div>
+      <div class="qp-fact">
+        <span class="qp-fact__value" data-ru="8 яз.">8 lang.</span>
+        <span class="qp-fact__label" data-ru="скриншоты для App Store и Google Play">of App Store &amp; Google Play screenshots</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- My role -->
+  <section class="cs-section cs-section--tight" id="qp-role">
+    <span class="label-pill" data-ru="Моя роль">My role</span>
+    <h2 class="cs-section-title" data-ru="От аудита до передачи в разработку">From audit to developer handoff</h2>
+    <div class="qp-cards">
+      <div class="qp-card">
+        <span class="qp-card__num">01</span>
+        <h3 data-ru="Аудит и исследование">Audit &amp; research</h3>
+        <p data-ru="Прошла все сценарии живого приложения, сравнила их с 12 конкурентами и описала проблемы по экранам.">Walked through every journey of the live app, compared it with 12 competitors and logged problems screen by screen.</p>
+      </div>
+      <div class="qp-card">
+        <span class="qp-card__num">02</span>
+        <h3 data-ru="Карта приложения">App map</h3>
+        <p data-ru="Собрала информационную архитектуру из 19 разделов с ветками «есть / нет получателя» и «есть / нет карты».">Built a 19-section information architecture with branches such as “recipient exists / doesn't exist” and “card exists / doesn't exist”.</p>
+      </div>
+      <div class="qp-card">
+        <span class="qp-card__num">03</span>
+        <h3 data-ru="Предложения «было — стало»">Before / after proposals</h3>
+        <p data-ru="Презентовала клиенту изменения по каждому сценарию: текущий экран рядом с предложенным и пронумерованные правки.">Presented changes to the client journey by journey: the current screen next to the proposal, with numbered fixes.</p>
+      </div>
+      <div class="qp-card">
+        <span class="qp-card__num">04</span>
+        <h3 data-ru="Ключевые сценарии">Core journeys</h3>
+        <p data-ru="Онбординг, главный экран, кошельки, обмен, отправка и получение крипты и фиата, пополнение телефона, KYC, настройки.">Onboarding, dashboard, wallets, exchange, sending and receiving crypto and fiat, mobile top-up, KYC and settings.</p>
+      </div>
+      <div class="qp-card">
+        <span class="qp-card__num">05</span>
+        <h3 data-ru="Дизайн-система">Design system</h3>
+        <p data-ru="UI-кит: цвета, типографика, кнопки, поля ввода, списки, тосты, иконки валют и состояния компонентов.">UI kit: colours, type, buttons, inputs, lists, toasts, currency icons and component states.</p>
+      </div>
+      <div class="qp-card">
+        <span class="qp-card__num">06</span>
+        <h3 data-ru="Визуальная коммуникация">Visual communication</h3>
+        <p data-ru="Мудборд 3D-иллюстраций, концепты первого экрана сайта и скриншоты для сторов на 8 языках.">A 3D illustration moodboard, website hero concepts and store screenshots in 8 languages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section class="cs-section cs-section--tight" id="qp-research">
+    <span class="label-pill" data-ru="Исследование">Research</span>
+    <h2 class="cs-section-title" data-ru="Что мы узнали, пользуясь приложением как клиент">What we learned using the app as a customer</h2>
+    <div class="qp-research">
+      <div class="qp-panel">
+        <h3 data-ru="Конкурентный анализ">Competitive analysis</h3>
+        <p data-ru="Мы прошли регистрацию, добавление кошелька, обмен и отправку в криптокошельках и необанках и разложили их скриншоты рядом с Quppy.">We went through sign-up, adding a wallet, exchange and sending in crypto wallets and neobanks, and laid their screenshots next to Quppy's.</p>
+        <div class="qp-chips">
+          <span class="qp-chip qp-chip--strong">Coinbase Wallet</span>
+          <span class="qp-chip qp-chip--strong">MetaMask</span>
+          <span class="qp-chip qp-chip--strong">Exodus</span>
+          <span class="qp-chip qp-chip--strong">Trust</span>
+          <span class="qp-chip qp-chip--strong">Guarda</span>
+          <span class="qp-chip qp-chip--strong">SwissBorg</span>
+          <span class="qp-chip">Nexo</span>
+          <span class="qp-chip">Celsius</span>
+          <span class="qp-chip">CakeDeFi</span>
+          <span class="qp-chip">Revolut</span>
+          <span class="qp-chip">Monzo</span>
+          <span class="qp-chip">Monese</span>
+        </div>
+      </div>
+      <div class="qp-panel">
+        <h3 data-ru="Главные находки">Key findings</h3>
+        <div class="qp-insights">
+          <div class="qp-insight">
+            <strong data-ru="Непонятный первый шаг">No clear first step</strong>
+            <span data-ru="После открытия приложения нужно сразу видеть «Создать кошелёк» и «У меня уже есть кошелёк».">Right after opening the app people need “Create a wallet” and “I already have a wallet” in front of them.</span>
+          </div>
+          <div class="qp-insight">
+            <strong data-ru="Скрытые комиссии">Hidden fees</strong>
+            <span data-ru="Отправили 2 EUR, а списалось больше — комиссия сети появлялась только после операции.">Sent 2 EUR but more was charged — the network fee only appeared after the transfer.</span>
+          </div>
+          <div class="qp-insight">
+            <strong data-ru="Суммы трудно сканировать">Amounts hard to scan</strong>
+            <span data-ru="Нужны обе суммы — в монете и в USD, — выровненные справа, иначе мелкие комиссии в ETH не видны.">Both the coin and the USD amount are needed, aligned right — otherwise small ETH fees disappear.</span>
+          </div>
+          <div class="qp-insight">
+            <strong data-ru="Импорт только по фразе">Import by phrase only</strong>
+            <span data-ru="Кошелёк импортировался только по фразе восстановления — не по приватному ключу.">A wallet could only be imported with the recovery phrase, not with a private key.</span>
+          </div>
+          <div class="qp-insight">
+            <strong data-ru="Нет обратной связи">No feedback</strong>
+            <span data-ru="После операций пользователь не понимал, что произошло и что делать дальше.">After an operation people didn't know what had happened or what to do next.</span>
+          </div>
+          <div class="qp-insight">
+            <strong data-ru="Непонятные термины">Unclear terms</strong>
+            <span data-ru="«Тип адреса», «родительская мнемоника», «другой оператор» — вопросы вместо действий.">“Address type”, “parent mnemonic”, “another operator” — questions instead of actions.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audit: before / after -->
+  <section class="qp-dark-section" id="qp-audit">
+    <div class="qp-dark-section__bg"></div>
+    <div class="qp-dark-section__inner">
+      <div class="qp-dark-head">
+        <span class="label-pill label-pill--dark" data-ru="Было — стало">Before / after</span>
+        <h2 data-ru="Предложения по каждому сценарию">Proposals for every journey</h2>
+        <p data-ru="Каждое изменение мы показывали клиенту рядом с текущей версией и короткими пронумерованными правками — так команде разработки было проще оценить объём и приоритет.">Every change was shown to the client next to the current version, with short numbered fixes — so the dev team could estimate scope and priority quickly.</p>
+      </div>
+      <div class="qp-audit">
+        <figure>
+          <div class="qp-slide"><img src="../assets/img/case-studies/quppy/audit-wallet.jpg" alt="Wallet layout changes: proposal next to current wallet screen with numbered fixes" width="1536" height="954" loading="lazy"></div>
+          <figcaption><strong data-ru="Детали кошелька.">Wallet details.</strong> <span data-ru="Баланс в валюте кошелька и в USD под ним, суммы операций — справа, время — в деталях транзакции.">Balance in the wallet currency with USD below, transaction amounts aligned right, time moved into the transaction detail.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="qp-slide"><img src="../assets/img/case-studies/quppy/audit-intro.jpg" alt="Introduction proposal with three calls to action on the first screen" width="1536" height="864" loading="lazy"></div>
+          <figcaption><strong data-ru="Первый экран.">First screen.</strong> <span data-ru="Сразу три действия: открыть IBAN, создать или импортировать кошелёк.">Three actions straight away: open an IBAN, create or import a wallet.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="qp-slide"><img src="../assets/img/case-studies/quppy/audit-backup.jpg" alt="Mnemonics proposal: secure your wallet right after creation" width="1536" height="864" loading="lazy"></div>
+          <figcaption><strong data-ru="Мнемоника.">Mnemonics.</strong> <span data-ru="Бэкап предлагается сразу после создания кошелька, а не когда-нибудь потом.">Backup is offered right after the wallet is created, not some time later.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="qp-slide"><img src="../assets/img/case-studies/quppy/audit-send.jpg" alt="Send crypto proposal with recent addresses and network fee" width="1536" height="864" loading="lazy"></div>
+          <figcaption><strong data-ru="Отправка крипты.">Send crypto.</strong> <span data-ru="Недавние адреса, свои кошельки, комментарий и комиссия сети до кнопки «Отправить».">Recent addresses, own wallets, a comment and the network fee before the Send button.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="qp-slide"><img src="../assets/img/case-studies/quppy/audit-receive.jpg" alt="Receive cash proposal with copyable bank details and processing time" width="1536" height="864" loading="lazy"></div>
+          <figcaption><strong data-ru="Получение фиата.">Receive cash.</strong> <span data-ru="Реквизиты копируются в одно касание, видно банк и срок зачисления, главная кнопка — «Поделиться».">Bank details copy in one tap, the bank and processing time are visible, and Share is the main action.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Information architecture -->
+  <section class="cs-section cs-section--tight" id="qp-ia">
+    <span class="label-pill" data-ru="Карта приложения">App map</span>
+    <h2 class="cs-section-title" data-ru="19 разделов, разложенных по задачам пользователя">19 sections, grouped by what people want to do</h2>
+    <div class="qp-ia">
+      <div class="qp-ia__col">
+        <h3 data-ru="Старт">Getting started</h3>
+        <ol>
+          <li><span>01</span><span data-ru="Вход">Login</span></li>
+          <li><span>02</span><span data-ru="PIN и загрузка">PIN &amp; loader</span></li>
+          <li><span>03</span><span data-ru="Онбординг">Intro</span></li>
+          <li><span>04</span><span data-ru="Регистрация">Registration</span></li>
+          <li><span>05</span><span data-ru="Главный экран">Dashboard</span></li>
+        </ol>
+      </div>
+      <div class="qp-ia__col qp-ia__col--crypto">
+        <h3 data-ru="Крипта">Crypto</h3>
+        <ol>
+          <li><span>07</span><span data-ru="Мнемоника и бэкап">Mnemonic &amp; backup</span></li>
+          <li><span>08</span><span data-ru="Добавление кошелька">Adding a crypto wallet</span></li>
+          <li><span>10</span><span data-ru="Криптокошелёк">Crypto wallet</span></li>
+          <li><span>12</span><span data-ru="Отправка крипты">Send crypto</span></li>
+          <li><span>16</span><span data-ru="Получение крипты">Receive crypto</span></li>
+        </ol>
+      </div>
+      <div class="qp-ia__col qp-ia__col--fiat">
+        <h3 data-ru="Фиат">Fiat</h3>
+        <ol>
+          <li><span>8.1</span><span data-ru="Верификация (KYC)">Verification (KYC)</span></li>
+          <li><span>09</span><span data-ru="Открытие IBAN">Adding an IBAN account</span></li>
+          <li><span>11</span><span data-ru="Пополнение телефона">Mobile top-up</span></li>
+          <li><span>13</span><span data-ru="Обмен">Exchange</span></li>
+          <li><span>14</span><span data-ru="Отправка на IBAN / карту">Send to IBAN / card</span></li>
+          <li><span>15</span><span data-ru="Получение с IBAN / карты">Receive from IBAN / card</span></li>
+        </ol>
+      </div>
+      <div class="qp-ia__col qp-ia__col--account">
+        <h3 data-ru="Аккаунт">Account</h3>
+        <ol>
+          <li><span>17</span><span data-ru="Настройки">Settings</span></li>
+          <li><span>18</span><span data-ru="Смена email">Change email</span></li>
+          <li><span>19</span><span data-ru="Удаление аккаунта">Delete account</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Onboarding -->
+  <section class="qp-dark-section" id="qp-onboarding">
+    <div class="qp-dark-section__bg"></div>
+    <div class="qp-dark-section__inner">
+      <div class="qp-dark-head">
+        <span class="label-pill label-pill--dark" data-ru="Онбординг">Onboarding</span>
+        <h2 data-ru="Шесть экранов — шесть причин остаться">Six screens, six reasons to stay</h2>
+        <p data-ru="Вместо абстрактного «Добро пожаловать в новую финансовую реальность» каждый экран показывает одну конкретную функцию через объёмную иллюстрацию в стиле интерфейса. Кнопки «Создать аккаунт» и «У меня есть аккаунт» доступны на каждом шаге.">Instead of an abstract “welcome to a new financial reality”, each screen shows one concrete feature through a 3D illustration built from the app's own UI. “Create an account” and “I have an account” are available on every step.</p>
+      </div>
+      <div class="qp-track">
+        <figure class="qp-phone">
+          <div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/onb-01-welcome.jpg" alt="Welcome to Quppy screen with a wallet and coins illustration" loading="lazy"></div>
+          <figcaption><strong data-ru="Мультивалютный кошелёк">Multi-currency wallet</strong><span data-ru="Подключите свои кошельки или откройте новый.">Connect existing wallets or open a new one.</span></figcaption>
+        </figure>
+        <figure class="qp-phone">
+          <div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/onb-02-crypto.jpg" alt="Buy, exchange and send crypto screen" loading="lazy"></div>
+          <figcaption><strong data-ru="Крипта">Crypto</strong><span data-ru="Покупка, обмен и отправка BTC, BCH, LTC, ETH.">Buy, exchange and send BTC, BCH, LTC, ETH.</span></figcaption>
+        </figure>
+        <figure class="qp-phone">
+          <div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/onb-03-iban.jpg" alt="IBAN accounts in EUR, GBP and USD screen" loading="lazy"></div>
+          <figcaption><strong data-ru="IBAN-счета">IBAN accounts</strong><span data-ru="EUR, GBP и USD и переводы между фиатом и криптой.">EUR, GBP and USD, with transfers between fiat and crypto.</span></figcaption>
+        </figure>
+        <figure class="qp-phone">
+          <div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/onb-04-topup.jpg" alt="Mobile top-up screen" loading="lazy"></div>
+          <figcaption><strong data-ru="Пополнение телефона">Mobile top-up</strong><span data-ru="Любой предоплаченный номер в мире.">Any pre-paid phone worldwide.</span></figcaption>
+        </figure>
+        <figure class="qp-phone">
+          <div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/onb-05-card.jpg" alt="Banking card coming soon screen" loading="lazy"></div>
+          <figcaption><strong data-ru="Банковская карта">Banking card</strong><span data-ru="Анонс карты для онлайн- и офлайн-оплат.">Announcing the card for online and offline payments.</span></figcaption>
+        </figure>
+        <figure class="qp-phone">
+          <div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/onb-06-referral.jpg" alt="Referral programme screen with 15 euro rewards" loading="lazy"></div>
+          <figcaption><strong data-ru="Рефералы">Referrals</strong><span data-ru="15 € за каждого друга с IBAN-счётом.">€15 for every friend who opens an IBAN.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key journeys -->
+  <section class="cs-section" id="qp-journeys">
+    <span class="label-pill" data-ru="Ключевые сценарии">Key journeys</span>
+    <h2 class="cs-section-title" data-ru="Деньги и крипта по одним правилам">Money and crypto, one set of rules</h2>
+
+    <div class="cs-features">
+      <div class="cs-feature-row">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Сценарий 01">Journey 01</span>
+          <h3 data-ru="Главный экран и кошелёк">Dashboard &amp; wallet</h3>
+          <p data-ru="Общий баланс в BTC и USD сверху, ниже — криптокошельки и IBAN-счета отдельными группами с фильтром «Все / Кошельки / Счета». В каждом кошельке три главных действия и заметное, но спокойное напоминание о бэкапе.">Total balance in BTC and USD on top; below it, crypto wallets and IBAN accounts as separate groups with an All / Wallets / Accounts filter. Each wallet has three main actions and a visible but calm backup reminder.</p>
+          <ul class="qp-list">
+            <li data-ru="Сумма в монете и её эквивалент — всегда справа">Coin amount and its equivalent — always right-aligned</li>
+            <li data-ru="Пополнение телефона вынесено баннером на главный">Mobile top-up surfaced as a banner on the dashboard</li>
+          </ul>
+        </div>
+        <div class="qp-phones-pair">
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-dashboard.jpg" alt="Dashboard with total balance, crypto wallets and IBAN accounts" loading="lazy"></div></figure>
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-wallet.jpg" alt="Litecoin wallet screen with backup reminder" loading="lazy"></div></figure>
+        </div>
+      </div>
+
+      <div class="cs-feature-row cs-feature-row--reverse">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Сценарий 02">Journey 02</span>
+          <h3 data-ru="Обмен и отправка крипты">Exchange &amp; send crypto</h3>
+          <p data-ru="Обмен построен как «откуда → куда» с минимумом и максимумом прямо под полем ввода. При отправке не нужно копировать адрес: недавние получатели и собственные кошельки показаны сразу, а адрес можно вставить или отсканировать QR.">Exchange reads as “from → to”, with the minimum and maximum right under the input. Sending no longer starts with copying an address: recent recipients and your own wallets are shown up front, and an address can be pasted or scanned as a QR code.</p>
+          <ul class="qp-list">
+            <li data-ru="Комиссия сети видна до подтверждения">Network fee visible before confirming</li>
+            <li data-ru="Новый адрес можно сохранить в адресную книгу">New addresses can be saved to the address book</li>
+          </ul>
+        </div>
+        <div class="qp-phones-pair">
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-exchange.jpg" alt="Exchange from EUR wallet to LTC wallet" loading="lazy"></div></figure>
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-send-crypto.jpg" alt="Send crypto with recent addresses and own wallets" loading="lazy"></div></figure>
+        </div>
+      </div>
+
+      <div class="cs-feature-row">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Сценарий 03">Journey 03</span>
+          <h3 data-ru="Фиатные переводы">Fiat transfers</h3>
+          <p data-ru="Отправка начинается с выбора способа — на IBAN или на карту — и сразу говорит, когда получатель увидит деньги. Экран получения стал готовыми реквизитами: IBAN и получатель копируются в одно касание, детали банка спрятаны в раскрывающемся блоке, а главная кнопка — «Поделиться».">Sending starts with choosing a route — to an IBAN or to a card — and tells you right away when the recipient gets the money. Receiving became a ready-to-share set of bank details: IBAN and receiver copy in one tap, bank details sit in an expandable block, and Share is the main action.</p>
+          <ul class="qp-list">
+            <li data-ru="Ветки «получатель есть / нет» и «карта есть / нет»">Branches for “recipient exists / doesn't” and “card exists / doesn't”</li>
+            <li data-ru="Срок зачисления — на каждом экране перевода">Processing time on every transfer screen</li>
+          </ul>
+        </div>
+        <div class="qp-phones-pair">
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-send-options.jpg" alt="Send options: to IBAN account or to a credit card" loading="lazy"></div></figure>
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-receive-iban.jpg" alt="Receive screen with copyable bank details" loading="lazy"></div></figure>
+        </div>
+      </div>
+
+      <div class="cs-feature-row cs-feature-row--reverse">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Сценарий 04">Journey 04</span>
+          <h3 data-ru="Пополнение с карты и телефона">Card funding &amp; mobile top-up</h3>
+          <p data-ru="При пополнении с карты пользователь видит лимиты, комиссию и итоговую сумму до нажатия «Получить средства». В пополнении телефона главный риск — контрактный номер, на который деньги не дойдут, поэтому предупреждение стоит прямо над списком контактов.">When funding from a card, people see limits, the fee and the total before tapping “Receive funds”. In mobile top-up the main risk is a contract number the money will never reach, so the warning sits right above the contact list.</p>
+        </div>
+        <div class="qp-phones-pair">
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-receive-card.jpg" alt="Receive from Visa card with estimated fee and total" loading="lazy"></div></figure>
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-topup.jpg" alt="Select phone number with pre-paid warning" loading="lazy"></div></figure>
+        </div>
+      </div>
+
+      <div class="cs-feature-row">
+        <div class="cs-feature-text">
+          <span class="cs-feature-badge" data-ru="Сценарий 05">Journey 05</span>
+          <h3 data-ru="Безопасность и верификация">Security &amp; verification</h3>
+          <p data-ru="Перед показом мнемоники пользователь отмечает три правила: найти безопасное место, не делать скриншот, записать фразу. Форма KYC собирает только то, что нужно для открытия фиатного счёта, а регистрация проверяет пароль по каждому правилу прямо во время ввода.">Before the mnemonic is shown, people tick three rules: find a safe place, don't take a screenshot, write it down. The KYC form asks only for what's needed to open a fiat account, and registration checks each password rule live while typing.</p>
+        </div>
+        <div class="qp-phones-pair">
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-backup.jpg" alt="Secure your wallet checklist before showing the mnemonic" loading="lazy"></div></figure>
+          <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/app-kyc.jpg" alt="Verification form with personal data fields" loading="lazy"></div></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reissue flow -->
+  <section class="cs-section cs-section--tight" id="qp-reissue">
+    <span class="label-pill" data-ru="Новая функция · 2024">New feature · 2024</span>
+    <h2 class="cs-section-title" data-ru="Перевыпуск кошелька: комиссия до, а не после">Wallet reissue: the fee before, not after</h2>
+    <p class="cs-section-lead" data-ru="Кошелёк можно перевыпустить — для этого берётся комиссия 1 USDT, а адрес меняется. Мы показали оба факта до подтверждения: пользователь выбирает, с какого кошелька списать комиссию, и только потом подтверждает перевыпуск. Сценарий спроектирован с ветками «перевыпустить один» и «перевыпустить все», с экранами успеха и ошибки.">A wallet can be reissued for a 1 USDT fee, and its address changes. We put both facts before the confirmation: people choose which wallet pays the fee and only then confirm. The flow covers “reissue one” and “reissue all”, with success and error states.</p>
+    <div class="qp-steps">
+      <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/reissue-01-menu.jpg" alt="Wallet action sheet with change name, deactivate, reissue and reissue all" loading="lazy"></div><figcaption><strong data-step="1" data-ru="Действия с кошельком">Wallet actions</strong></figcaption></figure>
+      <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/reissue-02-fee.jpg" alt="Choose wallet to pay a 1 USDT commission" loading="lazy"></div><figcaption><strong data-step="2" data-ru="Выбор кошелька для комиссии">Pick who pays the fee</strong></figcaption></figure>
+      <figure class="qp-phone"><div class="qp-phone__screen"><img src="../assets/img/case-studies/quppy/reissue-03-confirm.jpg" alt="Confirmation dialog warning that the address will change" loading="lazy"></div><figcaption><strong data-step="3" data-ru="Подтверждение">Confirm</strong></figcaption></figure>
+    </div>
+    <div class="qp-flow-board">
+      <img src="../assets/img/case-studies/quppy/flow-reissue.jpg" alt="Reissue flow board connecting dashboard, wallet, settings and confirmation screens" width="1597" height="1230" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Design system -->
+  <section class="cs-section cs-section--tight" id="qp-ds">
+    <span class="label-pill" data-ru="Дизайн-система">Design system</span>
+    <h2 class="cs-section-title" data-ru="UI-кит, который разработчики могли собрать без вопросов">A UI kit developers could build without guessing</h2>
+    <div class="qp-palette">
+      <div class="qp-swatch"><i style="background:#6c63fb"></i><strong>Primary</strong><span>#6C63FB</span></div>
+      <div class="qp-swatch"><i style="background:#3d31fa"></i><strong>Primary Dark</strong><span>#3D31FA</span></div>
+      <div class="qp-swatch"><i style="background:#ff6584"></i><strong>Pink</strong><span>#FF6584</span></div>
+      <div class="qp-swatch"><i style="background:#70d298"></i><strong>Green</strong><span>#70D298</span></div>
+      <div class="qp-swatch"><i style="background:#5b95ff"></i><strong>Blue</strong><span>#5B95FF</span></div>
+      <div class="qp-swatch"><i style="background:#414561"></i><strong>Secondary Dark</strong><span>#414561</span></div>
+      <div class="qp-swatch"><i style="background:#737899"></i><strong>Secondary</strong><span>#737899</span></div>
+      <div class="qp-swatch"><i style="background:#f2f3f5"></i><strong>Background</strong><span>#F2F3F5</span></div>
+    </div>
+    <div class="qp-ds-grid">
+      <div class="qp-type">
+        <div class="qp-type__row"><span class="qp-type__big">0.0041</span><small data-ru="Крупное число · 48">Big number · 48</small></div>
+        <div class="qp-type__row"><span style="font-size:20px;font-weight:500">Header 1</span><small>Gilroy Medium · 20</small></div>
+        <div class="qp-type__row"><span style="font-size:16px;font-weight:600">Button</span><small>Gilroy SemiBold · 16</small></div>
+        <div class="qp-type__row"><span style="font-size:16px">Body 1 — We are glad to see you</span><small>Gilroy Regular · 16</small></div>
+        <div class="qp-type__row"><span style="font-size:14px;font-weight:500">Body 2 — Recipient receives funds within 1–2 days</span><small>Gilroy Medium · 14</small></div>
+      </div>
+      <div class="qp-ui">
+        <div class="qp-ui__row">
+          <span class="qp-btn qp-btn--primary" data-ru="Обменять">Exchange</span>
+          <span class="qp-btn qp-btn--secondary" data-ru="Добавить кошелёк">Add wallet</span>
+          <span class="qp-btn qp-btn--disabled" data-ru="Далее">Next</span>
+          <span class="qp-btn qp-btn--text" data-ru="Пропустить">Skip</span>
+        </div>
+        <div class="qp-tabs"><span data-ru="Все">All</span><span data-ru="Получено">Received</span><span data-ru="Отправлено">Sent</span><span data-ru="Обмен">Exchanged</span></div>
+        <div class="qp-row">
+          <span class="qp-row__icon" style="background:#f7931a">₿</span>
+          <span class="qp-row__text"><span data-ru="Bitcoin-кошелёк">Bitcoin wallet</span><small>Bitcoin</small></span>
+          <span class="qp-row__amount">0.0041 BTC<small>≈ 32.33 $</small></span>
+        </div>
+        <div class="qp-row">
+          <span class="qp-row__icon" style="background:#3d5afe">€</span>
+          <span class="qp-row__text"><span data-ru="Основной EUR-счёт">Main EUR wallet</span><small>Euro</small></span>
+          <span class="qp-row__amount">254.75 EUR<small>≈ 0.00003 BTC</small></span>
+        </div>
+        <div class="qp-alert"><strong data-ru="Кошельку нужен бэкап">Wallet needs backup</strong><span data-ru="Чтобы восстановить кошелёк, если телефон потеряется.">So your wallet can be recovered if your device is lost or stolen.</span></div>
+      </div>
+    </div>
+    <div class="qp-chips">
+      <span class="qp-chip qp-chip--strong" data-ru="17 цветов">17 colour styles</span>
+      <span class="qp-chip qp-chip--strong" data-ru="9 текстовых стилей">9 text styles</span>
+      <span class="qp-chip" data-ru="Кнопки: Primary, Secondary, Tertiary">Buttons: primary, secondary, tertiary</span>
+      <span class="qp-chip" data-ru="Поля ввода и требования к паролю">Inputs &amp; password rules</span>
+      <span class="qp-chip" data-ru="Списки и элементы списка">Lists &amp; list items</span>
+      <span class="qp-chip" data-ru="Тосты и статусы">Toasts &amp; statuses</span>
+      <span class="qp-chip" data-ru="PIN и код активации">PIN &amp; activation code</span>
+      <span class="qp-chip" data-ru="28 иконок валют">28 currency logos</span>
+      <span class="qp-chip" data-ru="Таб-бар и шапки">Tab bar &amp; headers</span>
+    </div>
+  </section>
+
+  <!-- Visual communication -->
+  <section class="qp-dark-section" id="qp-visual">
+    <div class="qp-dark-section__bg"></div>
+    <div class="qp-dark-section__inner">
+      <div class="qp-dark-head">
+        <span class="label-pill label-pill--dark" data-ru="Визуальная коммуникация">Visual communication</span>
+        <h2 data-ru="Сторы, иллюстрации и сайт">Store listing, illustrations and website</h2>
+        <p data-ru="Скриншоты для App Store и Google Play рассказывают о продукте пятью обещаниями и собраны на 8 языках. Для иллюстраций мы собрали мудборд объёмной 3D-графики — чистой, яркой и профессиональной — и проверили её на концептах первого экрана сайта.">App Store and Google Play screenshots tell the story in five promises and were produced in 8 languages. For illustrations we put together a moodboard of clean, vivid yet professional 3D art and tested it on website hero concepts.</p>
+      </div>
+      <div class="qp-store">
+        <img src="../assets/img/case-studies/quppy/store-01.jpg" alt="Store screenshot: Dissolve barriers between traditional money and crypto" loading="lazy">
+        <img src="../assets/img/case-studies/quppy/store-02.jpg" alt="Store screenshot: Get a multicurrency IBAN in 5 mins" loading="lazy">
+        <img src="../assets/img/case-studies/quppy/store-03.jpg" alt="Store screenshot: Buy, sell and exchange crypto at best rates" loading="lazy">
+        <img src="../assets/img/case-studies/quppy/store-04.jpg" alt="Store screenshot: Profit from no limits and zero fees" loading="lazy">
+        <img src="../assets/img/case-studies/quppy/store-05.jpg" alt="Store screenshot: Get cashbacks from your exchange volumes" loading="lazy">
+      </div>
+      <div class="qp-gallery">
+        <figure>
+          <div class="qp-img-card"><img src="../assets/img/case-studies/quppy/web-hero-lilac.jpg" alt="Website hero concept on lilac background with 3D illustration" width="1440" height="868" loading="lazy"></div>
+          <figcaption data-ru="Концепт первого экрана сайта: лицензированное мультивалютное платёжное решение">Website hero concept: a licensed multi-currency payment solution</figcaption>
+        </figure>
+        <figure>
+          <div class="qp-img-card"><img src="../assets/img/case-studies/quppy/web-hero-purple.jpg" alt="Website hero concept on purple background for personal IBAN accounts" width="1440" height="868" loading="lazy"></div>
+          <figcaption data-ru="Вариант для частных клиентов: личный мультивалютный счёт в европейском банке">Variant for individuals: a personal multi-currency account in a European bank</figcaption>
+        </figure>
+      </div>
+      <div class="qp-img-card"><img src="../assets/img/case-studies/quppy/moodboard-3d.jpg" alt="Illustration moodboard slide with a 3D artwork reference" width="1344" height="756" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- Outcome -->
+  <section class="cs-section cs-section--tight" id="qp-outcome">
+    <span class="label-pill" data-ru="Результат">Outcome</span>
+    <h2 class="cs-section-title" data-ru="Что получила команда Quppy">What the Quppy team got</h2>
+    <div class="qp-outcome">
+      <div class="qp-card"><h3 data-ru="Единая логика">One logic for money</h3><p data-ru="Крипта и фиат используют одни и те же паттерны: «откуда → куда», сумма справа, комиссия до подтверждения.">Crypto and fiat share the same patterns: from → to, amounts on the right, the fee before confirming.</p></div>
+      <div class="qp-card"><h3 data-ru="Карта для разработки">A map for developers</h3><p data-ru="19 разделов с ветками и стрелками — команда видит, откуда пользователь приходит на каждый экран.">19 sections with branches and arrows — the team sees how people reach every screen.</p></div>
+      <div class="qp-card"><h3 data-ru="UI-кит">A UI kit</h3><p data-ru="Компоненты с состояниями вместо отдельных макетов — новые функции собираются из готовых блоков.">Components with states instead of one-off mockups — new features are assembled from ready blocks.</p></div>
+      <div class="qp-card"><h3 data-ru="Готовность к росту">Room to grow</h3><p data-ru="Карта, перевыпуск кошелька и новые способы пополнения встраиваются без перестройки навигации.">The card, wallet reissue and new funding methods fit in without rebuilding the navigation.</p></div>
+    </div>
+  </section>
+
+
+  <!-- CTA back to portfolio -->
+  <section class="cs-section cs-section--tight">
+    <div class="cs-cta">
+      <p data-ru="Хотите узнать больше об этом проекте или обсудить сотрудничество?">Want to learn more about this project or discuss a collaboration?</p>
+      <a class="tag tag--accent" href="../index.html#contacts" data-ru="Связаться со мной">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="contacts" id="contacts">
+    <div class="contacts__header">
+      <div class="contacts__title-row">
+        <h2 data-ru="Давайте общаться!">Let's stay in touch!</h2>
+        <span class="smiley-bubble smiley-bubble--card" aria-hidden="true"><img src="../assets/img/icons/smile.svg" alt="" width="24" height="24"></span>
+      </div>
+      <p data-ru="Я всегда открыта для новых проектов, долгосрочного сотрудничества и классных идей. Свяжитесь со мной любым удобным способом.">I'm always open to new projects, long-term collaborations, and exciting ideas. Feel free to reach out through any channel.</p>
+    </div>
+
+    <div class="contact-cards">
+      <a class="contact-card" href="https://t.me/viable" target="_blank" rel="noopener">
+        <span class="contact-card__icon contact-card__icon--telegram"><img src="../assets/img/icons/telegram.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label">Telegram</span>
+          <span class="contact-card__value">@viable</span>
+        </span>
+      </a>
+      <a class="contact-card" href="https://wa.me/34607944458" data-ru-href="https://wa.me/79312444104" target="_blank" rel="noopener">
+        <span class="contact-card__icon contact-card__icon--whatsapp"><img src="../assets/img/icons/whatsapp.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label">WhatsApp</span>
+          <span class="contact-card__value" data-ru="+7 931 2444104">+34 607 944 458</span>
+        </span>
+      </a>
+      <a class="contact-card" href="mailto:vavilovaiana@gmail.com">
+        <span class="contact-card__icon contact-card__icon--email"><img src="../assets/img/icons/mail.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label" data-ru="Электронная почта">Email</span>
+          <span class="contact-card__value">vavilovaiana@gmail.com</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year">2026</span> <span data-ru="Яна Вавилова. Продуктовый дизайнер.">Yana Vavilova. Product Designer.</span></p>
+  <p data-ru="В центре всего, что я создаю — люди.">People are at the center of everything.</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
