@@ -1,0 +1,282 @@
+/* ==========================================================================
+   Case study: Bank Guarantees — Lighthouse platform + Banka DS + micro-animations
+   Prefix: gt-. Loaded after case-study.css, case-alfa.css and case-bl.css;
+   re-colours the al-/bl- helpers to the Banka blue via .gt-page.
+   ========================================================================== */
+
+.gt-page {
+  --al-red: #4e76fc;
+  --al-red-soft: rgba(78, 118, 252, 0.1);
+  --al-navy: #0e1226;
+  --gt-blue: #4e76fc;
+  --gt-blue-dark: #1d50fb;
+}
+
+.gt-page .al-dark__bg {
+  background:
+    radial-gradient(55% 60% at 100% 0%, rgba(78, 118, 252, 0.38), transparent 70%),
+    radial-gradient(40% 50% at 0% 100%, rgba(116, 99, 226, 0.22), transparent 70%),
+    var(--al-navy);
+}
+.gt-page .al-hero-visual { background: var(--al-navy); }
+
+.gt-page .cs-hero__head .badge { align-self: flex-start; }
+.gt-figure-center { max-width: 880px; margin: 0 auto; width: 100%; }
+
+.gt-link-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---- Three parts -------------------------------------------------------- */
+.gt-parts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.gt-part {
+  padding: 28px;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid var(--c-border-lav);
+  box-shadow: 0 8px 24px rgba(21, 27, 55, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.gt-part__num {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--gt-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+}
+.gt-part h3 { font-weight: 700; font-size: 20px; line-height: 1.3; }
+.gt-part p { font-size: 15px; line-height: 1.6; color: var(--c-text-secondary); }
+
+/* ---- Parties of a guarantee --------------------------------------------- */
+.gt-parties { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; position: relative; }
+.gt-party {
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--c-light-bg);
+  border: 1px solid var(--c-border-lav);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.gt-party__role {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--gt-blue);
+}
+.gt-party h3 { font-weight: 700; font-size: 18px; }
+.gt-party p { font-size: 14.5px; line-height: 1.55; color: var(--c-text-secondary); }
+
+/* ---- Status tracker (dark) ---------------------------------------------- */
+.gt-track { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.gt-track li {
+  position: relative;
+  padding: 18px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.gt-track li span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  background: #44bf78;
+  color: #fff;
+}
+.gt-track li.is-current { background: rgba(78, 118, 252, 0.22); border-color: rgba(78, 118, 252, 0.6); }
+.gt-track li.is-current span { background: #fff; color: var(--al-navy); }
+.gt-track li.is-next span { background: rgba(255, 255, 255, 0.16); }
+
+/* ---- Design system numbers ---------------------------------------------- */
+.gt-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.gt-stats .al-stat__value { font-size: clamp(40px, 5vw, 64px); }
+
+/* ---- Component lifecycle ------------------------------------------------- */
+.gt-types { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.gt-type {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--c-border-lav);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.gt-type strong { font-size: 16px; }
+.gt-type p { font-size: 14px; line-height: 1.5; color: var(--c-text-secondary); }
+.gt-type--core { border-top: 4px solid var(--gt-blue); }
+.gt-type--candidate { border-top: 4px solid #7463e2; }
+.gt-type--special { border-top: 4px solid #fb9130; }
+.gt-type--reject { border-top: 4px solid #f6514c; }
+
+.gt-checklist { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+.gt-checklist li { position: relative; padding-left: 30px; font-size: 15px; line-height: 1.5; color: var(--c-text-secondary); }
+.gt-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--gt-blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center / 14px no-repeat;
+}
+
+/* ---- Palette / tokens ----------------------------------------------------- */
+.gt-palette { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.gt-swatch { border-radius: 16px; overflow: hidden; border: 1px solid var(--c-border-lav); background: #fff; }
+.gt-swatch__color { height: 88px; display: flex; }
+.gt-swatch__color i { flex: 1; }
+.gt-swatch__meta { padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+.gt-swatch__meta strong { font-size: 13px; }
+.gt-swatch__meta span { font-size: 12px; color: var(--c-text-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.gt-tokens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.gt-token-card h3 { font-weight: 700; font-size: 16px; }
+.gt-radii { display: flex; align-items: flex-end; gap: 8px; flex-wrap: wrap; }
+.gt-radii div {
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--gt-blue);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  background: var(--al-red-soft);
+  display: grid;
+  place-items: end start;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gt-blue);
+  padding: 2px 4px;
+}
+.gt-spacing { display: flex; align-items: flex-end; gap: 10px; }
+.gt-spacing div { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--c-text-secondary); }
+.gt-spacing i { display: block; width: 28px; background: var(--gt-blue); border-radius: 4px; }
+.gt-type-scale { display: flex; flex-direction: column; gap: 4px; }
+.gt-type-scale span { line-height: 1.2; color: var(--c-text); }
+
+/* ---- Spec gallery (dark) -------------------------------------------------- */
+.gt-spec { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
+.gt-spec__side { display: flex; flex-direction: column; gap: 24px; }
+.gt-mascot {
+  border-radius: 24px;
+  background: radial-gradient(60% 60% at 50% 40%, rgba(78, 118, 252, 0.35), transparent 70%), rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+}
+.gt-mascot img { width: 100%; height: auto; display: block; border-radius: 16px; background: #fff; }
+.gt-mascot p { font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.78); }
+.gt-mascot h3 { color: #fff; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+
+/* ---- Motion table ---------------------------------------------------------- */
+.gt-motion-wrap { overflow-x: auto; border-radius: 20px; border: 1px solid var(--c-border-lav); background: #fff; }
+.gt-motion { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14.5px; }
+.gt-motion th, .gt-motion td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--c-border-lav); vertical-align: top; }
+.gt-motion thead th { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--c-text-muted); background: var(--c-light-bg); }
+.gt-motion tbody tr:last-child td { border-bottom: 0; }
+.gt-motion td:first-child { font-weight: 700; color: var(--c-text); white-space: nowrap; }
+.gt-motion td { color: var(--c-text-secondary); }
+.gt-motion code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12.5px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: var(--al-red-soft);
+  color: var(--gt-blue-dark);
+  white-space: nowrap;
+}
+
+/* Little live demo of the DS easing next to the table */
+.gt-demo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.gt-demo__item {
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--c-light-bg);
+  border: 1px solid var(--c-border-lav);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.gt-demo__item strong { font-size: 15px; }
+.gt-demo__item span { font-size: 13px; color: var(--c-text-muted); }
+.gt-demo__stage { height: 72px; border-radius: 14px; background: #fff; border: 1px solid var(--c-border-lav); position: relative; overflow: hidden; }
+.gt-demo__shimmer {
+  position: absolute;
+  inset: 16px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ececf1 0%, #f7f7fa 40%, #ececf1 80%);
+  background-size: 300% 100%;
+  animation: gt-shimmer 1.3s cubic-bezier(0.45, 0.02, 0.49, 0.99) infinite;
+}
+@keyframes gt-shimmer { 0% { background-position: 100% 0; } 62% { background-position: 0 0; } 100% { background-position: 0 0; } }
+.gt-demo__tabs { position: absolute; inset: 16px; display: flex; border-radius: 999px; background: #f2f2f6; padding: 4px; }
+.gt-demo__tabs i {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(5, 5, 7, 0.12);
+  animation: gt-tabs 2.4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+@keyframes gt-tabs { 0%, 40% { transform: translateX(0); } 48%, 90% { transform: translateX(100%); } 98%, 100% { transform: translateX(0); } }
+.gt-demo__tooltip {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #050507;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  animation: gt-tooltip 2.4s ease-out infinite;
+}
+@keyframes gt-tooltip {
+  0% { opacity: 0; transform: translate(-50%, calc(-50% - 2px)); }
+  12.5%, 70% { opacity: 1; transform: translate(-50%, -50%); }
+  80%, 100% { opacity: 0; transform: translate(-50%, calc(-50% - 2px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gt-demo__shimmer, .gt-demo__tabs i, .gt-demo__tooltip { animation: none; }
+}
+
+.gt-boards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+
+/* ---- Responsive -------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .gt-track { grid-template-columns: repeat(3, 1fr); }
+  .gt-palette { grid-template-columns: repeat(3, 1fr); }
+  .gt-types, .gt-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .gt-parts, .gt-parties, .gt-tokens, .gt-demo, .gt-spec, .gt-boards { grid-template-columns: 1fr; }
+  .gt-checklist { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .gt-track, .gt-types, .gt-stats { grid-template-columns: 1fr; }
+  .gt-palette { grid-template-columns: repeat(2, 1fr); }
+  .gt-mascot { grid-template-columns: 1fr; }
+}

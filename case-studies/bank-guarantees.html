@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-ru="Банковские гарантии — кейс | Яна Вавилова">Bank Guarantees — Case Study | Iana Vavilova</title>
+<meta name="description" content="Case study: a Lighthouse platform for issuing bank guarantees, the Banka design system for Gazprombank and its micro-animations." data-ru="Кейс: платформа Lighthouse для выдачи банковских гарантий, дизайн-система Banka для Газпромбанка и её микроанимации.">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<link rel="stylesheet" href="../css/case-alfa.css">
+<link rel="stylesheet" href="../css/case-bl.css">
+<link rel="stylesheet" href="../css/case-guarantees.css">
+</head>
+<body class="gt-page">
+
+<a class="skip-link" href="#main" data-ru="Перейти к содержимому">Skip to content</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="logo" aria-label="Iana Vavilova — home">
+      <img src="../assets/img/photos/logo.png" alt="Iana Vavilova logo" width="59" height="36">
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <button class="main-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <div class="main-nav__links" id="navLinks">
+        <a href="../index.html#mission" data-ru="Обо мне">About me</a>
+        <a href="../index.html#case-studies" data-ru="Кейсы">Case studies</a>
+        <a href="../index.html#ai-tools" data-ru="Навыки">Skills</a>
+        <a href="../index.html#contacts" data-ru="Контакты">Contacts</a>
+        <div class="main-nav__buttons">
+          <button type="button" id="langToggle" class="tag tag--outline" data-ru="RU / EN" aria-label="Change language">EN / RU</button>
+          <a class="tag tag--accent" href="https://www.figma.com/proto/rudZk6rEIAjRQLwwJBsMRe/Viable_personal-brand?node-id=20007962-11445&amp;p=f&amp;t=sg4oWDETdWKKeh3u-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=1213%3A22987&amp;starting-point-node-id=20007962%3A11445" target="_blank" rel="noopener" data-ru="Презентация" data-ru-href="https://www.figma.com/proto/rudZk6rEIAjRQLwwJBsMRe/Viable_personal-brand?node-id=20007771-7284&amp;p=f&amp;t=vNckKan8vcx1uxIu-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=76%3A883&amp;starting-point-node-id=20007771%3A7284">Presentation</a>
+          <a class="tag tag--dark" href="../assets/cv/Iana-Vavilova-CV.pdf" download="Iana-Vavilova-CV.pdf" target="_blank" rel="noopener" data-ru="Резюме" data-ru-href="../assets/cv/Yana-Vavilova-CV-RU.pdf" data-ru-download="Yana-Vavilova-CV-RU.pdf">CV</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="cs-main">
+
+  <div class="cs-back-row">
+    <a class="cs-back-link" href="../index.html#case-studies">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span data-ru="Все кейсы">All case studies</span>
+    </a>
+  </div>
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="cs-hero__head">
+      <span class="badge al-badge" data-ru="FinTech · B2B и мобильный банк">FinTech · B2B &amp; mobile banking</span>
+      <h1 class="cs-hero__title" data-ru="Банковские гарантии">Bank Guarantees</h1>
+      <p class="cs-hero__subtitle" data-ru="Отдельная платформа Lighthouse для выдачи банковских гарантий — и дизайн-система Banka с микроанимациями, на которой собраны банковские интерфейсы. Один кейс о том, как сложный финансовый процесс превращается в понятный продукт.">A standalone Lighthouse platform for issuing bank guarantees — and the Banka design system with micro-animations that the banking interfaces are built on. One case about turning a heavy financial process into a clear product.</p>
+    </div>
+    <dl class="cs-meta-grid">
+      <div class="cs-meta-item"><dt data-ru="Компания">Company</dt><dd data-ru="Lighthouse · Газпромбанк">Lighthouse · Gazprombank</dd></div>
+      <div class="cs-meta-item"><dt data-ru="Роль">Role</dt><dd data-ru="Продуктовый дизайнер, дизайн-система">Product Designer, design system</dd></div>
+      <div class="cs-meta-item"><dt data-ru="Платформа">Platform</dt><dd data-ru="Веб-платформа, iOS и Android">Web platform, iOS &amp; Android</dd></div>
+      <div class="cs-meta-item"><dt data-ru="Годы">Years</dt><dd>2022–2024</dd></div>
+    </dl>
+    <div class="al-hero-visual">
+      <img src="../assets/img/case-studies/bank-guarantees/hero.jpg" alt="Lighthouse bank guarantees platform: home screen and a mobile payment status screen" data-ru-alt="Платформа банковских гарантий Lighthouse: главная и мобильный статусный экран платежа" width="2400" height="1260" loading="eager">
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="cs-section" id="gt-overview">
+    <span class="label-pill" data-ru="О проекте">About</span>
+    <div class="al-two">
+      <div class="al-text">
+        <h2 class="al-section-title" data-ru="Гарантия — это долго и трудоёмко">A guarantee is slow and labour-intensive</h2>
+        <p data-ru="Выдать банковскую гарантию и бенефициару, и принципалу сегодня — длинный и трудоёмкий процесс. Банку мешает распределение лимитов: нужно управлять финансовыми обязательствами и оценивать риски — кредитоспособность заявителя, размер и срок гарантии, исполнение контракта.">Issuing a bank guarantee for both the Beneficiary and the Principal is a long, labour-intensive process. Banks struggle with limit allocation: they have to manage financial obligations and assess risks — the applicant’s creditworthiness, the size and term of the guarantee, and how the contract will be performed.</p>
+        <p data-ru="Банк хочет поддержать клиента и при этом не рисковать бизнесом. Вместе с командой Lighthouse я спроектировала макеты отдельной платформы, которая помогает выдавать банковские гарантии.">The bank wants to support the client without putting the business at risk. Together with the Lighthouse team, I designed the layouts for a separate platform that helps issue bank guarantees.</p>
+        <div class="gt-link-row">
+          <a class="tag tag--accent" href="https://www.lth.pro/guarantees" target="_blank" rel="noopener" data-ru="Сайт Lighthouse">Visit website</a>
+        </div>
+      </div>
+      <div class="al-card">
+        <span class="al-card__label" data-ru="Задача банка">The bank’s challenge</span>
+        <h3 data-ru="Найти баланс между поддержкой клиента и риском">Balance client support against risk</h3>
+        <ul>
+          <li data-ru="Распределение лимитов между клиентами и контрактами">Allocating limits across clients and contracts</li>
+          <li data-ru="Оценка кредитоспособности заявителя">Assessing the applicant’s creditworthiness</li>
+          <li data-ru="Размер и срок действия гарантии">The guarantee’s size and term</li>
+          <li data-ru="Контроль исполнения контракта">Monitoring contract performance</li>
+          <li data-ru="Документы, которые ходят между тремя сторонами">Documents moving between three parties</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gt-parts">
+      <div class="gt-part"><span class="gt-part__num">01</span><h3 data-ru="Платформа гарантий">Guarantee platform</h3><p data-ru="Веб-кабинет Lighthouse: заявки, контракты, запросы, бенефициары, документы и статус сделки на каждом шаге.">The Lighthouse web cabinet: requests, contracts, queries, beneficiaries, documents and the deal status at every step.</p></div>
+      <div class="gt-part"><span class="gt-part__num">02</span><h3 data-ru="Дизайн-система Banka">Banka design system</h3><p data-ru="Токены и компоненты для iOS, Android и веба, светлая и тёмная темы, примеры экранов и корнер-кейсы.">Tokens and components for iOS, Android and web, light and dark themes, example screens and corner cases.</p></div>
+      <div class="gt-part"><span class="gt-part__num">03</span><h3 data-ru="Микроанимации и маскот">Micro-animations &amp; mascot</h3><p data-ru="Единая таблица таймингов и кривых для всех компонентов, прототипы переходов и персонаж для статусных экранов.">One table of timings and easing curves for every component, transition prototypes and a character for status screens.</p></div>
+    </div>
+  </section>
+
+  <!-- Parties -->
+  <section class="cs-section cs-section--tight" id="gt-parties">
+    <span class="label-pill" data-ru="Участники">Who is involved</span>
+    <div class="al-head">
+      <h2 class="al-section-title" data-ru="Три стороны одной гарантии">Three parties, one guarantee</h2>
+      <p data-ru="Интерфейс должен работать для каждой стороны: показывать, на чьей стороне сейчас мяч, и не терять документы между ними.">The interface has to work for every party: show whose move it is right now and never lose documents in between.</p>
+    </div>
+    <div class="gt-parties">
+      <div class="gt-party"><span class="gt-party__role" data-ru="Принципал">Principal</span><h3 data-ru="Компания-исполнитель">The contractor</h3><p data-ru="Запрашивает гарантию, задаёт лимит, загружает документы и следит за решением банка.">Requests the guarantee, sets the limit, uploads documents and follows the bank’s decision.</p></div>
+      <div class="gt-party"><span class="gt-party__role" data-ru="Бенефициар">Beneficiary</span><h3 data-ru="Заказчик по контракту">The customer</h3><p data-ru="Получает гарантию исполнения обязательств и видит данные договора, под который она выпущена.">Receives the performance guarantee and sees the contract it was issued for.</p></div>
+      <div class="gt-party"><span class="gt-party__role" data-ru="Банк">Bank</span><h3 data-ru="Гарант">The guarantor</h3><p data-ru="Оценивает риски, структурирует сделку, принимает решение и оформляет документацию.">Assesses risks, structures the deal, makes the decision and prepares the documentation.</p></div>
+    </div>
+  </section>
+
+  <!-- Platform home -->
+  <section class="cs-section" id="gt-home">
+    <span class="label-pill" data-ru="Платформа">Platform</span>
+    <div class="al-feature">
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/lh-dashboard.jpg" alt="Platform home: favourites, recent actions, help and feedback" data-ru-alt="Главная платформы: избранное, последние действия, справочник и обратная связь" width="1666" height="1184" loading="lazy"></div></figure>
+      <div class="al-text">
+        <h2 class="al-section-title" data-ru="Главная, с которой начинается любая сделка">A home screen where every deal starts</h2>
+        <p data-ru="Слева — разделы платформы: контракты, запросы, заявки, бенефициары и документы. В центре — избранные действия, которые пользователь настраивает под себя: создать заявку и задать лимит, решения по запросам, глобальный поиск по контрактам и документооборот.">On the left are the platform sections: contracts, queries, requests, beneficiaries and documents. In the centre are favourite actions the user arranges for themselves: create a request and set a limit, decisions on requests, a global search across contracts, and document flow.</p>
+        <p data-ru="Лента «Последние действия» показывает, что произошло с каждой заявкой: нужна загрузка документов, назначена дата комитета, предоставлена предварительная ставка, пройдена оценка рисков. Справочник «Вопрос-Ответ» и обратная связь всегда под рукой.">The “Recent actions” feed shows what happened to each request: documents needed, committee date set, a preliminary rate offered, the risk assessment passed. The Q&amp;A reference and a feedback form are always one click away.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request flow (dark) -->
+  <section class="al-dark" id="gt-request">
+    <div class="al-dark__bg"></div>
+    <div class="al-dark__inner">
+      <span class="label-pill label-pill--dark" data-ru="Заявка">Request</span>
+      <div class="al-head">
+        <h2 class="al-section-title" data-ru="Карточка заявки и шесть этапов сделки">The request card and six deal stages</h2>
+        <p data-ru="Вверху — кто принципал и кто бенефициар, запрашиваемая сумма, дата выпуска и период действия гарантии. Справа — трекер этапов: пользователь всегда видит, где сейчас сделка и что будет дальше. В центре — форма текущего шага, например внесение данных договора под гарантию.">At the top: who the principal and the beneficiary are, the requested amount, the issue date and the guarantee period. On the right: a stage tracker, so the user always sees where the deal is and what comes next. In the centre: the form for the current step — for example, entering the contract details for the guarantee.</p>
+      </div>
+      <ol class="gt-track">
+        <li><span>✓</span><b data-ru="Статус от банка">Bank status</b></li>
+        <li><span>✓</span><b data-ru="Работа с документами">Working with documents</b></li>
+        <li><span>✓</span><b data-ru="Структурирование сделки">Deal structuring</b></li>
+        <li><span>✓</span><b data-ru="Принятие решения">Decision</b></li>
+        <li class="is-current"><span>5</span><b data-ru="Заключение документации">Documentation</b></li>
+        <li class="is-next"><span>6</span><b data-ru="Окончательное решение">Final decision</b></li>
+      </ol>
+      <figure class="al-figure">
+        <div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/lh-application.jpg" alt="Request No. 001: principal and beneficiary, guarantee terms, contract form and stage tracker" data-ru-alt="Заявка № 001: принципал и бенефициар, условия гарантии, форма договора и трекер этапов" width="1746" height="960" loading="lazy"></div>
+        <figcaption data-ru="Шаг «Заключение документации»: новый договор или изменения в существующем, номер и дата, максимальный срок гарантий, лимит и дата окончания договора.">The “Documentation” step: a new contract or changes to an existing one, number and date, the maximum guarantee term, the limit and the contract end date.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Design system -->
+  <section class="cs-section" id="gt-ds">
+    <span class="label-pill" data-ru="Дизайн-система">Design system</span>
+    <div class="al-two">
+      <div class="al-text">
+        <h2 class="al-section-title">Banka Design System</h2>
+        <p data-ru="Газпромбанк отделялся от основной ветки Газпрома и развивал собственную дизайн-систему. Мы построили сложную систему на токенах и компонентах, реализовали примеры экранов и корнер-кейсы, спроектировали микроанимации и маскота.">Gazprombank was separating from the main Gazprom branch and developing its own design system. We built a sophisticated token- and component-based system, implemented example screens and corner cases, and designed micro-animations and a mascot.</p>
+        <p data-ru="Компоненты рассчитаны на одну библиотеку для iOS, Android и веба. Пресеты — компоненты с преднастроенными состояниями. У каждого компонента есть гайд: где и как его использовать.">Components are designed as one library for iOS, Android and web. Presets are components with pre-configured states. Each component has a guide on where and how to use it.</p>
+      </div>
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/ds-cells.jpg" alt="Component cards: Cell, Accordion, Header Cell" data-ru-alt="Карточки компонентов: Cell, Accordion, Header Cell" width="1330" height="394" loading="lazy"></div></figure>
+    </div>
+    <div class="gt-stats">
+      <div class="al-stat"><span class="al-stat__value">125</span><p data-ru="цветовых токенов в светлой и тёмной темах">colour tokens in light and dark themes</p></div>
+      <div class="al-stat"><span class="al-stat__value">72</span><p data-ru="текстовых стиля для iOS, Android и десктопа">text styles for iOS, Android and desktop</p></div>
+      <div class="al-stat"><span class="al-stat__value">57</span><p data-ru="групп компонентов в 9 разделах">component groups across 9 sections</p></div>
+      <div class="al-stat"><span class="al-stat__value">3</span><p data-ru="платформы из одной библиотеки">platforms from one library</p></div>
+    </div>
+    <figure class="al-figure gt-figure-center">
+      <div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/ds-components.jpg" alt="Banka library overview: styles, buttons, cells, popouts, forms, navigation, controls, cards and screens" data-ru-alt="Обзор библиотеки Banka: стили, кнопки, ячейки, всплывающие слои, формы, навигация, контролы, карточки и экраны" width="1224" height="1640" loading="lazy"></div>
+      <figcaption data-ru="Структура библиотеки: стили, кнопки, ячейки, всплывающие слои, поля ввода, навигация, контролы, карточки и экраны, остальные и специальные компоненты.">Library structure: styles, buttons, cells, popouts, forms, navigation, controls, cards and screens, other and special components.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Tokens -->
+  <section class="cs-section cs-section--tight" id="gt-tokens">
+    <span class="label-pill" data-ru="Стили">Styles</span>
+    <div class="al-head">
+      <h2 class="al-section-title" data-ru="Токены: цвет, скругления, отступы, шрифты">Tokens: colour, radii, spacing, type</h2>
+      <p data-ru="Цвета заданы семантически — text, elements, background, special — и у каждого токена есть значение для светлой и тёмной темы. Переключать темы и шрифтовые стили на макете помогает плагин Themer.">Colours are semantic — text, elements, background, special — and every token has a light and a dark value. The Themer plugin switches themes and type styles across a whole layout.</p>
+    </div>
+    <div class="gt-palette">
+      <div class="gt-swatch"><div class="gt-swatch__color"><i style="background:#4e76fc"></i></div><div class="gt-swatch__meta"><strong>accent</strong><span>#4E76FC</span></div></div>
+      <div class="gt-swatch"><div class="gt-swatch__color"><i style="background:#3664fc"></i><i style="background:#1d50fb"></i></div><div class="gt-swatch__meta"><strong>hover / pressed</strong><span>#3664FC · #1D50FB</span></div></div>
+      <div class="gt-swatch"><div class="gt-swatch__color"><i style="background:#050507"></i><i style="background:#f6f6f8"></i></div><div class="gt-swatch__meta"><strong>text/primary</strong><span>light · dark</span></div></div>
+      <div class="gt-swatch"><div class="gt-swatch__color"><i style="background:#f2f2f6"></i><i style="background:#1e1e20"></i></div><div class="gt-swatch__meta"><strong>bg/primaryGrey</strong><span>light · dark</span></div></div>
+      <div class="gt-swatch"><div class="gt-swatch__color"><i style="background:#44bf78"></i><i style="background:#ff9500"></i><i style="background:#f6514c"></i></div><div class="gt-swatch__meta"><strong>success · attention · error</strong><span>#44BF78 · #FF9500 · #F6514C</span></div></div>
+      <div class="gt-swatch"><div class="gt-swatch__color"><i style="background:#7dc8ff"></i><i style="background:#7463e2"></i><i style="background:#ca4fc0"></i><i style="background:#ff4c63"></i><i style="background:#ffcb57"></i></div><div class="gt-swatch__meta"><strong>special</strong><span data-ru="палитра иллюстраций">illustration palette</span></div></div>
+    </div>
+    <div class="gt-tokens">
+      <div class="al-card gt-token-card">
+        <h3 data-ru="Скругления">Corner radii</h3>
+        <div class="gt-radii">
+          <div style="border-top-right-radius:4px">4</div><div style="border-top-right-radius:6px">6</div><div style="border-top-right-radius:8px">8</div><div style="border-top-right-radius:10px">10</div><div style="border-top-right-radius:12px">12</div><div style="border-top-right-radius:16px">16</div><div style="border-top-right-radius:20px">20</div>
+        </div>
+      </div>
+      <div class="al-card gt-token-card">
+        <h3 data-ru="Отступы">Spacing</h3>
+        <div class="gt-spacing">
+          <div><i style="height:4px"></i>4</div><div><i style="height:8px"></i>8</div><div><i style="height:12px"></i>12</div><div><i style="height:16px"></i>16</div>
+        </div>
+      </div>
+      <div class="al-card gt-token-card">
+        <h3 data-ru="Типографика">Typography</h3>
+        <div class="gt-type-scale">
+          <span style="font-size:28px;font-weight:700">Title 1 · 28</span>
+          <span style="font-size:20px;font-weight:600">Title 3 · 20</span>
+          <span style="font-size:16px">Text 1 · 16</span>
+          <span style="font-size:12px;color:var(--c-text-muted)" data-ru="SF Pro Display на iOS, Roboto на Android и десктопе; размеры M, L (×1,1) и XL (×1,3) для динамических шрифтов">SF Pro Display on iOS, Roboto on Android and desktop; M, L (×1.1) and XL (×1.3) sizes for dynamic type</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="cs-section" id="gt-process">
+    <span class="label-pill" data-ru="Процесс">Process</span>
+    <div class="al-head">
+      <h2 class="al-section-title" data-ru="Как компонент попадает в систему">How a component gets into the system</h2>
+      <p data-ru="Мы описали для продуктовых команд путь компонента — от идеи до авторского надзора. Обновления UI Kit публикуются каждый второй четверг спринта, а новости — на общем демо раз в спринт.">We documented a component’s path for product teams, from idea to design supervision. UI Kit updates are published every second Thursday of the sprint, and news is shared at the joint demo once a sprint.</p>
+    </div>
+    <div class="al-steps">
+      <div class="al-step"><h3 data-ru="Идея">Idea</h3><p data-ru="В UI Kit нет компонента под задачу или он её не решает.">The UI Kit has no component for the task, or it doesn’t solve it.</p></div>
+      <div class="al-step"><h3 data-ru="Согласование">Agreement</h3><p data-ru="Обсуждаем с разработчиками, дизайнерами и аналитиками, присваиваем тип.">Discussed with developers, designers and analysts; a type is assigned.</p></div>
+      <div class="al-step"><h3 data-ru="Дизайн и чек-лист">Design &amp; checklist</h3><p data-ru="Стили, состояния, адаптив 320–640, документация и пример в контексте.">Styles, states, 320–640 adaptivity, documentation and an in-context example.</p></div>
+      <div class="al-step"><h3 data-ru="Публикация в UI Kit">UI Kit release</h3><p data-ru="Статус для iOS/Android, описание и груминг с разработчиками.">iOS/Android status, description and grooming with developers.</p></div>
+      <div class="al-step"><h3 data-ru="Разработка">Development</h3><p data-ru="Реализация занимает 1–2 спринта в песочнице команды.">Implementation takes 1–2 sprints in the team’s sandbox.</p></div>
+      <div class="al-step"><h3 data-ru="Надзор и тесты">Supervision &amp; QA</h3><p data-ru="Дизайнер принимает компонент в песочнице, баги — в Jira.">The designer signs off the component in the sandbox; bugs go to Jira.</p></div>
+    </div>
+    <div class="gt-types">
+      <div class="gt-type gt-type--core"><strong>Core</strong><p data-ru="Платформенный компонент, который точно нужен системе.">A platform component the system clearly needs.</p></div>
+      <div class="gt-type gt-type--candidate"><strong>Candidate</strong><p data-ru="Продуктовый кандидат с потенциалом переиспользования — сначала тестируем.">A product candidate with reuse potential — tested first.</p></div>
+      <div class="gt-type gt-type--special"><strong>Special</strong><p data-ru="Полезен для конкретного сценария, поддерживается командой продукта.">Useful for one specific case, maintained by the product team.</p></div>
+      <div class="gt-type gt-type--reject"><strong>Rejection</strong><p data-ru="Компонент отклонён.">The component is rejected.</p></div>
+    </div>
+    <div class="al-card">
+      <span class="al-card__label" data-ru="Чек-лист перед разработкой">Checklist before development</span>
+      <ul class="gt-checklist">
+        <li data-ru="Уникальное и понятное название компонента">A unique, clear component name</li>
+        <li data-ru="Привязаны стили типографики, цвета и скругления">Type, colour and radius styles are bound</li>
+        <li data-ru="Слои названы на английском, порядок одинаков во всех вариантах">Layers named in English, same order in every variant</li>
+        <li data-ru="Иконки из библиотеки, учтены тач-зоны">Icons from the library, touch areas accounted for</li>
+        <li data-ru="Auto Layout: адаптация от 320 до 640 px">Auto Layout: adapts from 320 to 640 px</li>
+        <li data-ru="Проверены все состояния, длинный текст и пустые данные">All states, long text and missing data checked</li>
+        <li data-ru="Анимация описана, если нужна">Animation specified where needed</li>
+        <li data-ru="Доступность: контраст, VoiceOver и TalkBack, динамические шрифты">Accessibility: contrast, VoiceOver and TalkBack, dynamic type</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Example screens (dark) -->
+  <section class="al-dark" id="gt-examples">
+    <div class="al-dark__bg"></div>
+    <div class="al-dark__inner">
+      <span class="label-pill label-pill--dark" data-ru="Примеры и корнер-кейсы">Examples &amp; corner cases</span>
+      <div class="al-head">
+        <h2 class="al-section-title" data-ru="Экраны, собранные из системы">Screens built from the system</h2>
+        <p data-ru="Для каждого компонента мы показывали, как он живёт на реальном экране. Например, распределение блоков на главной: что меняется, если есть или нет информации о системных уведомлениях, и какие отступы между секциями.">For each component we showed how it lives on a real screen. For example, the block layout on the home screen: what changes with and without system notices, and the spacing between sections.</p>
+      </div>
+      <div class="gt-spec">
+        <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/ds-home-blocks.jpg" alt="Home screen block layout with spacing annotations, with and without system notices" data-ru-alt="Распределение блоков на главной с разметкой отступов — с системными уведомлениями и без" width="1004" height="1364" loading="lazy"></div></figure>
+        <div class="gt-spec__side">
+          <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/ds-cell-spec.jpg" alt="Cell component variants: left slot, title and value combinations" data-ru-alt="Варианты ячейки: левый слот, комбинации заголовка и значения" width="1243" height="1080" loading="lazy"></div><figcaption data-ru="Спецификация ячейки: все сочетания левого слота, заголовка, значения и статуса.">Cell specification: every combination of left slot, title, value and status.</figcaption></figure>
+          <div class="gt-mascot">
+            <img src="../assets/img/case-studies/bank-guarantees/ds-mascot.jpg" alt="Blue furry mascot" data-ru-alt="Синий пушистый маскот" width="552" height="440" loading="lazy">
+            <div><h3 data-ru="Маскот и 3D-иллюстрации">Mascot &amp; 3D illustrations</h3><p data-ru="Пушистый синий персонаж и мягкие 3D-объекты появляются на статусных экранах и в советах — там, где банку нужно говорить теплее.">A fluffy blue character and soft 3D objects appear on status screens and tips — wherever the bank needs a warmer voice.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motion -->
+  <section class="cs-section" id="gt-motion">
+    <span class="label-pill" data-ru="Микроанимации">Micro-animations</span>
+    <div class="al-head">
+      <h2 class="al-section-title" data-ru="Одна таблица движения для всех компонентов">One motion table for every component</h2>
+      <p data-ru="Я собрала файл анимаций для дизайн-системы: для каждого компонента — событие, какие свойства анимируются, длительность и кривая. Дизайнеры брали значения из таблицы, разработчики — из прототипов, поэтому интерфейс двигается одинаково на iOS, Android и вебе.">I put together the animation file for the design system: for every component — the trigger, which properties animate, the duration and the curve. Designers took values from the table and developers from the prototypes, so the interface moves the same way on iOS, Android and web.</p>
+    </div>
+    <div class="gt-demo" aria-hidden="true">
+      <div class="gt-demo__item"><div class="gt-demo__stage"><div class="gt-demo__shimmer"></div></div><strong>Shimmer</strong><span>800 ms · cubic-bezier(0.45, 0.02, 0.49, 0.99)</span></div>
+      <div class="gt-demo__item"><div class="gt-demo__stage"><div class="gt-demo__tabs"><i></i></div></div><strong>Tabs &amp; Chips</strong><span>190 ms · ease-in-out (0.42, 0, 0.58, 1)</span></div>
+      <div class="gt-demo__item"><div class="gt-demo__stage"><div class="gt-demo__tooltip">Tooltip</div></div><strong>Tooltip</strong><span data-ru="300 мс появление · 250 мс исчезание · сдвиг 2 px">300 ms in · 250 ms out · 2 px shift</span></div>
+    </div>
+    <div class="gt-motion-wrap">
+      <table class="gt-motion">
+        <thead><tr><th data-ru="Компонент">Component</th><th data-ru="Что происходит">What happens</th><th data-ru="Длительность">Duration</th><th data-ru="Кривая">Easing</th></tr></thead>
+        <tbody>
+          <tr><td>Accordion</td><td data-ru="Раскрытие и закрытие ячейки">Cell expands and collapses</td><td data-ru="300 мс / 200 мс">300 ms / 200 ms</td><td><code>ease-out</code></td></tr>
+          <tr><td>Tabs &amp; Chips</td><td data-ru="Смещение по X и смена цвета при переключении">X shift and colour change on switch</td><td data-ru="190 мс">190 ms</td><td><code>0.42, 0, 0.58, 1</code></td></tr>
+          <tr><td>Tooltip</td><td data-ru="Появление со сдвигом на 2 px вниз, исчезание — вверх">Appears with a 2 px shift down, disappears upward</td><td data-ru="300 мс / 250 мс">300 ms / 250 ms</td><td><code>ease-out</code></td></tr>
+          <tr><td>Additional Alert</td><td data-ru="Затемнение фона и выезд алерта по центру; по тапу — уход в прозрачность">Background dims and the alert slides to centre; on tap it fades out</td><td data-ru="250–300 мс / 50–100 мс">250–300 ms / 50–100 ms</td><td><code>0, 0, 0.57, 1</code></td></tr>
+          <tr><td>Shimmer</td><td data-ru="Цикличное движение блика, повтор через 500 мс">Looping highlight, repeats after 500 ms</td><td data-ru="800 мс">800 ms</td><td><code>0.45, 0.02, 0.49, 0.99</code></td></tr>
+          <tr><td data-ru="Шиммер → контент">Shimmer → content</td><td data-ru="Шиммер сменяется контентом экрана в два шага">Shimmer is replaced by content in two steps</td><td data-ru="100 мс + 50 мс">100 ms + 50 ms</td><td><code>ease-in</code></td></tr>
+          <tr><td>Input</td><td data-ru="Смена состояния поля">Field state change</td><td data-ru="200 мс">200 ms</td><td><code>ease-out / ease-in</code></td></tr>
+          <tr><td>Status Screen</td><td data-ru="Баннер появляется, если подгрузился позже">A banner appears if it loads late</td><td data-ru="150 мс">150 ms</td><td><code>ease-in</code></td></tr>
+          <tr><td>Feedback Block</td><td data-ru="Блок «Оцените операцию» на статусном экране">The “Rate the operation” block on the status screen</td><td data-ru="300 мс">300 ms</td><td><code>ease-out</code></td></tr>
+          <tr><td>Pull-to-refresh</td><td data-ru="Стрелка до 88 px, затем лоадер и галочка или ошибка">Arrow up to 88 px, then a loader and a check mark or an error</td><td data-ru="по жесту">gesture-driven</td><td><code>—</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="gt-boards">
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/anim-status-banner.jpg" alt="Banner appearing on a status screen, 150 ms ease in" data-ru-alt="Появление баннера на статусном экране, 150 мс" width="1750" height="1153" loading="lazy"></div><figcaption data-ru="Появление баннера на статусном экране — с маскотом в совете.">A banner appearing on the status screen — with the mascot in the tip.</figcaption></figure>
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/anim-feedback.jpg" alt="Feedback block appearing on a status screen, 300 ms ease out" data-ru-alt="Появление блока обратной связи на статусном экране, 300 мс" width="1772" height="952" loading="lazy"></div><figcaption data-ru="Блок «Оцените операцию» выезжает после успешного платежа.">The “Rate the operation” block slides in after a successful payment.</figcaption></figure>
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/anim-bottom-sheet.jpg" alt="Bottom sheet animation: dim, shimmer, content" data-ru-alt="Анимация Bottom Sheet: затемнение, шиммер, контент" width="1919" height="980" loading="lazy"></div><figcaption data-ru="Bottom Sheet «Откуда списать деньги»: затемнение, шиммер, контент.">The “Pay from” bottom sheet: dim, shimmer, content.</figcaption></figure>
+      <figure class="al-figure"><div class="al-figure__img"><img src="../assets/img/case-studies/bank-guarantees/anim-shimmer.jpg" alt="Settings screen loading after the shimmer" data-ru-alt="Загрузка экрана настроек после шиммера" width="1755" height="1329" loading="lazy"></div><figcaption data-ru="Загрузка экрана после шиммера: 100 мс и 50 мс.">Screen loading after the shimmer: 100 ms and 50 ms.</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Outcome -->
+  <section class="cs-section cs-section--tight" id="gt-outcome">
+    <span class="label-pill" data-ru="Итог">Outcome</span>
+    <div class="al-cards">
+      <div class="al-card"><span class="al-card__label" data-ru="Для клиента">For the client</span><p data-ru="Гарантия оформляется на одной платформе: без визита в банк, со статусом сделки на каждом шаге.">The guarantee is arranged on one platform: no branch visit, with the deal status visible at every step.</p></div>
+      <div class="al-card"><span class="al-card__label" data-ru="Для банка">For the bank</span><p data-ru="Лимиты, риски, документы и решения собраны в одном процессе вместо переписки и ручной работы.">Limits, risks, documents and decisions sit in one process instead of email threads and manual work.</p></div>
+      <div class="al-card"><span class="al-card__label" data-ru="Для команд">For the teams</span><p data-ru="Одна дизайн-система и одна таблица анимаций для iOS, Android и веба, понятный путь нового компонента.">One design system and one motion table for iOS, Android and web, and a clear path for every new component.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA back to portfolio -->
+  <section class="cs-section cs-section--tight">
+    <div class="cs-cta">
+      <p data-ru="Хотите узнать больше об этом проекте или обсудить сотрудничество?">Want to learn more about this project or discuss a collaboration?</p>
+      <a class="tag tag--accent" href="../index.html#contacts" data-ru="Связаться со мной">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="contacts" id="contacts">
+    <div class="contacts__header">
+      <div class="contacts__title-row">
+        <h2 data-ru="Давайте общаться!">Let's stay in touch!</h2>
+        <span class="smiley-bubble smiley-bubble--card" aria-hidden="true"><img src="../assets/img/icons/smile.svg" alt="" width="24" height="24"></span>
+      </div>
+      <p data-ru="Я всегда открыта для новых проектов, долгосрочного сотрудничества и классных идей. Свяжитесь со мной любым удобным способом.">I'm always open to new projects, long-term collaborations, and exciting ideas. Feel free to reach out through any channel.</p>
+    </div>
+
+    <div class="contact-cards">
+      <a class="contact-card" href="https://t.me/viable" target="_blank" rel="noopener">
+        <span class="contact-card__icon contact-card__icon--telegram"><img src="../assets/img/icons/telegram.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label">Telegram</span>
+          <span class="contact-card__value">@viable</span>
+        </span>
+      </a>
+      <a class="contact-card" href="https://wa.me/34607944458" data-ru-href="https://wa.me/79312444104" target="_blank" rel="noopener">
+        <span class="contact-card__icon contact-card__icon--whatsapp"><img src="../assets/img/icons/whatsapp.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label">WhatsApp</span>
+          <span class="contact-card__value" data-ru="+7 931 2444104">+34 607 944 458</span>
+        </span>
+      </a>
+      <a class="contact-card" href="mailto:vavilovaiana@gmail.com">
+        <span class="contact-card__icon contact-card__icon--email"><img src="../assets/img/icons/mail.svg" alt="" width="36" height="36"></span>
+        <span class="contact-card__text">
+          <span class="contact-card__label" data-ru="Электронная почта">Email</span>
+          <span class="contact-card__value">vavilovaiana@gmail.com</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year">2026</span> <span data-ru="Яна Вавилова. Продуктовый дизайнер.">Yana Vavilova. Product Designer.</span></p>
+  <p data-ru="В центре всего, что я создаю — люди.">People are at the center of everything.</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
