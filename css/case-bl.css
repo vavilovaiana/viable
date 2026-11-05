@@ -1,0 +1,107 @@
+/* Business Lines case — extras on top of case-alfa.css (prefix bl-) */
+
+.bl-map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.bl-map .al-card { gap: 10px; }
+.bl-map__num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--al-red);
+  letter-spacing: 0.04em;
+}
+
+.bl-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.bl-tags span {
+  font-size: 13px;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--al-red-soft);
+  color: var(--al-red);
+  font-weight: 600;
+}
+.al-dark .bl-tags span { background: rgba(255, 255, 255, 0.1); color: #fff; }
+
+.bl-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  counter-reset: bl-step;
+}
+.bl-flow li {
+  counter-increment: bl-step;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px 10px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.bl-flow li::before {
+  content: counter(bl-step);
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--al-red);
+  color: #fff;
+  font-size: 12px;
+}
+
+.bl-table-wrap {
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.bl-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #fff;
+}
+.bl-table th,
+.bl-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.bl-table thead th {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.04);
+}
+.bl-table tbody tr:last-child td { border-bottom: 0; }
+.bl-table td:first-child { color: rgba(255, 255, 255, 0.75); }
+.bl-table .bl-win { color: #7ee2a8; font-weight: 700; }
+
+.bl-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.bl-tech span {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--c-bg-soft, #f2f3f7);
+  color: var(--c-text);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .bl-map { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .bl-map { grid-template-columns: 1fr; }
+}
+
+.al-dark .al-section-title { color: #fff; }
+.bl-flow { list-style: none; padding: 0; margin: 0; }
