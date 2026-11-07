@@ -1,0 +1,127 @@
+/* Portfolio presentation landing — Figma "Landing / Desktop 1440" (20008858:7957) */
+:root {
+  --pr-bg: #f4f4f6;
+  --pr-text: #151515;
+  --pr-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  --pr-pad: 40px;
+  --pr-gap: 40px;
+  --pr-radius: 28px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body.pr-page {
+  margin: 0;
+  background: var(--pr-bg);
+  color: var(--pr-text);
+  font-family: var(--pr-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid #4b5bdc; outline-offset: 3px; border-radius: 8px; }
+
+.pr-skip {
+  position: absolute; left: 16px; top: -48px; z-index: 100;
+  background: var(--pr-text); color: #fff; padding: 8px 14px; border-radius: 8px;
+}
+.pr-skip:focus { top: 12px; }
+
+/* Header */
+.pr-header {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pr-pad);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.pr-logo { font-size: 20px; font-weight: 600; white-space: nowrap; }
+.pr-nav { display: flex; align-items: center; gap: 32px; }
+.pr-nav a:not(.pr-btn) { font-size: 16px; color: rgba(21, 21, 21, 0.7); transition: color .2s; }
+.pr-nav a:not(.pr-btn):hover { color: var(--pr-text); }
+.pr-btn {
+  display: inline-flex; align-items: center;
+  height: 38px; padding: 0 20px;
+  border-radius: 12px;
+  background: var(--pr-text); color: #fff;
+  font-size: 15px; font-weight: 500;
+  transition: opacity .2s;
+}
+.pr-btn:hover { opacity: .85; }
+
+/* Content column */
+.pr-content {
+  max-width: calc(1360px + 2 * var(--pr-pad));
+  margin: 0 auto;
+  padding: 112px var(--pr-pad) 0;
+  display: flex; flex-direction: column; gap: var(--pr-gap);
+}
+
+.pr-chapter {
+  margin: 0;
+  padding: 40px 0 0 8px;
+  display: flex; align-items: baseline; gap: 16px;
+  font-size: 56px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2;
+}
+.pr-chapter__num {
+  font-size: 20px; font-weight: 500; letter-spacing: 0;
+  color: rgba(21, 21, 21, 0.35);
+}
+
+.pr-slide {
+  position: relative;
+  margin: 0;
+  border-radius: var(--pr-radius);
+  overflow: hidden;
+  background: #fff;
+  aspect-ratio: 1360 / 765;
+}
+.pr-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pr-slide::after { /* keeps the hairline border above the image */
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+/* Clickable areas over buttons/links drawn inside the slide images */
+.pr-hotspot {
+  position: absolute; z-index: 2;
+  border-radius: 10px;
+  transition: background-color .2s, box-shadow .2s;
+}
+.pr-hotspot:hover { background-color: rgba(255, 255, 255, 0.12); box-shadow: 0 0 0 2px rgba(91, 104, 230, 0.55); }
+
+/* Footer */
+.pr-footer {
+  max-width: calc(1360px + 2 * var(--pr-pad));
+  margin: 0 auto;
+  height: 90px;
+  padding: 0 calc(var(--pr-pad) + 8px);
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 15px;
+}
+.pr-footer span { color: rgba(21, 21, 21, 0.5); }
+.pr-footer a { font-weight: 500; }
+
+@media (max-width: 900px) {
+  .pr-nav { gap: 20px; }
+  .pr-nav a:not(.pr-btn) { font-size: 15px; }
+}
+@media (max-width: 760px) {
+  :root { --pr-pad: 16px; --pr-gap: 16px; --pr-radius: 14px; }
+  html { scroll-padding-top: 76px; }
+  .pr-header { height: 60px; }
+  .pr-logo { font-size: 18px; }
+  .pr-nav a:not(.pr-btn) { display: none; }
+  .pr-btn { height: 34px; padding: 0 14px; font-size: 14px; border-radius: 10px; }
+  .pr-content { padding-top: 76px; }
+  .pr-chapter { font-size: 34px; padding: 24px 0 0 4px; gap: 10px; }
+  .pr-chapter__num { font-size: 16px; }
+  .pr-hotspot { border-radius: 6px; }
+  .pr-footer { flex-direction: column; justify-content: center; gap: 8px; padding: 24px var(--pr-pad); height: auto; font-size: 14px; text-align: center; }
+}
