@@ -1,0 +1,79 @@
+/* Digital business card — built 1:1 from Figma (402×874 design units), scaled to fit the screen. */
+:root{
+  --brand:#A78BFA; --brand-hover:#9576F7; --brand-pressed:#7E5DE8;
+  --ink:#1E1E1E; --ink-55:rgba(30,30,30,.55); --ink-50:rgba(30,30,30,.5); --ink-15:rgba(30,30,30,.15);
+  --paper:#FFFFFF; --muted:#F3F2EB; --night:#0E0E0E; --badge:#F2F0EA; --metal:#9A9A9A; --grid:#EAEAEA;
+  --soc:#F3F2EB; --soc-hover:#EDE7FE; --soc-pressed:#DCD0FD;
+  --sans:'Archivo',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --s:1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#141414;-webkit-tap-highlight-color:transparent}
+body{font-family:var(--sans);color:var(--ink);overflow:hidden}
+.viewport{position:fixed;inset:0;display:grid;place-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.fit{width:calc(402px*var(--s));height:calc(874px*var(--s))}
+.scene3d{width:402px;height:874px;transform:scale(var(--s));transform-origin:0 0;perspective:1600px}
+.card3d{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.65,0,.35,1)}
+.card3d.flipped{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:2px}
+.front{background:var(--paper)}
+.back{background:var(--night);transform:rotateY(180deg)}
+.face>*,.scene>*,.b-swing>*,.badge>*{position:absolute}
+.mono{font-family:var(--mono)}
+
+/* FRONT */
+.grid{top:0;width:1px;height:874px;background:var(--grid)}
+.iv{left:12px;top:30px;width:272px;height:200px;font-weight:900;font-size:250px;line-height:200px;letter-spacing:-15px;color:var(--brand)}
+.caption{font-size:10px;line-height:13.5px;color:var(--ink-50)}
+.name{left:20px;top:262px;font-weight:500;font-size:44px;line-height:44px;letter-spacing:-.88px}
+.role{left:20px;top:362px;font-size:16px;line-height:21.6px;color:var(--ink-55)}
+.rule{left:20px;width:362px;height:1.5px;background:var(--ink)}
+.list{left:20px;top:435px;width:362px;list-style:none}
+.list li{position:relative;height:52px;border-bottom:1px solid var(--ink-15)}
+.list .idx{position:absolute;left:0;top:15px;font:500 12px/16px var(--mono);color:var(--brand)}
+.list .lbl{position:absolute;left:121px;top:11px;font-weight:500;font-size:20px;line-height:24px}
+.qr{left:14px;top:642px;width:180px;height:180px;background:var(--paper);padding:14px;display:block;transition:transform .2s}
+.qr img{width:100%;height:100%;display:block}
+.qr:active{transform:scale(.97)}
+.contacts{left:217px;top:650px;width:160px}
+.cta{display:flex;flex-direction:column;gap:12px;color:inherit;text-decoration:none}
+.cta-title{font-weight:500;font-size:16px;line-height:20px;transition:color .15s}
+.cta-link{font-size:10px;line-height:13.5px;color:var(--ink-50)}
+.cta:hover .cta-title{color:var(--brand-pressed)}
+.socials{display:flex;gap:8px;margin-top:26px}
+.soc{width:42px;height:42px;border-radius:999px;background:var(--soc);display:grid;place-items:center;transition:background .15s,transform .15s}
+.soc svg{width:20px;height:20px;fill:var(--brand);transition:fill .15s}
+.soc:hover{background:var(--soc-hover)}
+.soc:active{background:var(--soc-pressed);transform:scale(.94)}
+.soc:active svg{fill:var(--brand-pressed)}
+.soc:focus-visible,.flip:focus-visible,.qr:focus-visible,.cta:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+
+/* mascot scenes */
+.scene{pointer-events:none}
+.scene img{display:block;object-fit:contain}
+.s2 .butterfly{transform-origin:50% 50%}
+.z{font-weight:900;color:var(--brand);line-height:1}
+
+/* flip button — states mirror the Figma component (Default / Hover / Pressed) */
+.flip{z-index:5;display:inline-flex;align-items:center;gap:6px;height:32px;padding:8px 16px 8px 12px;border:0;border-radius:999px;background:var(--brand);color:#fff;font:500 13px/1 var(--sans);cursor:pointer;
+  box-shadow:0 4px 12px rgba(102,77,204,.28);transition:background .15s,box-shadow .15s,transform .15s}
+.flip svg{width:16px;height:16px;transition:transform .3s}
+.flip:hover{background:var(--brand-hover);box-shadow:0 6px 16px rgba(102,77,204,.4)}
+.flip:hover svg{transform:rotate(-30deg)}
+.flip:active{background:var(--brand-pressed);box-shadow:none;transform:scale(.97)}
+
+/* BACK */
+.b-shadow{left:-10px;top:706px;width:200px;height:18px;border-radius:50%;background:var(--brand);opacity:.35;filter:blur(8px)}
+.b-cat{object-fit:contain}
+.b-marks{width:40px;height:34px;transform:rotate(-17.13deg);transform-origin:0 0}
+.b-marks i{position:absolute;inset:0}
+.b-marks svg{width:40px;height:34px}
+.b-swing{left:7px;top:-700px;width:600px;height:1400px;transform-origin:50% 50%}
+.lanyard{left:293px;top:700px;width:14px;height:318px;background:var(--brand)}
+.clip{left:287px;top:1006px;width:26px;height:22px;border-radius:6px;background:var(--metal)}
+.badge{left:212px;top:1020px;width:176px;height:262px;border-radius:14px;background:var(--badge);transform:rotate(4deg);transform-origin:0 0;box-shadow:0 16px 30px rgba(0,0,0,.5)}
+.hole{left:72px;top:10px;width:32px;height:6px;border-radius:3px;background:var(--night);opacity:.2}
+.photo{left:14px;top:68px;width:84px;height:104px;border-radius:6px;object-fit:cover}
+.info{left:104px;top:70px;width:66px;font-size:7.5px;line-height:9.75px}
+.tagline{left:14px;top:186px;font-weight:500;font-size:7.5px;white-space:nowrap}
+.brand{left:14px;top:204px;width:148px;height:44px;border-radius:6px;background:var(--brand);color:#fff;font-weight:900;font-size:22px;letter-spacing:1.32px;padding:10px 0 0 6px}
