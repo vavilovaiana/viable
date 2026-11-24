@@ -842,3 +842,72 @@ a.lang-rail__label { text-decoration: none; }
     width: calc((100% - 40px) / 2);
   }
 }
+
+/* ---------- Hero CTA — "Book a call" (Swiss outline, Figma: Book a Call / Swiss outline) ---------- */
+.cta-swiss {
+  --cta-ink: #1e1e1e;
+  --cta-lilac: #a78bfa;
+  --cta-violet: #6d4ae0;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  padding: 18px 24px;
+  border: 1.5px solid var(--cta-ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--cta-ink);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: color .2s ease-out, border-color .2s ease-out, gap .2s ease-out;
+}
+/* fill layers: lilac sweeps in on hover, gradient fades in on press */
+.cta-swiss::before,
+.cta-swiss::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.cta-swiss::before {
+  background: var(--cta-lilac);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .25s ease-out;
+}
+.cta-swiss::after {
+  background: linear-gradient(90deg, var(--cta-lilac) 0%, var(--cta-violet) 55%, var(--cta-ink) 100%);
+  opacity: 0;
+  transition: opacity .12s ease-out;
+}
+.cta-swiss__arrow { flex: none; transition: transform .2s ease-out; }
+
+.cta-swiss:hover,
+.cta-swiss:focus-visible {
+  color: #fff;
+  border-color: var(--cta-lilac);
+  gap: 52px;
+}
+.cta-swiss:hover::before,
+.cta-swiss:focus-visible::before { transform: scaleX(1); }
+
+.cta-swiss:active { color: #fff; border-color: var(--cta-ink); gap: 52px; }
+.cta-swiss:active::after { opacity: 1; }
+
+.cta-swiss:focus-visible { outline: 2px solid var(--cta-lilac); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-swiss, .cta-swiss::before, .cta-swiss::after, .cta-swiss__arrow { transition: none; }
+}
+@media (max-width: 600px) {
+  .cta-swiss { align-self: stretch; justify-content: space-between; }
+}
