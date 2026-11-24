@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Archivo:wght@400;500;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -132,7 +132,7 @@
 
     <div class="stats__row">
       <div class="stat">
-        <p class="stat__number">20+</p>
+        <p class="stat__number">20<span class="plus">+</span></p>
         <p class="stat__label" data-ru-html="проведённых<br>UX-исследований">research<br>studies</p>
       </div>
       <div class="stat">
@@ -140,7 +140,7 @@
         <p class="stat__label" data-ru-html="созданных<br>курсов по дизайну">authored<br>courses</p>
       </div>
       <div class="stat">
-        <p class="stat__number">100+</p>
+        <p class="stat__number">100<span class="plus">+</span></p>
         <p class="stat__label" data-ru-html="реализованных<br>end-to-end проектов">end-to-end<br>projects</p>
       </div>
       <div class="stat">
@@ -148,7 +148,7 @@
         <p class="stat__label" data-ru-html="дизайн-<br>сообщества">design<br>communities</p>
       </div>
       <div class="stat">
-        <p class="stat__number">100+</p>
+        <p class="stat__number">100<span class="plus">+</span></p>
         <p class="stat__label" data-ru-html="выпускников-<br>менти">students<br>mentored</p>
       </div>
     </div>
@@ -276,56 +276,72 @@
     </div>
   </section>
 
-  <!-- AI Tools -->
-  <section class="ai-tools" id="ai-tools">
-    <div class="ai-tools__header">
-      <span class="label-pill label-pill--dark" data-ru="Интеграция AI">AI integration</span>
-      <h2 data-ru="AI-процесс в проектировании">AI Design Workflow</h2>
-      <p data-ru="Я активно интегрирую искусственный интеллект в свою работу для кратного ускорения исследований, генерации продуктовых гипотез, создания интерфейсов и написания кода.">In my work, I actively integrate modern AI tools to dramatically accelerate research, hypothesis generation, design, and coding.</p>
+  <!-- AI Stack (Figma: "AI Stack Section") -->
+  <section class="ai-stack" id="ai-tools">
+    <div class="ai-stack__grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+    <div class="ai-stack__meta">
+      <span data-ru="05 — Интеграция AI">05 — AI integration</span>
+      <span data-ru="Мой стек · 2026">My stack · 2026</span>
     </div>
 
-    <ul class="tools-stack">
-      <li class="tool-row">
-        <span class="tool-row__icon"><img src="assets/img/icons/figma.svg" alt="" width="32" height="32"></span>
-        <div class="tool-row__text">
-          <h3>Figma AI + FigJam</h3>
-          <p class="tool-row__use" data-ru="Черновики, Референсы, Дизайн-аудиты">Drafts, References, Audit</p>
-          <p data-ru="Быстрое прототипирование структуры разделов, автоматизированный поиск лучших визуальных решений и базовый аудит макетов.">Quick interface structure sketching, visual reference search, automated design audits.</p>
-        </div>
+    <div class="ai-stack__hero">
+      <span class="ai-stack__monogram" aria-hidden="true">AI</span>
+      <div class="ai-stack__title">
+        <h2 data-ru-html="Дизайн-процесс,<br>ускоренный AI">Design workflow,<br>accelerated by AI</h2>
+        <p data-ru="Я встраиваю AI в каждый этап процесса — от исследований и гипотез до дизайн-систем и продакшен-кода, — чтобы идея превращалась в рабочий прототип за дни, а не недели.">I build AI into every stage of the process — from research and hypotheses to design systems and production code — so an idea reaches a working prototype in days, not weeks.</p>
+      </div>
+    </div>
+
+    <div class="ai-stack__table">
+      <div class="ai-stack__head" aria-hidden="true">
+        <span>№</span><span data-ru="Инструмент">Tool</span><span data-ru="Сценарии">Use cases</span><span data-ru="Что он даёт мне">What it does for me</span>
+        <div class="ai-stack__stages"><span data-ru="Ресёрч">Research</span><span data-ru="Дизайн">Design</span><span data-ru="Прототип">Proto</span><span data-ru="Код">Code</span></div>
+      </div>
+      <ul class="ai-stack__rows">
+      <li class="ai-stack__row">
+        <span class="ai-stack__index">01</span>
+        <div class="ai-stack__tool"><span class="ai-stack__logo"><img src="assets/img/icons/figma.svg" alt="" width="40" height="40"></span><h3>Figma AI + FigJam</h3></div>
+        <p class="ai-stack__use" data-ru-html="Черновики · Референсы · Аудит">Drafts · References · Audit</p>
+        <p class="ai-stack__desc" data-ru="Быстрые наброски структуры интерфейса, поиск визуальных референсов и автоматический аудит макетов.">Fast interface-structure sketches, visual reference search and automated design audits.</p>
+        <div class="ai-stack__stages"><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Research: yes" data-ru-aria-label="Исследование: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Ресёрч">Research</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Design: yes" data-ru-aria-label="Дизайн: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Дизайн">Design</span></span><span class="ai-stack__stage"><span class="ai-stack__dot" role="img" aria-label="Proto: no" data-ru-aria-label="Прототип: нет"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Прототип">Proto</span></span><span class="ai-stack__stage"><span class="ai-stack__dot" role="img" aria-label="Code: no" data-ru-aria-label="Код: нет"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Код">Code</span></span></div>
       </li>
-      <li class="tool-row">
-        <span class="tool-row__icon"><img src="assets/img/icons/chatgpt.svg" alt="" width="32" height="32"></span>
-        <div class="tool-row__text">
-          <h3>ChatGPT</h3>
-          <p class="tool-row__use" data-ru="Аналитика, Метрики, CJM, Брейншторм, Генерация идей">Analysis, Metrics, Key Visuals, Brainstorm, Ideation</p>
-          <p data-ru="Качественный продуктовый анализ, проектирование CJM, проработка микрокопирайтинга и формулирование альтернативных сценариев использования.">Quality product analysis, CJM creation, interface copy refinement, alternative scenario generation.</p>
-        </div>
+      <li class="ai-stack__row">
+        <span class="ai-stack__index">02</span>
+        <div class="ai-stack__tool"><span class="ai-stack__logo"><img src="assets/img/icons/chatgpt.svg" alt="" width="40" height="40"></span><h3>ChatGPT</h3></div>
+        <p class="ai-stack__use" data-ru-html="Аналитика · Метрики<br>Ключевые визуалы · Идеи">Analysis · Metrics<br>Key visuals · Ideation</p>
+        <p class="ai-stack__desc" data-ru="Продуктовый анализ, проектирование CJM, доработка интерфейсных текстов и генерация альтернативных сценариев.">Product analysis, CJM creation, interface copy refinement and alternative scenario generation.</p>
+        <div class="ai-stack__stages"><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Research: yes" data-ru-aria-label="Исследование: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Ресёрч">Research</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Design: yes" data-ru-aria-label="Дизайн: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Дизайн">Design</span></span><span class="ai-stack__stage"><span class="ai-stack__dot" role="img" aria-label="Proto: no" data-ru-aria-label="Прототип: нет"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Прототип">Proto</span></span><span class="ai-stack__stage"><span class="ai-stack__dot" role="img" aria-label="Code: no" data-ru-aria-label="Код: нет"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Код">Code</span></span></div>
       </li>
-      <li class="tool-row">
-        <span class="tool-row__icon"><img src="assets/img/icons/mcp.svg" alt="" width="32" height="32"></span>
-        <div class="tool-row__text">
-          <h3 data-ru="MCP Сервер">MCP Server</h3>
-          <p class="tool-row__use" data-ru="Дизайн-ревью, работа со слоями макета, масштабирование дизайн-систем">Design review, mockup layers editing, design system scaling</p>
-          <p data-ru="Внутренний контекстный мост для автоматизированного дизайн-ревью, рефакторинга текста и проверки соответствия дизайн-системе.">Internal contextual bridge for automated design review, text refactoring, and design system compliance checks.</p>
-        </div>
+      <li class="ai-stack__row">
+        <span class="ai-stack__index">03</span>
+        <div class="ai-stack__tool"><span class="ai-stack__logo"><img src="assets/img/icons/mcp.svg" alt="" width="40" height="40"></span><h3 data-ru="MCP-сервер">MCP Server</h3></div>
+        <p class="ai-stack__use" data-ru-html="Дизайн-ревью<br>Работа со слоями · Масштабирование ДС">Design review<br>Layers editing · DS scaling</p>
+        <p class="ai-stack__desc" data-ru="Контекстный мост между Figma и кодом: автоматическое дизайн-ревью, рефакторинг текстов и проверка соответствия дизайн-системе.">A contextual bridge between Figma and code: automated design review, text refactoring and design-system compliance checks.</p>
+        <div class="ai-stack__stages"><span class="ai-stack__stage"><span class="ai-stack__dot" role="img" aria-label="Research: no" data-ru-aria-label="Исследование: нет"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Ресёрч">Research</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Design: yes" data-ru-aria-label="Дизайн: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Дизайн">Design</span></span><span class="ai-stack__stage"><span class="ai-stack__dot" role="img" aria-label="Proto: no" data-ru-aria-label="Прототип: нет"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Прототип">Proto</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Code: yes" data-ru-aria-label="Код: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Код">Code</span></span></div>
       </li>
-      <li class="tool-row">
-        <span class="tool-row__icon"><img src="assets/img/icons/claude.svg" alt="" width="32" height="32"></span>
-        <div class="tool-row__text">
-          <h3>Claude Code</h3>
-          <p class="tool-row__use" data-ru="Сложные прототипы, интеграция кода, генерация токенов">Analysis, Metrics, Design skills, Quick prototyping, Code integration</p>
-          <p data-ru="Глубокий анализ кода, сборка интерактивных реактивных прототипов и генерация комплексных дизайн-токенов в реальном времени.">Deep code analysis, reactive prototype assembly, real-time complex design token creation.</p>
-        </div>
+      <li class="ai-stack__row">
+        <span class="ai-stack__index">04</span>
+        <div class="ai-stack__tool"><span class="ai-stack__logo"><img src="assets/img/icons/claude.svg" alt="" width="40" height="40"></span><h3>Claude Code</h3></div>
+        <p class="ai-stack__use" data-ru-html="Аналитика · Дизайн-навыки<br>Прототипы · Код">Analysis · Design skills<br>Prototyping · Code</p>
+        <p class="ai-stack__desc" data-ru="Глубокий анализ кода, сборка реактивных прототипов и создание сложных дизайн-токенов в реальном времени.">Deep code analysis, reactive prototype assembly and complex design-token creation in real time.</p>
+        <div class="ai-stack__stages"><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Research: yes" data-ru-aria-label="Исследование: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Ресёрч">Research</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Design: yes" data-ru-aria-label="Дизайн: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Дизайн">Design</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Proto: yes" data-ru-aria-label="Прототип: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Прототип">Proto</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Code: yes" data-ru-aria-label="Код: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Код">Code</span></span></div>
       </li>
-      <li class="tool-row">
-        <span class="tool-row__icon"><img src="assets/img/icons/cursor.svg" alt="" width="32" height="32"></span>
-        <div class="tool-row__text">
-          <h3>Cursor &amp; Codex</h3>
-          <p class="tool-row__use" data-ru="Базы данных, фронтенд, код">Databases, frontend, code</p>
-          <p data-ru="Быстрое развёртывание прототипов, вёрстка компонентов и финальная сборка макетов.">Rapid prototype deployment, component markup, final mockup deployment.</p>
-        </div>
+      <li class="ai-stack__row">
+        <span class="ai-stack__index">05</span>
+        <div class="ai-stack__tool"><span class="ai-stack__logo"><img src="assets/img/icons/cursor.svg" alt="" width="40" height="40"></span><h3>Cursor &amp; Codex</h3></div>
+        <p class="ai-stack__use" data-ru-html="Базы данных · Фронтенд · Код">Databases · Frontend · Code</p>
+        <p class="ai-stack__desc" data-ru="Быстрое развёртывание прототипов, вёрстка компонентов и выпуск финальной сборки.">Rapid prototype deployment, component markup and shipping the final build.</p>
+        <div class="ai-stack__stages"><span class="ai-stack__stage"><span class="ai-stack__dot" role="img" aria-label="Research: no" data-ru-aria-label="Исследование: нет"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Ресёрч">Research</span></span><span class="ai-stack__stage"><span class="ai-stack__dot" role="img" aria-label="Design: no" data-ru-aria-label="Дизайн: нет"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Дизайн">Design</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Proto: yes" data-ru-aria-label="Прототип: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Прототип">Proto</span></span><span class="ai-stack__stage is-on"><span class="ai-stack__dot is-on" role="img" aria-label="Code: yes" data-ru-aria-label="Код: да"></span><span class="ai-stack__stage-name" aria-hidden="true" data-ru="Код">Code</span></span></div>
       </li>
-    </ul>
+      </ul>
+    </div>
+
+    <div class="ai-stack__stats">
+      <div class="ai-stack__stat"><span class="is-accent">05</span><p data-ru="AI-инструментов в ежедневной работе">AI tools in my daily workflow</p></div>
+      <div class="ai-stack__stat"><span>04</span><p data-ru="этапа — от исследования до продакшен-кода">Stages covered — from research to production code</p></div>
+      <div class="ai-stack__stat"><span>01</span><p data-ru="Петля Figma ⇄ код через MCP: дизайн и код всегда синхронны">Loop: Figma ⇄ code via MCP, so design and code stay in sync</p></div>
+    </div>
   </section>
 
   <!-- Contacts -->
