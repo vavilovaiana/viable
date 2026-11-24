@@ -306,6 +306,27 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
   flex-wrap: wrap;
   gap: 8px;
 }
+/* Hero skill chips — business-card style: cream chip, ink text, small radius */
+.tags-grid .tag {
+  background: #F3F2EB;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--c-text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.tags-grid .tag:hover { background: #EDE7FE; color: #7E5DE8; }
+/* Code skills set in the card's mono face */
+.tags-grid .tag--code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 13px;
+  color: #7E5DE8;
+  background: #EDE7FE;
+}
 
 .lang-rail {
   flex: 0 0 60px;
