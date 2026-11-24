@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
+
 /* ==========================================================================
    Iana Vavilova — Portfolio
    Design source: Figma (Viable_personal-brand)
@@ -75,21 +77,25 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 
 /* ---- Shared components ----------------------------------------------- */
 
+/* Section labels — mono caption, same style as "PORTFOLIO 2026" on the business card */
 .label-pill {
   display: inline-flex;
   align-items: center;
-  background: var(--c-accent-soft-bg);
-  color: var(--c-text-secondary);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
+  align-self: flex-start;
+  background: none;
+  color: rgba(30, 27, 57, 0.5);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: 0;
   text-transform: uppercase;
-  padding: 10px 16px;
-  border-radius: 16px;
+  padding: 0;
+  border-radius: 0;
 }
 .label-pill--dark {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: none;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .tag {
