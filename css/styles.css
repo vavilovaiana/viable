@@ -190,6 +190,31 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 }
 .main-nav__buttons .tag { cursor: pointer; }
 
+/* Header Presentation / CV — gradient pills in the site palette (indigo → lavender, ink → indigo) */
+.main-nav__buttons .tag--accent,
+.main-nav__buttons .tag--dark {
+  color: #fff;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  transition: background-position 0.45s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+.main-nav__buttons .tag--accent {
+  background-image: linear-gradient(110deg, #575CCE 0%, #7C6FE8 45%, #A78BFA 75%, #575CCE 100%);
+  box-shadow: 0 4px 12px rgba(87, 92, 206, 0.28);
+}
+.main-nav__buttons .tag--dark {
+  background-image: linear-gradient(110deg, #1E1B39 0%, #34307A 45%, #575CCE 75%, #1E1B39 100%);
+  box-shadow: 0 4px 12px rgba(30, 27, 57, 0.25);
+}
+.main-nav__buttons .tag--accent:hover,
+.main-nav__buttons .tag--dark:hover { background-position: 100% 50%; }
+.main-nav__buttons .tag--accent:hover { box-shadow: 0 6px 18px rgba(87, 92, 206, 0.42); }
+.main-nav__buttons .tag--dark:hover { box-shadow: 0 6px 18px rgba(30, 27, 57, 0.38); }
+.main-nav__buttons .tag--accent:active,
+.main-nav__buttons .tag--dark:active { transform: scale(0.97); box-shadow: none; }
+.main-nav__buttons .tag--accent:focus-visible,
+.main-nav__buttons .tag--dark:focus-visible { outline: 2px solid #A78BFA; outline-offset: 3px; }
+
 /* Social buttons in the header — copied from the digital business card (Default / Hover / Pressed) */
 .nav-socials { display: flex; align-items: center; gap: 12px; }
 .nav-soc {
