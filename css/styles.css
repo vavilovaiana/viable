@@ -187,8 +187,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 /* Social buttons in the header — copied from the digital business card (Default / Hover / Pressed) */
 .nav-socials { display: flex; align-items: center; gap: 12px; }
 .nav-soc {
-  height: 39px; padding: 0 16px; border-radius: 16px; /* same box as .tag (Presentation / CV) */
-  display: inline-flex; align-items: center; justify-content: center;
+  width: 39px; height: 39px; border-radius: 999px; /* round, same height as .tag (Presentation / CV) */
+  display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
   background: #F3F2EB;
   transition: background 0.15s ease, transform 0.15s ease;
 }
