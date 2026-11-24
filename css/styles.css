@@ -224,12 +224,25 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 }
 .hero__inner {
   position: relative;
+  isolation: isolate;
   flex: 1 1 0;
   display: flex;
   align-items: center;
   gap: clamp(32px, 6vw, 100px);
   padding: var(--section-pad-y) var(--side-pad);
   min-width: 0;
+}
+/* Barely visible Swiss grid behind the hero — same idea as the digital business card */
+.hero__inner::before {
+  content: "";
+  position: absolute;
+  inset: 0 var(--side-pad);
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(to right, rgba(30, 27, 57, 0.06) 1px, transparent 1px);
+  background-size: 25% 100%;
+  background-repeat: repeat-x;
+  box-shadow: inset -1px 0 0 rgba(30, 27, 57, 0.06);
 }
 .hero__glow {
   position: absolute;
@@ -330,6 +343,18 @@ a.lang-rail__label { text-decoration: none; }
 
 @media (min-width: 1200px) {
   .lang-rail { display: flex; }
+  /* Side rails are pinned to the viewport edges while the page scrolls */
+  .hero { padding: 0 60px; }
+  .lang-rail {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    z-index: 40; /* below the sticky header (50) */
+    padding: 120px 0 40px;
+  }
+  .lang-rail--left { right: auto; left: 0; }
 }
 
 /* ==========================================================================
