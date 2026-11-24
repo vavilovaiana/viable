@@ -184,6 +184,20 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 }
 .main-nav__buttons .tag { cursor: pointer; }
 
+/* Social buttons in the header — copied from the digital business card (Default / Hover / Pressed) */
+.nav-socials { display: flex; align-items: center; gap: 8px; }
+.nav-soc {
+  width: 40px; height: 40px; border-radius: 999px;
+  display: grid; place-items: center;
+  background: #F3F2EB;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.nav-soc svg { width: 20px; height: 20px; fill: #A78BFA; transition: fill 0.15s ease; }
+.nav-soc:hover { background: #EDE7FE; }
+.nav-soc:active { background: #DCD0FD; transform: scale(0.94); }
+.nav-soc:active svg { fill: #7E5DE8; }
+.nav-soc:focus-visible { outline: 2px solid #A78BFA; outline-offset: 3px; }
+
 .main-nav__toggle {
   display: none;
   flex-direction: column;
@@ -733,7 +747,8 @@ a.lang-rail__label { text-decoration: none; }
     opacity: 1;
     pointer-events: auto;
   }
-  .main-nav__buttons { width: 100%; }
+  .main-nav__buttons { width: 100%; flex-wrap: wrap; }
+  .nav-socials { width: 100%; }
   .contact-cards { grid-template-columns: 1fr; }
 }
 
