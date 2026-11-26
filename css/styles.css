@@ -1279,3 +1279,27 @@ a.lang-rail__label { text-decoration: none; }
 @media (max-width: 560px) { .ai-stack__logo--img img { width: 35px; height: 35px; } }
 /* Mission on narrow screens: column layout must not inherit the 480px flex-basis as height */
 @media (max-width: 1100px) { .mission__headline, .mission__details { flex: 0 0 auto; } }
+
+/* Mission — "with care" is the real Amsterdam Handwriting lettering, exported from Figma
+   (node 20009002:5372) as outlined vector. Geometry in em of the 90px headline:
+   art 431×162px, starts 12px left of the text and 45px above line 2, "for people" at x=438.5px. */
+.mission__script--art {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  font-size: 1em;
+  width: 4.872em;   /* 438.5 / 90 */
+  height: 1.11em;   /* one line box */
+  line-height: inherit;
+}
+.mission__script--art img {
+  position: absolute;
+  left: -0.132em;   /* -11.9 / 90 */
+  top: -0.497em;    /* (55.3 - 100) / 90 */
+  width: 4.789em;   /* 431 / 90 */
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+}
+/* Keep the two Figma lines intact ("Creating projects" / "with care for people") where there is room */
+@media (min-width: 768px) { .mission__headline { white-space: nowrap; } }
