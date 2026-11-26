@@ -875,3 +875,103 @@
   .cs-cta { flex-direction: column; align-items: flex-start; }
   .cs-ds-type-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ==========================================================================
+   Case studies — shared business-card style (2026-11-26)
+   Same language as the homepage / Design System: Archivo (EN) / Inter (RU),
+   medium-weight headings with tight tracking, mono uppercase meta,
+   Book-a-Call outline controls. Project screenshots and brand colours stay.
+   ========================================================================== */
+
+/* Headings: Medium + tight tracking (was Bold) */
+.cs-hero__title,
+.cs-section-title,
+.cs-ds-head h2,
+.cs-overview-panel h3,
+.cs-feature-text h3,
+.cs-tablet-text h3,
+.al-section-title,
+.al-text h3,
+.al-stat__value,
+.dm-feature__text h3,
+.qp-brief__text h3,
+.qp-dark-head h2,
+.qp-fact__value,
+.tr-brief__text h3,
+.tr-dark-head h2,
+.nt-persona h3,
+.nt-age__num {
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+.cs-feature-text h3, .cs-tablet-text h3, .cs-overview-panel h3, .al-text h3,
+.dm-feature__text h3, .qp-brief__text h3, .tr-brief__text h3, .nt-persona h3 { letter-spacing: -0.02em; line-height: 1.15; }
+.cs-hero__title { color: var(--bc-ink); }
+.cs-section-title:not(.cs-section-title--dark) { color: var(--bc-ink); }
+
+/* Back link: mono caption */
+.cs-back-link {
+  font-family: var(--bc-mono);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--bc-ink-2);
+}
+.cs-back-link:hover { color: var(--bc-lilac); }
+
+/* Hero meta (Company / Role / Platform / Year): mono label + Archivo value */
+.cs-meta-item dt {
+  font-family: var(--bc-mono);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--bc-ink-3);
+}
+.cs-meta-item dd { font-weight: 500; color: var(--bc-ink); }
+.cs-hero--dark .cs-meta-item dt, .cs-hero[class*="dark"] .cs-meta-item dt { color: rgba(255,255,255,0.55); }
+
+/* Core roles: Tag (Skill) — beige tile, 6px radius */
+.cs-role-pill {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--bc-tile);
+  font-size: 14px;
+  color: var(--bc-ink);
+}
+.cs-role-pill svg { color: var(--bc-lilac); }
+
+/* Outline controls (language toggle in the header, "Check presentation"):
+   Book-a-Call / Filter chip style */
+.main-nav__buttons #langToggle.tag--outline,
+.cs-main .tag--outline {
+  background: none;
+  border: 1.5px solid var(--bc-ink);
+  border-radius: 0;
+  font-family: var(--bc-mono);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--bc-ink);
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+.main-nav__buttons #langToggle.tag--outline { padding: 9px 14px; }
+.cs-main .tag--outline { padding: 18px 24px; font-size: 15px; }
+.main-nav__buttons #langToggle.tag--outline:hover,
+.cs-main .tag--outline:hover { background: var(--bc-lilac); border-color: var(--bc-lilac); color: #fff; }
+.cs-tablet-section .tag--outline { border-color: #fff; color: #fff; }
+
+/* Hero badge: Design System Badge (mono pill, hugs its text); project colours stay */
+.cs-hero .badge {
+  align-self: flex-start;
+  font-family: var(--bc-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+}

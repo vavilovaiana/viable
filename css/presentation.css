@@ -2,11 +2,13 @@
 :root {
   --pr-bg: #f4f4f6;
   --pr-text: #151515;
-  --pr-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  --pr-font: "Archivo", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif; /* EN Archivo, RU Inter (same as the site) */
   --pr-pad: 40px;
   --pr-gap: 40px;
   --pr-radius: 28px;
 }
+
+html[lang="ru"] { --pr-font: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
 
 *, *::before, *::after { box-sizing: border-box; }
 

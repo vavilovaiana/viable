@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Archivo:wght@400;500;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css?v=20261124b">
 </head>
 <body>
@@ -161,10 +161,18 @@
     <div class="showcase__header">
       <span class="label-pill" data-ru="Избранные проекты">Selected projects</span>
       <h2 class="showcase__title" data-ru="Кейсы">Case studies</h2>
+      <div class="case-filters" role="group" aria-label="Filter case studies" data-ru-aria-label="Фильтр кейсов">
+        <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true"><span class="filter-chip__label" data-ru="Все">All</span><span class="filter-chip__count"></span></button>
+        <button type="button" class="filter-chip" data-filter="fintech" aria-pressed="false"><span class="filter-chip__label" data-ru="Финтех">FinTech</span><span class="filter-chip__count"></span></button>
+        <button type="button" class="filter-chip" data-filter="saas" aria-pressed="false"><span class="filter-chip__label" data-ru="SaaS и B2B">SaaS &amp; B2B</span><span class="filter-chip__count"></span></button>
+        <button type="button" class="filter-chip" data-filter="mobile" aria-pressed="false"><span class="filter-chip__label" data-ru="Мобильные">Mobile</span><span class="filter-chip__count"></span></button>
+        <button type="button" class="filter-chip" data-filter="industrial" aria-pressed="false"><span class="filter-chip__label" data-ru="Промышленность">Industrial</span><span class="filter-chip__count"></span></button>
+        <button type="button" class="filter-chip" data-filter="data" aria-pressed="false"><span class="filter-chip__label" data-ru="Данные">Data</span><span class="filter-chip__count"></span></button>
+      </div>
     </div>
 
     <div class="projects-grid">
-      <a class="project-card" href="case-studies/nornickel.html">
+      <a class="project-card" href="case-studies/nornickel.html" data-categories="saas industrial data">
         <div class="project-card__image">
           <img src="assets/img/photos/project-nornickel.png" alt="Nornickel Mining Platform preview" width="780" height="342" loading="lazy">
         </div>
@@ -175,7 +183,7 @@
         </div>
       </a>
 
-      <a class="project-card project-card--muted" href="case-studies/nornickel-tablet.html">
+      <a class="project-card project-card--muted" href="case-studies/nornickel-tablet.html" data-categories="industrial mobile">
         <div class="project-card__image">
           <img src="assets/img/photos/project-nornickel-tablet.jpg" alt="Nornickel mine worker tablet preview: drilling task screens in yellow on black" width="780" height="342" loading="lazy">
         </div>
@@ -186,7 +194,7 @@
         </div>
       </a>
 
-      <a class="project-card" href="case-studies/turron.html">
+      <a class="project-card" href="case-studies/turron.html" data-categories="fintech mobile">
         <div class="project-card__image">
           <img src="assets/img/photos/project-turron.jpg" alt="Turrón BNPL preview" width="780" height="342" loading="lazy">
         </div>
@@ -197,7 +205,7 @@
         </div>
       </a>
 
-      <a class="project-card project-card--muted" href="case-studies/domina.html">
+      <a class="project-card project-card--muted" href="case-studies/domina.html" data-categories="saas">
         <div class="project-card__image">
           <img src="assets/img/photos/project-domina.jpg" alt="Domina Invest partner platform preview" width="780" height="342" loading="lazy">
         </div>
@@ -208,7 +216,7 @@
         </div>
       </a>
 
-      <a class="project-card project-card--muted" href="case-studies/space-data.html">
+      <a class="project-card project-card--muted" href="case-studies/space-data.html" data-categories="data">
         <div class="project-card__image">
           <img src="assets/img/photos/project-space-data.jpg" alt="Space data analytics preview" width="780" height="342" loading="lazy">
         </div>
@@ -219,7 +227,7 @@
         </div>
       </a>
 
-      <a class="project-card" href="case-studies/alfa-voc.html">
+      <a class="project-card" href="case-studies/alfa-voc.html" data-categories="fintech">
         <div class="project-card__image">
           <img src="assets/img/photos/project-alfa-voc.jpg" alt="Alfa-Bank Voice of Client preview: rating widget and expert task list" width="780" height="342" loading="lazy">
         </div>
@@ -230,7 +238,7 @@
         </div>
       </a>
 
-      <a class="project-card" href="case-studies/alfa-emp.html">
+      <a class="project-card" href="case-studies/alfa-emp.html" data-categories="fintech mobile">
         <div class="project-card__image">
           <img src="assets/img/photos/project-alfa-emp.jpg" alt="Alfa-Bank EMP preview: mobile candidate questionnaire and agent requests table" width="780" height="342" loading="lazy">
         </div>
@@ -241,7 +249,7 @@
         </div>
       </a>
 
-      <a class="project-card project-card--muted" href="case-studies/quppy.html">
+      <a class="project-card project-card--muted" href="case-studies/quppy.html" data-categories="fintech mobile">
         <div class="project-card__image">
           <img src="assets/img/photos/project-quppy.jpg" alt="Quppy wallet illustration with Bitcoin, Ethereum and Tether coins" width="780" height="342" loading="lazy">
         </div>
@@ -252,7 +260,7 @@
         </div>
       </a>
 
-      <a class="project-card" href="case-studies/business-lines.html">
+      <a class="project-card" href="case-studies/business-lines.html" data-categories="fintech saas">
         <div class="project-card__image">
           <img src="assets/img/photos/project-business-lines.jpg" alt="Alfa-Bank business internet bank on mobile" data-ru-alt="Интернет-банк Альфа-Бизнес в мобильном" width="780" height="342" loading="lazy">
         </div>
@@ -263,7 +271,7 @@
         </div>
       </a>
 
-      <a class="project-card project-card--muted" href="case-studies/bank-guarantees.html">
+      <a class="project-card project-card--muted" href="case-studies/bank-guarantees.html" data-categories="fintech saas mobile">
         <div class="project-card__image">
           <img src="assets/img/photos/project-bank-guarantees.jpg" alt="Lighthouse bank guarantees platform and a mobile payment status screen" data-ru-alt="Платформа банковских гарантий Lighthouse и мобильный статусный экран" width="780" height="342" loading="lazy">
         </div>

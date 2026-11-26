@@ -206,3 +206,48 @@
     }
   });
 })();
+
+/* ---- Case studies filters (homepage) ---------------------------------- */
+(function () {
+  var wrap = document.querySelector(".case-filters");
+  var grid = document.querySelector(".projects-grid");
+  if (!wrap || !grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll(".project-card[data-categories]"));
+  var chips = Array.prototype.slice.call(wrap.querySelectorAll(".filter-chip"));
+  var has = function (card, f) { return f === "all" || (" " + card.getAttribute("data-categories") + " ").indexOf(" " + f + " ") !== -1; };
+
+  chips.forEach(function (chip) {
+    var f = chip.getAttribute("data-filter");
+    var n = cards.filter(function (c) { return has(c, f); }).length;
+    var count = chip.querySelector(".filter-chip__count");
+    if (count) count.textContent = n;
+    if (!n) chip.hidden = true;
+  });
+
+  function apply(f) {
+    chips.forEach(function (chip) {
+      var on = chip.getAttribute("data-filter") === f;
+      chip.classList.toggle("is-active", on);
+      chip.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    var visible = [];
+    cards.forEach(function (c) {
+      var show = has(c, f);
+      var wasHidden = c.hidden;
+      c.hidden = !show;
+      c.classList.remove("is-solo", "is-entering");
+      if (show) {
+        visible.push(c);
+        if (wasHidden) { void c.offsetWidth; c.classList.add("is-entering"); }
+      }
+    });
+    grid.classList.toggle("is-filtered", f !== "all");
+    if (f !== "all" && visible.length % 2 === 1) visible[visible.length - 1].classList.add("is-solo");
+  }
+
+  wrap.addEventListener("click", function (e) {
+    var chip = e.target.closest(".filter-chip");
+    if (!chip) return;
+    apply(chip.getAttribute("data-filter"));
+  });
+})();

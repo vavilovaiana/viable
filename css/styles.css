@@ -1303,3 +1303,81 @@ a.lang-rail__label { text-decoration: none; }
 }
 /* Keep the two Figma lines intact ("Creating projects" / "with care for people") where there is room */
 @media (min-width: 768px) { .mission__headline { white-space: nowrap; } }
+
+/* ==========================================================================
+   Typography: Archivo for EN, Inter for RU (2026-11-26)
+   One family per language for headings and body. Mono labels (IBM Plex Mono),
+   the "with care" lettering and case-study brand fonts are unchanged.
+   ========================================================================== */
+:root {
+  --font-en: "Archivo", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-ru: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-en);
+  --bc-sans: var(--font-en);
+}
+html[lang="ru"] {
+  --font-sans: var(--font-ru);
+  --bc-sans: var(--font-ru);
+}
+body,
+.mission__headline,
+.mission__statement,
+.mission__text,
+.ai-stack__monogram { font-family: var(--font-sans); }
+
+/* ==========================================================================
+   Case studies filters (2026-11-26) — Figma "Filter chip" (Design System)
+   Book-a-Call language: mono uppercase, 1.5px ink outline, square corners.
+   Default = outline · Hover = lilac · Selected = ink fill.
+   ========================================================================== */
+.case-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: none;
+  border: 1.5px solid var(--bc-ink);
+  border-radius: 0;
+  font-family: var(--bc-mono);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--bc-ink);
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+.filter-chip__count {
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--bc-ink-2);
+}
+.filter-chip:hover { background: var(--bc-lilac); border-color: var(--bc-lilac); color: #fff; }
+.filter-chip:hover .filter-chip__count { color: rgba(255,255,255,0.62); }
+.filter-chip.is-active { background: var(--bc-ink); border-color: var(--bc-ink); color: #fff; }
+.filter-chip.is-active .filter-chip__count { color: rgba(255,255,255,0.62); }
+.filter-chip:focus-visible { outline: 2px solid var(--bc-lilac); outline-offset: 3px; }
+.filter-chip:active { transform: scale(0.98); }
+@media (max-width: 560px) {
+  .case-filters { gap: 8px; }
+  .filter-chip { padding: 10px 16px; font-size: 13px; gap: 8px; }
+  .filter-chip__count { font-size: 12px; }
+}
+
+/* filtering */
+.project-card[hidden] { display: none !important; }
+.projects-grid.is-filtered > :last-child:nth-child(odd) { grid-column: auto; justify-self: stretch; width: auto; }
+@media (min-width: 1101px) {
+  .projects-grid.is-filtered > .project-card.is-solo { grid-column: 1 / -1; justify-self: center; width: calc((100% - 40px) / 2); }
+}
+.project-card.is-entering { animation: card-in .35s ease both; }
+@keyframes card-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .project-card.is-entering { animation: none; } }
